@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Reviewer - Philippines Civil Service Exam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --bg-elevated: #222230;
+            --accent-gold: #d4a853;
+            --accent-gold-light: #f0d78c;
+            --accent-gold-dark: #a67c3d;
+            --accent-cyan: #5cf0e8;
+            --accent-purple: #9b5de5;
+            --text-primary: #e8e6e3;
+            --text-secondary: #9a9a9a;
+            --text-muted: #666680;
+            --border-gold: rgba(212, 168, 83, 0.3);
+            --success: #4ade80;
+            --error: #f87171;
+            --shadow-gold: 0 0 30px rgba(212, 168, 83, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        /* Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(212, 168, 83, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(155, 93, 229, 0.05) 0%, transparent 50%),
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(212, 168, 83, 0.02) 50px, rgba(212, 168, 83, 0.02) 51px),
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(212, 168, 83, 0.02) 50px, rgba(212, 168, 83, 0.02) 51px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border-bottom: 1px solid var(--border-gold);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--bg-primary);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-subtitle {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: 1px solid var(--border-gold);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background: var(--bg-elevated);
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: var(--bg-primary);
+            border: none;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%);
+            transform: translateY(-1px);
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+            min-width: 200px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.7rem 1rem 0.7rem 2.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: var(--bg-card);
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .sidebar-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border-bottom: 1px solid var(--border-gold);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .topic-list {
+            list-style: none;
+        }
+
+        .topic-item {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topic-item:last-child {
+            border-bottom: none;
+        }
+
+        .topic-item:hover {
+            background: var(--bg-elevated);
+            padding-left: 1.2rem;
+            color: var(--accent-gold);
+        }
+
+        .topic-item.active {
+            background: linear-gradient(90deg, rgba(212, 168, 83, 0.15) 0%, transparent 100%);
+            color: var(--accent-gold);
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .topic-count {
+            background: var(--bg-elevated);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Content Area */
+        .content-area {
+            min-width: 0;
+        }
+
+        .content-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .content-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--accent-gold-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .content-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Question Cards */
+        .question-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover {
+            box-shadow: var(--shadow-gold);
+        }
+
+        .question-card.highlight {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 20px rgba(212, 168, 83, 0.3);
+        }
+
+        .question-header {
+            padding: 1.2rem 1.5rem;
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border-bottom: 1px solid var(--border-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .question-number {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            background: rgba(212, 168, 83, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+        }
+
+        .question-topic {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .question-text {
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        /* Choices */
+        .choices-container {
+            padding: 0 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .choice {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: var(--bg-elevated);
+            border: 1px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .choice:hover {
+            border-color: var(--border-gold);
+            background: rgba(212, 168, 83, 0.05);
+        }
+
+        .choice.selected {
+            border-color: var(--accent-gold);
+            background: rgba(212, 168, 83, 0.1);
+        }
+
+        .choice.correct {
+            border-color: var(--success);
+            background: rgba(74, 222, 128, 0.1);
+        }
+
+        .choice.wrong {
+            border-color: var(--error);
+            background: rgba(248, 113, 113, 0.1);
+        }
+
+        .choice-letter {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            min-width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background: var(--bg-card);
+            color: var(--accent-gold);
+        }
+
+        .choice.correct .choice-letter {
+            background: var(--success);
+            color: var(--bg-primary);
+        }
+
+        .choice.wrong .choice-letter {
+            background: var(--error);
+            color: var(--bg-primary);
+        }
+
+        .choice-text {
+            flex: 1;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Answer Section */
+        .answer-section {
+            border-top: 1px solid var(--border-gold);
+        }
+
+        .answer-toggle {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--bg-elevated);
+            border: none;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+
+        .answer-toggle:hover {
+            background: var(--bg-card);
+            color: var(--accent-gold);
+        }
+
+        .answer-toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .answer-toggle.open .answer-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .answer-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .answer-content.open {
+            max-height: 500px;
+        }
+
+        .answer-inner {
+            padding: 1.5rem;
+            background: var(--bg-primary);
+        }
+
+        .final-answer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: linear-gradient(135deg, rgba(212, 168, 83, 0.15) 0%, rgba(212, 168, 83, 0.05) 100%);
+            border: 1px solid var(--accent-gold);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .final-answer-label {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+        }
+
+        .final-answer-value {
+            font-weight: 600;
+            color: var(--accent-gold-light);
+            font-size: 1.1rem;
+        }
+
+        .explanation {
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-gold);
+        }
+
+        .explanation-title {
+            font-weight: 600;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .explanation-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Admin Panel */
+        .admin-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .admin-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .admin-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        .admin-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .admin-close:hover {
+            color: var(--error);
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .admin-tab {
+            padding: 0.7rem 1.2rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-gold);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .admin-tab:hover, .admin-tab.active {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            border-color: var(--accent-gold);
+        }
+
+        .admin-form {
+            display: none;
+        }
+
+        .admin-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-gold);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .btn-save {
+            width: 100%;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        .empty-state-text {
+            font-size: 1.1rem;
+        }
+
+        /* Stats */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100vh;
+                max-height: 100vh;
+                background: var(--bg-secondary);
+                z-index: 200;
+                padding: 1rem;
+                transition: left 0.3s ease;
+            }
+
+            .sidebar.open {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .sidebar-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 150;
+            }
+
+            .sidebar-overlay.open {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0;
+            }
+
+            .search-container {
+                order: 3;
+                flex: 100%;
+                max-width: 100%;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-subtitle {
+                display: none;
+            }
+
+            .main-container {
+                padding: 1rem;
+            }
+
+            .question-text {
+                font-size: 1rem;
+            }
+
+            .choice {
+                padding: 0.8rem 1rem;
+            }
+
+            .choice-text {
+                font-size: 0.95rem;
+            }
+
+            .content-title {
+                font-size: 1.4rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .btn {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question-card {
+            animation: fadeIn 0.4s ease;
+        }
+
+        /* Scroll to highlight */
+        .search-highlight {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* Table Builder */
+        #tableCells input {
+            padding: 0.5rem;
+            font-size: 0.85rem;
+        }
+        
+        #tablePreview table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.5rem 0;
+        }
+        
+        #tablePreview th, #tablePreview td {
+            padding: 0.5rem;
+            border: 1px solid var(--accent-gold);
+            text-align: center;
+        }
+        
+        #tablePreview th {
+            background: var(--bg-elevated);
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+                <div class="logo-icon">CSE</div>
+                <div>
+                    <div class="logo-text">Civil Service</div>
+                    <div class="logo-subtitle">Exam Reviewer</div>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search topics... (Ctrl+F)">
+            </div>
+
+            <div class="header-actions">
+                <button class="btn" onclick="toggleDarkMode()">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="btn btn-primary" onclick="openAdmin()">
+                    <span>⚙️</span> Admin
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-header">
+                    <span>📚</span> Subjects
+                </div>
+                <ul class="topic-list" id="subjectsList">
+                    <!-- Subjects will be populated here -->
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-header">
+                    <span>📖</span> Topics
+                </div>
+                <ul class="topic-list" id="topicsList">
+                    <!-- Topics will be populated here -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area" id="contentArea">
+            <!-- Content will be populated here -->
+        </main>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h2 class="admin-title">⚙️ Admin Panel</h2>
+                <button class="admin-close" onclick="closeAdmin()">✕</button>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="showAdminTab('subjects')">Subjects</button>
+                <button class="admin-tab" onclick="showAdminTab('topics')">Topics</button>
+                <button class="admin-tab" onclick="showAdminTab('questions')">Questions</button>
+            </div>
+
+            <!-- Add Subject Form -->
+            <div class="admin-form active" id="form-subjects">
+                <div class="form-group">
+                    <label class="form-label">Subject Name</label>
+                    <input type="text" class="form-input" id="subjectName" placeholder="e.g., English, Mathematics">
+                </div>
+                <button class="btn btn-primary btn-save" onclick="addSubject()">Add Subject</button>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--text-secondary); margin-bottom: 1rem;">Existing Subjects</h3>
+                    <div id="adminSubjectsList"></div>
+                </div>
+            </div>
+
+            <!-- Add Topic Form -->
+            <div class="admin-form" id="form-topics">
+                <div class="form-group">
+                    <label class="form-label">Select Subject</label>
+                    <select class="form-select" id="topicSubject">
+                        <!-- Options populated by JS -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Topic Name</label>
+                    <input type="text" class="form-input" id="topicName" placeholder="e.g., Grammar, Algebra">
+                </div>
+                <button class="btn btn-primary btn-save" onclick="addTopic()">Add Topic</button>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--text-secondary); margin-bottom: 1rem;">Existing Topics</h3>
+                    <div id="adminTopicsList"></div>
+                </div>
+            </div>
+
+            <!-- Add Question Form -->
+            <div class="admin-form" id="form-questions">
+                <div class="form-group">
+                    <label class="form-label">Select Subject</label>
+                    <select class="form-select" id="questionSubject" onchange="loadTopicsForQuestion()">
+                        <!-- Options populated by JS -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Select Topic</label>
+                    <select class="form-select" id="questionTopic">
+                        <!-- Options populated by JS -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Question</label>
+                    <textarea class="form-textarea" id="questionText" placeholder="Enter your question here..."></textarea>
+                </div>
+
+                <!-- Table Builder -->
+                <div class="form-group">
+                    <label class="form-label">📊 Add Table (Optional)</label>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <input type="number" class="form-input" id="tableRows" placeholder="Rows" min="1" max="10" style="width: 80px;" value="2">
+                        <input type="number" class="form-input" id="tableCols" placeholder="Cols" min="1" max="6" style="width: 80px;" value="2">
+                        <button class="btn" onclick="generateTableBuilder()">Generate Table</button>
+                    </div>
+                    <div id="tableBuilder" style="display: none;">
+                        <div id="tableCells" style="display: grid; gap: 0.25rem; margin-bottom: 0.5rem;"></div>
+                        <button class="btn" onclick="previewTable()">Preview Table</button>
+                        <button class="btn" onclick="insertTableToQuestion()">Insert to Question</button>
+                    </div>
+                    <div id="tablePreview" style="margin-top: 0.5rem; display: none;"></div>
+                    <input type="hidden" id="tableData" value="">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Choice A</label>
+                        <input type="text" class="form-input" id="choiceA" placeholder="Option A">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Choice B</label>
+                        <input type="text" class="form-input" id="choiceB" placeholder="Option B">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Choice C</label>
+                        <input type="text" class="form-input" id="choiceC" placeholder="Option C">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Choice D</label>
+                        <input type="text" class="form-input" id="choiceD" placeholder="Option D">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Correct Answer</label>
+                    <select class="form-select" id="correctAnswer">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Explanation</label>
+                    <textarea class="form-textarea" id="explanation" placeholder="Explain why this is the correct answer..."></textarea>
+                    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-primary); border-radius: 6px; font-size: 0.8rem; color: var(--text-muted);">
+                        <strong>💡 Formatting Tips:</strong><br>
+                        • Use &lt;br&gt; for line breaks<br>
+                        • Use &lt;sup&gt; for exponents: x&lt;sup&gt;2&lt;/sup&gt; → x²<br>
+                        • Use &lt;sub&gt; for subscripts: H&lt;sub&gt;2&lt;/sub&gt;O → H₂O<br>
+                        • Use &lt;strong&gt; for bold text<br>
+                        • Use &amp;divide; for ÷ symbol<br>
+                        • Use &amp;times; for × symbol<br>
+                        • For fractions, use: &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; → ¹⁄₂
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-save" onclick="addQuestion()">Add Question</button>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--text-secondary); margin-bottom: 1rem;">Existing Questions</h3>
+                    <div id="adminQuestionsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data Storage
+        let data = {
+            subjects: [],
+            topics: [],
+            questions: []
+        };
+
+        // Initialize with sample data
+        function initData() {
+            const savedData = localStorage.getItem('cseReviewerData');
+            if (savedData) {
+                data = JSON.parse(savedData);
+            } else {
+                // Default sample data for Civil Service Exam
+                data = {
+                    subjects: [
+                        { id: 1, name: 'English' },
+                        { id: 2, name: 'Mathematics' },
+                        { id: 3, name: 'Filipino' },
+                        { id: 4, name: 'General Information' },
+                        { id: 5, name: 'Analytical Ability' }
+                    ],
+                    topics: [
+                        { id: 1, subjectId: 1, name: 'Grammar' },
+                        { id: 2, subjectId: 1, name: 'Vocabulary' },
+                        { id: 3, subjectId: 1, name: 'Reading Comprehension' },
+                        { id: 4, subjectId: 2, name: 'Algebra' },
+                        { id: 5, subjectId: 2, name: 'Number Series' },
+                        { id: 6, subjectId: 2, name: 'Word Problems' },
+                        { id: 7, subjectId: 3, name: 'Grammar at Pangungusap' },
+                        { id: 8, subjectId: 3, name: 'Vocabulary' },
+                        { id: 9, subjectId: 4, name: 'Philippine Constitution' },
+                        { id: 10, subjectId: 4, name: 'Current Events' },
+                        { id: 11, subjectId: 5, name: 'Logical Reasoning' },
+                        { id: 12, subjectId: 5, name: 'Data Interpretation' }
+                    ],
+                    questions: [
+                        {
+                            id: 1,
+                            subjectId: 1,
+                            topicId: 1,
+                            question: "Choose the correct sentence:",
+                            choices: {
+                                A: "She don't know the answer.",
+                                B: "She doesn't knows the answer.",
+                                C: "She doesn't know the answer.",
+                                D: "She do not knows the answer."
+                            },
+                            correctAnswer: "C",
+                            explanation: "The correct form is 'doesn't know' because 'she' is a third-person singular subject, which requires 'doesn't' (does + not) followed by the base form of the verb."
+                        },
+                        {
+                            id: 2,
+                            subjectId: 1,
+                            topicId: 2,
+                            question: "What is the meaning of the word 'ubiquitous'?",
+                            choices: {
+                                A: "Rare or uncommon",
+                                B: "Existing or being everywhere at the same time",
+                                C: "Difficult to understand",
+                                D: "Extremely happy or joyful"
+                            },
+                            correctAnswer: "B",
+                            explanation: "'Ubiquitous' means omnipresent or existing everywhere at the same time. Example: 'Smartphones have become ubiquitous in modern society.'"
+                        },
+                        {
+                            id: 3,
+                            subjectId: 1,
+                            topicId: 3,
+                            question: "Read the passage and answer: The author uses the phrase 'break the ice' to mean:",
+                            choices: {
+                                A: "To make coffee",
+                                B: "To initiate conversation in a social setting",
+                                C: "To damage frozen water",
+                                D: "To end a relationship"
+                            },
+                            correctAnswer: "B",
+                            explanation: "'Break the ice' is an idiom meaning to initiate conversation or make people feel more comfortable in a social gathering. It originated from the practice of breaking ice in frozen waterways to allow ships to pass."
+                        },
+                        {
+                            id: 4,
+                            subjectId: 2,
+                            topicId: 4,
+                            question: "Solve for x: 2x + 5 = 15",
+                            choices: {
+                                A: "x = 4",
+                                B: "x = 5",
+                                C: "x = 6",
+                                D: "x = 10"
+                            },
+                            correctAnswer: "B",
+                            explanation: "2x + 5 = 15\n2x = 15 - 5\n2x = 10\nx = 10 ÷ 2\nx = 5"
+                        },
+                        {
+                            id: 5,
+                            subjectId: 2,
+                            topicId: 5,
+                            question: "What is the next number in the series: 2, 5, 10, 17, ?",
+                            choices: {
+                                A: "24",
+                                B: "26",
+                                C: "28",
+                                D: "30"
+                            },
+                            correctAnswer: "B",
+                            explanation: "The pattern is adding consecutive odd numbers:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 9 = 26\nThe next odd number after 7 is 9."
+                        },
+                        {
+                            id: 6,
+                            subjectId: 2,
+                            topicId: 6,
+                            question: "If 3 workers can complete a task in 8 days, how many days will 6 workers take?",
+                            choices: {
+                                A: "4 days",
+                                B: "16 days",
+                                C: "12 days",
+                                D: "6 days"
+                            },
+                            correctAnswer: "A",
+                            explanation: "This is an inverse proportion problem. More workers means less time.\nWorkers × Days = Constant\n3 × 8 = 6 × x\n24 = 6x\nx = 4 days"
+                        },
+                        {
+                            id: 7,
+                            subjectId: 3,
+                            topicId: 7,
+                            question: "Piliin ang wastong pangungusap:",
+                            choices: {
+                                A: "Si Maria ay mag-aaral.",
+                                B: "Si Maria ay nag-aaral.",
+                                C: "Si Maria ay nagaaral.",
+                                D: "Si Maria ay nag-aaral."
+                            },
+                            correctAnswer: "B",
+                            explanation: "Ang tamang pang-ayon ng pandiwa ay 'nag-aaral' (nag + um + -an). Ginagamit ito kapag ang paksang pangungusap ay nasa kasalukuyang aspekto."
+                        },
+                        {
+                            id: 8,
+                            subjectId: 3,
+                            topicId: 8,
+                            question: "Ano ang kahulugan ng 'pagtitipid'?",
+                            choices: {
+                                A: "Pag gastos ng pera",
+                                B: "Maingat na paggamit ng pera o yaman",
+                                C: "Pagbibigay ng pera sa iba",
+                                D: "Pagtago ng pera"
+                            },
+                            correctAnswer: "B",
+                            explanation: "Ang pagtitipid ay ang maingat na paggamit ng pera o anumang yaman upang ito ay tumagal at hindi masayang."
+                        },
+                        {
+                            id: 9,
+                            subjectId: 4,
+                            topicId: 9,
+                            question: "How many provinces are there in the Philippines as of 2023?",
+                            choices: {
+                                A: "81",
+                                B: "82",
+                                C: "83",
+                                D: "85"
+                            },
+                            correctAnswer: "C",
+                            explanation: "As of 2023, the Philippines has 83 provinces. This was increased from 81 with the creation of Maguindanao del Norte and Maguindanao del Sur in 2022."
+                        },
+                        {
+                            id: 10,
+                            subjectId: 4,
+                            topicId: 9,
+                            question: "Who is the current President of the Philippines (as of 2023)?",
+                            choices: {
+                                A: "Rodrigo Duterte",
+                                B: "Ferdinand Marcos Jr.",
+                                C: "Leni Robredo",
+                                D: "Bongbong Marcos"
+                            },
+                            correctAnswer: "B",
+                            explanation: "Ferdinand 'Bongbong' Marcos Jr. became the 17th President of the Philippines on May 30, 2022. He is the son of former President Ferdinand Marcos Sr."
+                        },
+                        {
+                            id: 11,
+                            subjectId: 5,
+                            topicId: 11,
+                            question: "All roses are flowers. Some flowers fade quickly. Therefore:",
+                            choices: {
+                                A: "All roses fade quickly",
+                                B: "Some roses fade quickly",
+                                C: "No roses fade quickly",
+                                D: "Cannot be determined"
+                            },
+                            correctAnswer: "D",
+                            explanation: "This is a logical reasoning problem. We know all roses are flowers, and some flowers fade quickly. However, we cannot conclude that roses specifically are among those that fade quickly. More information is needed."
+                        },
+                        {
+                            id: 13,
+                            subjectId: 2,
+                            topicId: 6,
+                            question: "The length of a rectangle is 2cm less than twice its width. What is its width in cm, if its perimeter is 50cm?",
+                            choices: {
+                                A: "8 cm",
+                                B: "9 cm",
+                                C: "16 cm",
+                                D: "25 cm"
+                            },
+                            correctAnswer: "B",
+                            explanation: "<strong>Solution:</strong><br><br>Let x = width in cm<br>Length = 2x − 2 cm (twice the width minus 2)<br><br><strong>Perimeter Formula:</strong><br>P = 2(Length + Width)<br><br><strong>Substitute values:</strong><br>50 = 2((2x − 2) + x)<br>50 = 2(3x − 2)<br>50 = 6x − 4<br><br><strong>Solve for x:</strong><br>6x − 4 + 4 = 50 + 4<br>6x = 54<br>x = 54 ÷ 6<br><strong>x = 9 cm</strong><br><br>✓ <strong>Answer: B. 9 cm</strong>"
+                        },
+                        {
+                            id: 12,
+                            subjectId: 5,
+                            topicId: 12,
+                            question: "Study the table below and answer:\n\nProduct | Q1 | Q2 | Q3 | Q4\n-------|----|----|----|----\nA      | 100| 120 | 110 | 130\n\nWhich quarter showed the highest increase from the previous quarter?",
+                            choices: {
+                                A: "Q1 to Q2",
+                                B: "Q2 to Q3",
+                                C: "Q3 to Q4",
+                                D: "Q1 to Q4"
+                            },
+                            correctAnswer: "A",
+                            explanation: "Q1 to Q2: (120-100)/100 = 20% increase\nQ2 to Q3: (110-120)/120 = -8.3% decrease\nQ3 to Q4: (130-110)/110 = 18.2% increase\nQ1 to Q4: (130-100)/100 = 30% increase\nThe highest percentage increase from one quarter to the next is Q1 to Q2 (20%)."
+                        }
+                    ]
+                };
+                saveData();
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem('cseReviewerData', JSON.stringify(data));
+        }
+
+        // Render Functions
+        function renderSidebar() {
+            const subjectsList = document.getElementById('subjectsList');
+            const topicsList = document.getElementById('topicsList');
+
+            // Render subjects
+            subjectsList.innerHTML = `
+                <li class="topic-item active" onclick="filterBySubject(null)">
+                    <span>📚 All Subjects</span>
+                    <span class="topic-count">${data.questions.length}</span>
+                </li>
+            `;
+            data.subjects.forEach(subject => {
+                const count = data.questions.filter(q => q.subjectId === subject.id).length;
+                subjectsList.innerHTML += `
+                    <li class="topic-item" onclick="filterBySubject(${subject.id})">
+                        <span>${subject.name}</span>
+                        <span class="topic-count">${count}</span>
+                    </li>
+                `;
+            });
+
+            // Render topics
+            topicsList.innerHTML = `
+                <li class="topic-item active" onclick="filterByTopic(null)">
+                    <span>📖 All Topics</span>
+                </li>
+            `;
+            data.topics.forEach(topic => {
+                const count = data.questions.filter(q => q.topicId === topic.id).length;
+                if (count > 0) {
+                    topicsList.innerHTML += `
+                        <li class="topic-item" onclick="filterByTopic(${topic.id})">
+                            <span>${topic.name}</span>
+                            <span class="topic-count">${count}</span>
+                        </li>
+                    `;
+                }
+            });
+        }
+
+        let currentSubjectFilter = null;
+        let currentTopicFilter = null;
+
+        function renderContent() {
+            const contentArea = document.getElementById('contentArea');
+            let filteredQuestions = data.questions;
+
+            if (currentSubjectFilter) {
+                filteredQuestions = filteredQuestions.filter(q => q.subjectId === currentSubjectFilter);
+            }
+            if (currentTopicFilter) {
+                filteredQuestions = filteredQuestions.filter(q => q.topicId === currentTopicFilter);
+            }
+
+            // Get subject and topic names
+            const subjectName = currentSubjectFilter 
+                ? data.subjects.find(s => s.id === currentSubjectFilter)?.name 
+                : 'All Subjects';
+            const topicName = currentTopicFilter 
+                ? data.topics.find(t => t.id === currentTopicFilter)?.name 
+                : 'All Topics';
+
+            // Stats
+            const totalQuestions = data.questions.length;
+            const answeredQuestions = filteredQuestions.length;
+
+            contentArea.innerHTML = `
+                <div class="content-header">
+                    <h1 class="content-title">${subjectName}</h1>
+                    <p class="content-subtitle">${topicName} • ${answeredQuestions} questions</p>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-value">${totalQuestions}</div>
+                        <div class="stat-label">Total Questions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${data.subjects.length}</div>
+                        <div class="stat-label">Subjects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${data.topics.length}</div>
+                        <div class="stat-label">Topics</div>
+                    </div>
+                </div>
+            `;
+
+            if (filteredQuestions.length === 0) {
+                contentArea.innerHTML += `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📝</div>
+                        <p class="empty-state-text">No questions found for this selection.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filteredQuestions.forEach((q, index) => {
+                const subject = data.subjects.find(s => s.id === q.subjectId);
+                const topic = data.topics.find(t => t.id === q.topicId);
+
+                contentArea.innerHTML += `
+                    <div class="question-card" id="question-${q.id}">
+                        <div class="question-header">
+                            <div>
+                                <span class="question-number">Question ${index + 1}</span>
+                            </div>
+                            <div class="question-topic">${subject?.name || ''} • ${topic?.name || ''}</div>
+                        </div>
+                        <div class="question-text">${q.question}</div>
+                        <div class="choices-container">
+                            ${Object.entries(q.choices).map(([letter, text]) => `
+                                <div class="choice" id="choice-${q.id}-${letter}" onclick="selectChoice(${q.id}, '${letter}')">
+                                    <span class="choice-letter">${letter}</span>
+                                    <span class="choice-text">${text}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="answer-section">
+                            <button class="answer-toggle" onclick="toggleAnswer(${q.id})">
+                                <span>📖 View Answer & Explanation</span>
+                                <span class="answer-toggle-icon">▼</span>
+                            </button>
+                            <div class="answer-content" id="answer-${q.id}">
+                                <div class="answer-inner">
+                                    <div class="final-answer">
+                                        <span class="final-answer-label">✓ CORRECT ANSWER:</span>
+                                        <span class="final-answer-value">${q.correctAnswer}</span>
+                                    </div>
+                                    <div class="explanation">
+                                        <div class="explanation-title">📚 Explanation</div>
+                                        <p class="explanation-text">${q.explanation}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Filter Functions
+        function filterBySubject(subjectId) {
+            currentSubjectFilter = subjectId;
+            currentTopicFilter = null;
+            renderSidebar();
+            renderContent();
+            
+            // Update active state
+            document.querySelectorAll('.topic-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.topic-item').classList.add('active');
+        }
+
+        function filterByTopic(topicId) {
+            currentTopicFilter = topicId;
+            const topic = data.topics.find(t => t.id === topicId);
+            if (topic) {
+                currentSubjectFilter = topic.subjectId;
+            }
+            renderSidebar();
+            renderContent();
+        }
+
+        // Interaction Functions
+        function selectChoice(questionId, letter) {
+            const question = data.questions.find(q => q.id === questionId);
+            if (!question) return;
+
+            // Remove previous selections
+            document.querySelectorAll(`[id^="choice-${questionId}-"]`).forEach(el => {
+                el.classList.remove('selected', 'correct', 'wrong');
+            });
+
+            // Add selection class
+            const selectedEl = document.getElementById(`choice-${questionId}-${letter}`);
+            selectedEl.classList.add('selected');
+
+            // Show correct/wrong
+            if (letter === question.correctAnswer) {
+                selectedEl.classList.add('correct');
+            } else {
+                selectedEl.classList.add('wrong');
+                // Also highlight correct answer
+                const correctEl = document.getElementById(`choice-${questionId}-${question.correctAnswer}`);
+                correctEl.classList.add('correct');
+            }
+
+            // Auto open answer
+            const answerContent = document.getElementById(`answer-${questionId}`);
+            const answerToggle = document.querySelector(`[onclick="toggleAnswer(${questionId})"]`);
+            if (!answerContent.classList.contains('open')) {
+                answerContent.classList.add('open');
+                answerToggle.classList.add('open');
+            }
+        }
+
+        function toggleAnswer(questionId) {
+            const answerContent = document.getElementById(`answer-${questionId}`);
+            const answerToggle = document.querySelector(`[onclick="toggleAnswer(${questionId})"]`);
+            answerContent.classList.toggle('open');
+            answerToggle.classList.toggle('open');
+        }
+
+        // Search Function
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            if (searchTerm.length < 2) {
+                // Reset highlights
+                document.querySelectorAll('.search-highlight').forEach(el => {
+                    el.outerHTML = el.textContent;
+                });
+                return;
+            }
+
+            // Filter questions by search term
+            const questionCards = document.querySelectorAll('.question-card');
+            questionCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Ctrl+F focus search
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+
+        // Admin Functions
+        function openAdmin() {
+            document.getElementById('adminPanel').classList.add('active');
+            loadAdminData();
+        }
+
+        function closeAdmin() {
+            document.getElementById('adminPanel').classList.remove('active');
+        }
+
+        function showAdminTab(tab) {
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.admin-form').forEach(f => f.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(`form-${tab}`).classList.add('active');
+
+            // Reset question form when switching to questions tab
+            if (tab === 'questions') {
+                resetQuestionForm();
+            }
+        }
+
+        function loadAdminData() {
+            // Load subjects for dropdowns
+            const subjectSelects = ['topicSubject', 'questionSubject'];
+            subjectSelects.forEach(id => {
+                const select = document.getElementById(id);
+                select.innerHTML = '<option value="">Select Subject</option>';
+                data.subjects.forEach(s => {
+                    select.innerHTML += `<option value="${s.id}">${s.name}</option>`;
+                });
+            });
+
+            // Load admin subjects list
+            const adminSubjectsList = document.getElementById('adminSubjectsList');
+            adminSubjectsList.innerHTML = data.subjects.map(s => `
+                <div class="topic-item">
+                    <span>${s.name}</span>
+                    <button class="btn" onclick="deleteSubject(${s.id})" style="padding: 0.3rem 0.5rem; font-size: 0.8rem;">🗑️</button>
+                </div>
+            `).join('');
+
+            // Load admin topics list
+            const adminTopicsList = document.getElementById('adminTopicsList');
+            adminTopicsList.innerHTML = data.topics.map(t => {
+                const subject = data.subjects.find(s => s.id === t.subjectId);
+                return `
+                    <div class="topic-item">
+                        <span>${t.name} (${subject?.name || 'Unknown'})</span>
+                        <button class="btn" onclick="deleteTopic(${t.id})" style="padding: 0.3rem 0.5rem; font-size: 0.8rem;">🗑️</button>
+                    </div>
+                `;
+            }).join('');
+
+            // Load admin questions list
+            const adminQuestionsList = document.getElementById('adminQuestionsList');
+            adminQuestionsList.innerHTML = data.questions.map((q, index) => {
+                const subject = data.subjects.find(s => s.id === q.subjectId);
+                const topic = data.topics.find(t => t.id === q.topicId);
+                return `
+                    <div class="topic-item" style="flex-direction: column; align-items: flex-start; gap: 0.5rem;">
+                        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 600; color: var(--accent-gold);">Q${index + 1}: ${subject?.name || 'Unknown'} • ${topic?.name || 'Unknown'}</span>
+                            <div style="display: flex; gap: 0.3rem;">
+                                <button class="btn" onclick="editQuestion(${q.id})" style="padding: 0.3rem 0.5rem; font-size: 0.8rem;">✏️ Edit</button>
+                                <button class="btn" onclick="deleteQuestion(${q.id})" style="padding: 0.3rem 0.5rem; font-size: 0.8rem;">🗑️ Delete</button>
+                            </div>
+                        </div>
+                        <span style="color: var(--text-secondary); font-size: 0.85rem;">${q.question.substring(0, 80)}${q.question.length > 80 ? '...' : ''}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function loadTopicsForQuestion() {
+            const subjectId = parseInt(document.getElementById('questionSubject').value);
+            const topicSelect = document.getElementById('questionTopic');
+            topicSelect.innerHTML = '<option value="">Select Topic</option>';
+            
+            if (subjectId) {
+                data.topics.filter(t => t.subjectId === subjectId).forEach(t => {
+                    topicSelect.innerHTML += `<option value="${t.id}">${t.name}</option>`;
+                });
+            }
+        }
+
+        function addSubject() {
+            const name = document.getElementById('subjectName').value.trim();
+            if (!name) {
+                alert('Please enter a subject name');
+                return;
+            }
+
+            const newSubject = {
+                id: Date.now(),
+                name: name
+            };
+            data.subjects.push(newSubject);
+            saveData();
+            document.getElementById('subjectName').value = '';
+            loadAdminData();
+            renderSidebar();
+            alert('Subject added successfully!');
+        }
+
+        function addTopic() {
+            const subjectId = parseInt(document.getElementById('topicSubject').value);
+            const name = document.getElementById('topicName').value.trim();
+            
+            if (!subjectId || !name) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const newTopic = {
+                id: Date.now(),
+                subjectId: subjectId,
+                name: name
+            };
+            data.topics.push(newTopic);
+            saveData();
+            document.getElementById('topicName').value = '';
+            loadAdminData();
+            renderSidebar();
+            alert('Topic added successfully!');
+        }
+
+        function addQuestion() {
+            const subjectId = parseInt(document.getElementById('questionSubject').value);
+            const topicId = parseInt(document.getElementById('questionTopic').value);
+            const question = document.getElementById('questionText').value.trim();
+            const choiceA = document.getElementById('choiceA').value.trim();
+            const choiceB = document.getElementById('choiceB').value.trim();
+            const choiceC = document.getElementById('choiceC').value.trim();
+            const choiceD = document.getElementById('choiceD').value.trim();
+            const correctAnswer = document.getElementById('correctAnswer').value;
+            const explanation = document.getElementById('explanation').value.trim();
+
+            if (!subjectId || !topicId || !question || !choiceA || !choiceB || !choiceC || !choiceD || !explanation) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const newQuestion = {
+                id: Date.now(),
+                subjectId: subjectId,
+                topicId: topicId,
+                question: question,
+                choices: {
+                    A: choiceA,
+                    B: choiceB,
+                    C: choiceC,
+                    D: choiceD
+                },
+                correctAnswer: correctAnswer,
+                explanation: explanation
+            };
+            data.questions.push(newQuestion);
+            saveData();
+            
+            // Clear form
+            resetQuestionForm();
+            
+            loadAdminData();
+            renderSidebar();
+            renderContent();
+            alert('Question added successfully!');
+        }
+
+        function deleteSubject(id) {
+            if (confirm('Are you sure? This will also delete related topics and questions.')) {
+                data.subjects = data.subjects.filter(s => s.id !== id);
+                data.topics = data.topics.filter(t => t.subjectId !== id);
+                data.questions = data.questions.filter(q => q.subjectId !== id);
+                saveData();
+                loadAdminData();
+                renderSidebar();
+                renderContent();
+            }
+        }
+
+        function deleteTopic(id) {
+            if (confirm('Are you sure? This will also delete related questions.')) {
+                data.topics = data.topics.filter(t => t.id !== id);
+                data.questions = data.questions.filter(q => q.topicId !== id);
+                saveData();
+                loadAdminData();
+                renderSidebar();
+                renderContent();
+            }
+        }
+
+        function deleteQuestion(id) {
+            if (confirm('Are you sure you want to delete this question?')) {
+                data.questions = data.questions.filter(q => q.id !== id);
+                saveData();
+                loadAdminData();
+                renderSidebar();
+                renderContent();
+            }
+        }
+
+        function editQuestion(id) {
+            const question = data.questions.find(q => q.id === id);
+            if (!question) return;
+
+            // Populate the form with question data
+            document.getElementById('questionSubject').value = question.subjectId;
+            loadTopicsForQuestion();
+            setTimeout(() => {
+                document.getElementById('questionTopic').value = question.topicId;
+            }, 100);
+            document.getElementById('questionText').value = question.question;
+            document.getElementById('choiceA').value = question.choices.A;
+            document.getElementById('choiceB').value = question.choices.B;
+            document.getElementById('choiceC').value = question.choices.C;
+            document.getElementById('choiceD').value = question.choices.D;
+            document.getElementById('correctAnswer').value = question.correctAnswer;
+            document.getElementById('explanation').value = question.explanation;
+
+            // Change button to Update
+            const saveBtn = document.querySelector('#form-questions .btn-save');
+            saveBtn.textContent = 'Update Question';
+            saveBtn.onclick = () => updateQuestion(id);
+
+            // Scroll to form
+            document.querySelector('#form-questions').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateQuestion(id) {
+            const subjectId = parseInt(document.getElementById('questionSubject').value);
+            const topicId = parseInt(document.getElementById('questionTopic').value);
+            const question = document.getElementById('questionText').value.trim();
+            const choiceA = document.getElementById('choiceA').value.trim();
+            const choiceB = document.getElementById('choiceB').value.trim();
+            const choiceC = document.getElementById('choiceC').value.trim();
+            const choiceD = document.getElementById('choiceD').value.trim();
+            const correctAnswer = document.getElementById('correctAnswer').value;
+            const explanation = document.getElementById('explanation').value.trim();
+
+            if (!subjectId || !topicId || !question || !choiceA || !choiceB || !choiceC || !choiceD || !explanation) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const questionIndex = data.questions.findIndex(q => q.id === id);
+            if (questionIndex !== -1) {
+                data.questions[questionIndex] = {
+                    id: id,
+                    subjectId: subjectId,
+                    topicId: topicId,
+                    question: question,
+                    choices: {
+                        A: choiceA,
+                        B: choiceB,
+                        C: choiceC,
+                        D: choiceD
+                    },
+                    correctAnswer: correctAnswer,
+                    explanation: explanation
+                };
+                saveData();
+                
+                // Reset form
+                resetQuestionForm();
+                loadAdminData();
+                renderSidebar();
+                renderContent();
+                alert('Question updated successfully!');
+            }
+        }
+
+        function resetQuestionForm() {
+            document.getElementById('questionText').value = '';
+            document.getElementById('choiceA').value = '';
+            document.getElementById('choiceB').value = '';
+            document.getElementById('choiceC').value = '';
+            document.getElementById('choiceD').value = '';
+            document.getElementById('explanation').value = '';
+            document.getElementById('tableData').value = '';
+            document.getElementById('tablePreview').innerHTML = '';
+            document.getElementById('tablePreview').style.display = 'none';
+            document.getElementById('tableBuilder').style.display = 'none';
+            
+            // Reset button
+            const saveBtn = document.querySelector('#form-questions .btn-save');
+            saveBtn.textContent = 'Add Question';
+            saveBtn.onclick = addQuestion;
+        }
+
+        // Table Builder Functions
+        function generateTableBuilder() {
+            const rows = parseInt(document.getElementById('tableRows').value) || 2;
+            const cols = parseInt(document.getElementById('tableCols').value) || 2;
+            const container = document.getElementById('tableCells');
+            
+            container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+            container.innerHTML = '';
+            
+            // Generate header row first
+            for (let c = 0; c < cols; c++) {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'form-input';
+                input.placeholder = `Header ${c + 1}`;
+                input.dataset.row = '0';
+                input.dataset.col = c;
+                container.appendChild(input);
+            }
+            
+            // Generate data rows
+            for (let r = 1; r <= rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.className = 'form-input';
+                    input.placeholder = `R${r}C${c + 1}`;
+                    input.dataset.row = r;
+                    input.dataset.col = c;
+                    container.appendChild(input);
+                }
+            }
+            
+            document.getElementById('tableBuilder').style.display = 'block';
+            document.getElementById('tablePreview').style.display = 'none';
+        }
+
+        function previewTable() {
+            const rows = parseInt(document.getElementById('tableRows').value) || 2;
+            const cols = parseInt(document.getElementById('tableCols').value) || 2;
+            const inputs = document.querySelectorAll('#tableCells input');
+            
+            let tableHTML = '<table style="width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.9rem;">';
+            
+            // Header row
+            tableHTML += '<tr style="background: var(--bg-elevated);">';
+            for (let c = 0; c < cols; c++) {
+                const val = inputs[c]?.value || `Header ${c + 1}`;
+                tableHTML += `<th style="padding: 0.5rem; border: 1px solid var(--border-gold); text-align: center;">${val}</th>`;
+            }
+            tableHTML += '</tr>';
+            
+            // Data rows
+            for (let r = 1; r <= rows; r++) {
+                tableHTML += '<tr>';
+                for (let c = 0; c < cols; c++) {
+                    const idx = cols + (r - 1) * cols + c;
+                    const val = inputs[idx]?.value || '';
+                    tableHTML += `<td style="padding: 0.5rem; border: 1px solid var(--border-gold); text-align: center;">${val}</td>`;
+                }
+                tableHTML += '</tr>';
+            }
+            
+            tableHTML += '</table>';
+            
+            const preview = document.getElementById('tablePreview');
+            preview.innerHTML = tableHTML;
+            preview.style.display = 'block';
+        }
+
+        function insertTableToQuestion() {
+            const rows = parseInt(document.getElementById('tableRows').value) || 2;
+            const cols = parseInt(document.getElementById('tableCols').value) || 2;
+            const inputs = document.querySelectorAll('#tableCells input');
+            
+            let tableHTML = '<table style="width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.9rem;">';
+            
+            // Header row
+            tableHTML += '<tr style="background: var(--bg-elevated);">';
+            for (let c = 0; c < cols; c++) {
+                const val = inputs[c]?.value || `Header ${c + 1}`;
+                tableHTML += `<th style="padding: 0.5rem; border: 1px solid #d4a853; text-align: center;">${val}</th>`;
+            }
+            tableHTML += '</tr>';
+            
+            // Data rows
+            for (let r = 1; r <= rows; r++) {
+                tableHTML += '<tr>';
+                for (let c = 0; c < cols; c++) {
+                    const idx = cols + (r - 1) * cols + c;
+                    const val = inputs[idx]?.value || '';
+                    tableHTML += `<td style="padding: 0.5rem; border: 1px solid #d4a853; text-align: center;">${val}</td>`;
+                }
+                tableHTML += '</tr>';
+            }
+            
+            tableHTML += '</table>';
+            
+            // Store table data
+            document.getElementById('tableData').value = tableHTML;
+            
+            // Add to question text
+            const questionField = document.getElementById('questionText');
+            questionField.value += '\n' + tableHTML;
+            
+            alert('Table inserted into question! Click "Add Question" to save.');
+        }
+
+        // Mobile sidebar
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+            document.getElementById('sidebarOverlay').classList.toggle('open');
+        }
+
+        // Dark mode toggle (for potential light mode, but dark is default)
+        function toggleDarkMode() {
+            alert('Dark mode is default! 🌙');
+        }
+
+        // Initialize
+        initData();
+        renderSidebar();
+        renderContent();
+    </script>
+</body>
+</html>
