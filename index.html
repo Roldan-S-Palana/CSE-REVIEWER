@@ -476,7 +476,21 @@
         }
 
         .answer-content.open {
-            max-height: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .answer-content.open::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .answer-content.open::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        .answer-content.open::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 3px;
         }
 
         .answer-inner {
