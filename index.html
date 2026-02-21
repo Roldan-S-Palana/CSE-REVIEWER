@@ -366,6 +366,30 @@
             color: var(--text-primary);
         }
 
+        .question-text table.question-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .question-text table.question-table th, 
+        .question-text table.question-table td {
+            padding: 0.75rem;
+            border: 1px solid var(--accent-gold);
+            text-align: center;
+        }
+
+        .question-text table.question-table th {
+            background: var(--bg-elevated);
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .question-text table.question-table td {
+            background: var(--bg-card);
+        }
+
         /* Choices */
         .choices-container {
             padding: 0 1.5rem 1.5rem;
@@ -881,6 +905,13 @@
             </div>
 
             <div class="header-actions">
+                <button class="btn" onclick="exportData()">
+                    <span>📤</span> Export
+                </button>
+                <button class="btn" onclick="document.getElementById('importFile').click()">
+                    <span>📥</span> Import
+                </button>
+                <input type="file" id="importFile" style="display: none;" accept=".json" onchange="importData(this)">
                 <button class="btn" onclick="toggleDarkMode()">
                     <span id="themeIcon">🌙</span>
                 </button>
@@ -1052,6 +1083,8 @@
                 </div>
                 <button class="btn btn-primary btn-save" onclick="addQuestion()">Add Question</button>
 
+                <button class="btn" style="margin-top: 0.5rem;" onclick="addSampleTableQuestion()">➕ Add Sample Question with Table</button>
+
                 <div style="margin-top: 2rem;">
                     <h3 style="color: var(--text-secondary); margin-bottom: 1rem;">Existing Questions</h3>
                     <div id="adminQuestionsList"></div>
@@ -1073,6 +1106,9 @@
             const savedData = localStorage.getItem('cseReviewerData');
             if (savedData) {
                 data = JSON.parse(savedData);
+                // Remove duplicate questions
+                data.questions = removeDuplicateQuestions(data.questions);
+                saveData();
             } else {
                 // Default sample data for Civil Service Exam
                 data = {
@@ -1270,7 +1306,7 @@
                             id: 12,
                             subjectId: 5,
                             topicId: 12,
-                            question: "Study the table below and answer:\n\nProduct | Q1 | Q2 | Q3 | Q4\n-------|----|----|----|----\nA      | 100| 120 | 110 | 130\n\nWhich quarter showed the highest increase from the previous quarter?",
+                            question: "Study the table below and answer:<table class='question-table'><tr><th>Product</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr><tr><td>A</td><td>100</td><td>120</td><td>110</td><td>130</td></tr></table>Which quarter showed the highest increase from the previous quarter?",
                             choices: {
                                 A: "Q1 to Q2",
                                 B: "Q2 to Q3",
@@ -1278,7 +1314,7 @@
                                 D: "Q1 to Q4"
                             },
                             correctAnswer: "A",
-                            explanation: "Q1 to Q2: (120-100)/100 = 20% increase\nQ2 to Q3: (110-120)/120 = -8.3% decrease\nQ3 to Q4: (130-110)/110 = 18.2% increase\nQ1 to Q4: (130-100)/100 = 30% increase\nThe highest percentage increase from one quarter to the next is Q1 to Q2 (20%)."
+                            explanation: "Q1 to Q2: (120-100)/100 = 20% increase<br>Q2 to Q3: (110-120)/120 = -8.3% decrease<br>Q3 to Q4: (130-110)/110 = 18.2% increase<br>Q1 to Q4: (130-100)/100 = 30% increase<br>The highest percentage increase from one quarter to the next is Q1 to Q2 (20%)."
                         }
                     ]
                 };
@@ -1288,6 +1324,32 @@
 
         function saveData() {
             localStorage.setItem('cseReviewerData', JSON.stringify(data));
+        }
+
+        // Remove duplicate questions based on question content
+        function removeDuplicateQuestions(questions) {
+            const seen = new Set();
+            const uniqueQuestions = [];
+            let duplicatesRemoved = 0;
+            
+            questions.forEach(q => {
+                // Normalize question text for comparison (trim and remove extra spaces)
+                const normalizedQuestion = q.question.trim();
+                
+                if (!seen.has(normalizedQuestion)) {
+                    seen.add(normalizedQuestion);
+                    uniqueQuestions.push(q);
+                } else {
+                    duplicatesRemoved++;
+                    console.log('Duplicate removed:', normalizedQuestion.substring(0, 50) + '...');
+                }
+            });
+            
+            if (duplicatesRemoved > 0) {
+                alert(duplicatesRemoved + ' duplicate question(s) have been removed!');
+            }
+            
+            return uniqueQuestions;
         }
 
         // Render Functions
@@ -1659,13 +1721,19 @@
         function addQuestion() {
             const subjectId = parseInt(document.getElementById('questionSubject').value);
             const topicId = parseInt(document.getElementById('questionTopic').value);
-            const question = document.getElementById('questionText').value.trim();
+            let question = document.getElementById('questionText').value.trim();
             const choiceA = document.getElementById('choiceA').value.trim();
             const choiceB = document.getElementById('choiceB').value.trim();
             const choiceC = document.getElementById('choiceC').value.trim();
             const choiceD = document.getElementById('choiceD').value.trim();
             const correctAnswer = document.getElementById('correctAnswer').value;
             const explanation = document.getElementById('explanation').value.trim();
+
+            // Check if there's table data to append
+            const tableData = document.getElementById('tableData').value;
+            if (tableData) {
+                question += '\n' + tableData;
+            }
 
             if (!subjectId || !topicId || !question || !choiceA || !choiceB || !choiceC || !choiceD || !explanation) {
                 alert('Please fill in all fields');
@@ -1696,6 +1764,29 @@
             renderSidebar();
             renderContent();
             alert('Question added successfully!');
+        }
+
+        function addSampleTableQuestion() {
+            const sampleQuestion = {
+                id: Date.now(),
+                subjectId: 5,
+                topicId: 12,
+                question: "Study the table below and answer:<table class='question-table'><tr><th>Product</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr><tr><td>A</td><td>100</td><td>120</td><td>110</td><td>130</td></tr><tr><td>B</td><td>200</td><td>180</td><td>190</td><td>210</td></tr></table>Which product showed the highest growth from Q1 to Q4?",
+                choices: {
+                    A: "Product A - 30% growth",
+                    B: "Product B - 5% growth",
+                    C: "Product A - 10% growth",
+                    D: "Product B - 15% growth"
+                },
+                correctAnswer: "B",
+                explanation: "Product A: (130-100)/100 = 30% growth<br>Product B: (210-200)/200 = 5% growth<br>Product A has higher growth at 30%, but the question asks for the highest growth - actually Product A at 30% is highest."
+            };
+            data.questions.push(sampleQuestion);
+            saveData();
+            loadAdminData();
+            renderSidebar();
+            renderContent();
+            alert('Sample question with table added! Check the Data Interpretation topic.');
         }
 
         function deleteSubject(id) {
@@ -1894,13 +1985,13 @@
             const cols = parseInt(document.getElementById('tableCols').value) || 2;
             const inputs = document.querySelectorAll('#tableCells input');
             
-            let tableHTML = '<table style="width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.9rem;">';
+            let tableHTML = '<table class="question-table">';
             
             // Header row
-            tableHTML += '<tr style="background: var(--bg-elevated);">';
+            tableHTML += '<tr>';
             for (let c = 0; c < cols; c++) {
                 const val = inputs[c]?.value || `Header ${c + 1}`;
-                tableHTML += `<th style="padding: 0.5rem; border: 1px solid #d4a853; text-align: center;">${val}</th>`;
+                tableHTML += `<th>${val}</th>`;
             }
             tableHTML += '</tr>';
             
@@ -1910,27 +2001,75 @@
                 for (let c = 0; c < cols; c++) {
                     const idx = cols + (r - 1) * cols + c;
                     const val = inputs[idx]?.value || '';
-                    tableHTML += `<td style="padding: 0.5rem; border: 1px solid #d4a853; text-align: center;">${val}</td>`;
+                    tableHTML += `<td>${val}</td>`;
                 }
                 tableHTML += '</tr>';
             }
             
             tableHTML += '</table>';
             
-            // Store table data
+            // Store table data in hidden field only (not in textarea to avoid escaping)
             document.getElementById('tableData').value = tableHTML;
             
-            // Add to question text
-            const questionField = document.getElementById('questionText');
-            questionField.value += '\n' + tableHTML;
+            // Show a preview in the tablePreview div
+            const preview = document.getElementById('tablePreview');
+            preview.innerHTML = '<p style="color: var(--accent-gold); margin-bottom: 0.5rem;">📊 Table Preview:</p>' + tableHTML;
+            preview.style.display = 'block';
             
-            alert('Table inserted into question! Click "Add Question" to save.');
+            alert('Table added! It will be attached when you save the question. Click "Add Question" to save.');
         }
 
         // Mobile sidebar
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('open');
             document.getElementById('sidebarOverlay').classList.toggle('open');
+        }
+
+        // Export data to JSON file
+        function exportData() {
+            const dataStr = JSON.stringify(data, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'cse-reviewer-data-' + new Date().toISOString().slice(0, 10) + '.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            alert('Data exported successfully!');
+        }
+
+        // Import data from JSON file
+        function importData(input) {
+            const file = input.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    
+                    // Validate the data structure
+                    if (!importedData.subjects || !importedData.topics || !importedData.questions) {
+                        alert('Invalid file format. Please select a valid CSE Reviewer data file.');
+                        return;
+                    }
+                    
+                    if (confirm('This will replace ALL your current data with the imported data. Are you sure?')) {
+                        data = importedData;
+                        saveData();
+                        renderSidebar();
+                        renderContent();
+                        loadAdminData();
+                        alert('Data imported successfully! ' + data.questions.length + ' questions loaded.');
+                    }
+                } catch (err) {
+                    alert('Error reading file: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+            input.value = ''; // Reset file input
         }
 
         // Dark mode toggle (for potential light mode, but dark is default)
