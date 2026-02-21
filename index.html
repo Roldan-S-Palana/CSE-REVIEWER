@@ -850,9 +850,9 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes magicGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(155, 93, 229, 0.5), 0 0 40px rgba(155, 93, 229, 0.3), inset 0 0 20px rgba(155, 93, 229, 0.1); border-color: #9b5de5; }
-            50% { box-shadow: 0 0 30px rgba(155, 93, 229, 0.8), 0 0 60px rgba(155, 93, 229, 0.5), inset 0 0 30px rgba(155, 93, 229, 0.2); border-color: #f0e6ff; }
+        @keyframes magicGlowGold {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.5), 0 0 40px rgba(212, 168, 83, 0.3), inset 0 0 20px rgba(212, 168, 83, 0.1); border-color: #d4a853; }
+            50% { box-shadow: 0 0 30px rgba(212, 168, 83, 0.8), 0 0 60px rgba(212, 168, 83, 0.5), inset 0 0 30px rgba(212, 168, 83, 0.2); border-color: #f0d78c; }
         }
 
         .question-card {
@@ -1025,7 +1025,7 @@
                     <label class="form-label">Question</label>
                     <div style="display: flex; gap: 0.5rem;">
                         <textarea class="form-textarea" id="questionText" placeholder="Enter your question here..."></textarea>
-                        <button class="btn" onclick="insertMath('questionText')" title="Insert Math" style="align-self: flex-start;">∑</button>
+                        <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f; align-self: flex-start;" onclick="insertMath('questionText')" title="Insert Math">∑</button>
                     </div>
                 </div>
 
@@ -1051,14 +1051,14 @@
                         <label class="form-label">Choice A</label>
                         <div style="display: flex; gap: 0.5rem;">
                             <input type="text" class="form-input" id="choiceA" placeholder="Option A">
-                            <button class="btn" onclick="insertMath('choiceA')" title="Insert Math">∑</button>
+                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceA')" title="Insert Math">∑</button>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Choice B</label>
                         <div style="display: flex; gap: 0.5rem;">
                             <input type="text" class="form-input" id="choiceB" placeholder="Option B">
-                            <button class="btn" onclick="insertMath('choiceB')" title="Insert Math">∑</button>
+                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceB')" title="Insert Math">∑</button>
                         </div>
                     </div>
                 </div>
@@ -1067,14 +1067,14 @@
                         <label class="form-label">Choice C</label>
                         <div style="display: flex; gap: 0.5rem;">
                             <input type="text" class="form-input" id="choiceC" placeholder="Option C">
-                            <button class="btn" onclick="insertMath('choiceC')" title="Insert Math">∑</button>
+                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceC')" title="Insert Math">∑</button>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Choice D</label>
                         <div style="display: flex; gap: 0.5rem;">
                             <input type="text" class="form-input" id="choiceD" placeholder="Option D">
-                            <button class="btn" onclick="insertMath('choiceD')" title="Insert Math">∑</button>
+                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceD')" title="Insert Math">∑</button>
                         </div>
                     </div>
                 </div>
@@ -1091,7 +1091,7 @@
                     <label class="form-label">Explanation</label>
                     <div style="display: flex; gap: 0.5rem;">
                         <textarea class="form-textarea" id="explanation" placeholder="Explain why this is the correct answer..."></textarea>
-                        <button class="btn" onclick="insertMath('explanation')" title="Insert Math" style="align-self: flex-start;">∑</button>
+                        <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f; align-self: flex-start;" onclick="insertMath('explanation')" title="Insert Math">∑</button>
                     </div>
                     <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-primary); border-radius: 6px; font-size: 0.8rem; color: var(--text-muted);">
                         <strong>💡 Formatting Tips:</strong><br>
@@ -1944,43 +1944,43 @@
             // Create math notation popup
             const popup = document.createElement('div');
             popup.id = 'mathPopup';
-            popup.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #9b5de5; border-radius: 12px; padding: 1.5rem; z-index: 9999; box-shadow: 0 0 30px rgba(155, 93, 229, 0.8), 0 0 60px rgba(155, 93, 229, 0.4), inset 0 0 30px rgba(155, 93, 229, 0.1); max-width: 350px; width: 90%; animation: magicGlow 2s ease-in-out infinite;';
+            popup.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #1a1a25 0%, #0a0a0f 100%); border: 2px solid #d4a853; border-radius: 12px; padding: 1.5rem; z-index: 9999; box-shadow: 0 0 30px rgba(212, 168, 83, 0.8), 0 0 60px rgba(212, 168, 83, 0.4), inset 0 0 30px rgba(212, 168, 83, 0.1); max-width: 350px; width: 90%; animation: magicGlowGold 2s ease-in-out infinite;';
             popup.innerHTML = `
-                <div style="margin-bottom: 0.75rem; color: #f0e6ff; font-weight: 600; text-shadow: 0 0 10px rgba(155, 93, 229, 0.8); font-family: 'Cinzel', serif; font-size: 1.1rem;">✨ Math Notation ✨</div>
+                <div style="margin-bottom: 0.75rem; color: #f0d78c; font-weight: 600; text-shadow: 0 0 10px rgba(212, 168, 83, 0.8); font-family: 'Cinzel', serif; font-size: 1.1rem;">✨ Math Notation ✨</div>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sup>2</sup>', 6)" title="Superscript (x²)">x²</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sub>2</sub>', 6)" title="Subscript (x₂)">x₂</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '√', 1)" title="Square Root">√</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '∛', 1)" title="Cube Root">∛</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '÷', 1)" title="Division">÷</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '×', 1)" title="Multiplication">×</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '±', 1)" title="Plus/Minus">±</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '≠', 1)" title="Not Equal">≠</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '≈', 1)" title="Approximately">≈</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sup>3</sup>√', 7)" title="Cube Root Symbol">∛x</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sup>4</sup>√', 7)" title="Fourth Root">⁴√x</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', 'π', 1)" title="Pi">π</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '°', 1)" title="Degree">°</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '%', 1)" title="Percent">%</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '∞', 1)" title="Infinity">∞</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>2</sup>', 6)" title="Superscript (x²)">x²</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sub>2</sub>', 6)" title="Subscript (x₂)">x₂</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '√', 1)" title="Square Root">√</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '∛', 1)" title="Cube Root">∛</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '÷', 1)" title="Division">÷</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '×', 1)" title="Multiplication">×</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '±', 1)" title="Plus/Minus">±</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '≠', 1)" title="Not Equal">≠</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '≈', 1)" title="Approximately">≈</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>3</sup>√', 7)" title="Cube Root Symbol">∛x</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>4</sup>√', 7)" title="Fourth Root">⁴√x</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', 'π', 1)" title="Pi">π</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '°', 1)" title="Degree">°</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '%', 1)" title="Percent">%</button>
+                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '∞', 1)" title="Infinity">∞</button>
                 </div>
-                <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(155, 93, 229, 0.3);">
-                    <div style="margin-bottom: 0.5rem; color: #c9b8e8; font-size: 0.85rem;">Fractions:</div>
+                <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(212, 168, 83, 0.3);">
+                    <div style="margin-bottom: 0.5rem; color: #c9a868; font-size: 0.85rem;">Fractions:</div>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;">
-                        <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>2</sub>', 14)" title="1/2">½</button>
-                        <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>3</sub>', 14)" title="1/3">⅓</button>
-                        <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>4</sub>', 14)" title="1/4">¼</button>
-                        <button class="btn" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="insertMathSymbol('${inputId}', '<sup>3</sup>⁄<sub>4</sub>', 14)" title="3/4">¾</button>
+                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>2</sub>', 14)" title="1/2">½</button>
+                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>3</sub>', 14)" title="1/3">⅓</button>
+                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>4</sub>', 14)" title="1/4">¼</button>
+                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>3</sup>⁄<sub>4</sub>', 14)" title="3/4">¾</button>
                     </div>
                 </div>
-                <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(155, 93, 229, 0.3);">
-                    <div style="margin-bottom: 0.5rem; color: #c9b8e8; font-size: 0.85rem;">Custom Power:</div>
+                <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(212, 168, 83, 0.3);">
+                    <div style="margin-bottom: 0.5rem; color: #c9a868; font-size: 0.85rem;">Custom Power:</div>
                     <div style="display: flex; gap: 0.5rem;">
-                        <input type="number" id="customPower" placeholder="Power" style="width: 60px; padding: 0.4rem; background: #1a1a2e; border: 1px solid #9b5de5; border-radius: 4px; color: #f0e6ff;">
-                        <button class="btn" style="background: linear-gradient(135deg, #9b5de5 0%, #7b4cb5 100%); border: none; color: white;" onclick="insertCustomPower('${inputId}')">Add</button>
+                        <input type="number" id="customPower" placeholder="Power" style="width: 60px; padding: 0.4rem; background: #1a1a25; border: 1px solid #d4a853; border-radius: 4px; color: #f0d78c;">
+                        <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: none; color: #0a0a0f;" onclick="insertCustomPower('${inputId}')">Add</button>
                     </div>
                 </div>
-                <button class="btn" style="margin-top: 0.75rem; width: 100%; background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%); border: 1px solid #9b5de5; color: #f0e6ff;" onclick="closeMathPopup()">Close ✕</button>
+                <button class="btn" style="margin-top: 0.75rem; width: 100%; background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="closeMathPopup()">Close ✕</button>
             `;
             
             document.body.appendChild(popup);
