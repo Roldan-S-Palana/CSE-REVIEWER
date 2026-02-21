@@ -1751,14 +1751,27 @@
             alert('Topic added successfully!');
         }
 
+        // Remove letter/number prefixes from pasted content (e.g., "a. ", "1. ", "b. ", "2. ")
+        function cleanChoiceText(text) {
+            // Remove patterns like "a. ", "b. ", "c. ", "d. " (case insensitive) at the start
+            // Also remove numbered prefixes like "1. ", "2. " up to "100. "
+            return text.replace(/^([a-dA-D]|\d{1,3})\.\s*/, '').trim();
+        }
+
+        // Clean question text (for numbered lists like "1. ", "2. " up to "100. ")
+        function cleanQuestionText(text) {
+            // Remove numbered prefixes like "1. ", "2. " up to "100. " at the start
+            return text.replace(/^\d{1,3}\.\s*/, '').trim();
+        }
+
         function addQuestion() {
             const subjectId = parseInt(document.getElementById('questionSubject').value);
             const topicId = parseInt(document.getElementById('questionTopic').value);
-            let question = convertNewlinesToBr(document.getElementById('questionText').value.trim());
-            const choiceA = document.getElementById('choiceA').value.trim();
-            const choiceB = document.getElementById('choiceB').value.trim();
-            const choiceC = document.getElementById('choiceC').value.trim();
-            const choiceD = document.getElementById('choiceD').value.trim();
+            let question = convertNewlinesToBr(cleanQuestionText(document.getElementById('questionText').value));
+            const choiceA = cleanChoiceText(document.getElementById('choiceA').value);
+            const choiceB = cleanChoiceText(document.getElementById('choiceB').value);
+            const choiceC = cleanChoiceText(document.getElementById('choiceC').value);
+            const choiceD = cleanChoiceText(document.getElementById('choiceD').value);
             const correctAnswer = document.getElementById('correctAnswer').value;
             const explanation = convertNewlinesToBr(document.getElementById('explanation').value.trim());
 
@@ -1885,11 +1898,11 @@
         function updateQuestion(id) {
             const subjectId = parseInt(document.getElementById('questionSubject').value);
             const topicId = parseInt(document.getElementById('questionTopic').value);
-            const question = convertNewlinesToBr(document.getElementById('questionText').value.trim());
-            const choiceA = document.getElementById('choiceA').value.trim();
-            const choiceB = document.getElementById('choiceB').value.trim();
-            const choiceC = document.getElementById('choiceC').value.trim();
-            const choiceD = document.getElementById('choiceD').value.trim();
+            const question = convertNewlinesToBr(cleanQuestionText(document.getElementById('questionText').value));
+            const choiceA = cleanChoiceText(document.getElementById('choiceA').value);
+            const choiceB = cleanChoiceText(document.getElementById('choiceB').value);
+            const choiceC = cleanChoiceText(document.getElementById('choiceC').value);
+            const choiceD = cleanChoiceText(document.getElementById('choiceD').value);
             const correctAnswer = document.getElementById('correctAnswer').value;
             const explanation = convertNewlinesToBr(document.getElementById('explanation').value.trim());
 
