@@ -1211,7 +1211,7 @@
                                 D: "x = 10"
                             },
                             correctAnswer: "B",
-                            explanation: "2x + 5 = 15\n2x = 15 - 5\n2x = 10\nx = 10 ÷ 2\nx = 5"
+                            explanation: "2x + 5 = 15<br>2x = 15 - 5<br>2x = 10<br>x = 10 ÷ 2<br>x = 5"
                         },
                         {
                             id: 5,
@@ -1225,7 +1225,7 @@
                                 D: "30"
                             },
                             correctAnswer: "B",
-                            explanation: "The pattern is adding consecutive odd numbers:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 9 = 26\nThe next odd number after 7 is 9."
+                            explanation: "The pattern is adding consecutive odd numbers:<br>2 + 3 = 5<br>5 + 5 = 10<br>10 + 7 = 17<br>17 + 9 = 26<br>The next odd number after 7 is 9."
                         },
                         {
                             id: 6,
@@ -1239,7 +1239,7 @@
                                 D: "6 days"
                             },
                             correctAnswer: "A",
-                            explanation: "This is an inverse proportion problem. More workers means less time.\nWorkers × Days = Constant\n3 × 8 = 6 × x\n24 = 6x\nx = 4 days"
+                            explanation: "This is an inverse proportion problem. More workers means less time.<br>Workers × Days = Constant<br>3 × 8 = 6 × x<br>24 = 6x<br>x = 4 days"
                         },
                         {
                             id: 7,
@@ -1343,6 +1343,16 @@
                 };
                 saveData();
             }
+        }
+
+        // Auto-convert newlines to <br> for textareas
+        function convertNewlinesToBr(text) {
+            return text.replace(/\n/g, '<br>');
+        }
+
+        // Convert <br> back to newlines for editing
+        function convertBrToNewlines(text) {
+            return text.replace(/<br\s*\/?>/gi, '\n');
         }
 
         function saveData() {
@@ -1744,13 +1754,13 @@
         function addQuestion() {
             const subjectId = parseInt(document.getElementById('questionSubject').value);
             const topicId = parseInt(document.getElementById('questionTopic').value);
-            let question = document.getElementById('questionText').value.trim();
+            let question = convertNewlinesToBr(document.getElementById('questionText').value.trim());
             const choiceA = document.getElementById('choiceA').value.trim();
             const choiceB = document.getElementById('choiceB').value.trim();
             const choiceC = document.getElementById('choiceC').value.trim();
             const choiceD = document.getElementById('choiceD').value.trim();
             const correctAnswer = document.getElementById('correctAnswer').value;
-            const explanation = document.getElementById('explanation').value.trim();
+            const explanation = convertNewlinesToBr(document.getElementById('explanation').value.trim());
 
             // Check if there's table data to append
             const tableData = document.getElementById('tableData').value;
@@ -1855,13 +1865,13 @@
             setTimeout(() => {
                 document.getElementById('questionTopic').value = question.topicId;
             }, 100);
-            document.getElementById('questionText').value = question.question;
+            document.getElementById('questionText').value = convertBrToNewlines(question.question);
             document.getElementById('choiceA').value = question.choices.A;
             document.getElementById('choiceB').value = question.choices.B;
             document.getElementById('choiceC').value = question.choices.C;
             document.getElementById('choiceD').value = question.choices.D;
             document.getElementById('correctAnswer').value = question.correctAnswer;
-            document.getElementById('explanation').value = question.explanation;
+            document.getElementById('explanation').value = convertBrToNewlines(question.explanation);
 
             // Change button to Update
             const saveBtn = document.querySelector('#form-questions .btn-save');
@@ -1875,13 +1885,13 @@
         function updateQuestion(id) {
             const subjectId = parseInt(document.getElementById('questionSubject').value);
             const topicId = parseInt(document.getElementById('questionTopic').value);
-            const question = document.getElementById('questionText').value.trim();
+            const question = convertNewlinesToBr(document.getElementById('questionText').value.trim());
             const choiceA = document.getElementById('choiceA').value.trim();
             const choiceB = document.getElementById('choiceB').value.trim();
             const choiceC = document.getElementById('choiceC').value.trim();
             const choiceD = document.getElementById('choiceD').value.trim();
             const correctAnswer = document.getElementById('correctAnswer').value;
-            const explanation = document.getElementById('explanation').value.trim();
+            const explanation = convertNewlinesToBr(document.getElementById('explanation').value.trim());
 
             if (!subjectId || !topicId || !question || !choiceA || !choiceB || !choiceC || !choiceD || !explanation) {
                 alert('Please fill in all fields');
