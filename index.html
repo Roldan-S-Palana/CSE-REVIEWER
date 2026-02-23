@@ -889,6 +889,173 @@
             background: var(--bg-elevated);
             color: var(--accent-gold);
         }
+
+        /* Drag and Drop Alphabetize Styles */
+        .drag-container {
+            padding: 1.5rem;
+        }
+
+        .drag-instruction {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem 1rem;
+            background: rgba(155, 93, 229, 0.1);
+            border-left: 3px solid var(--accent-purple);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .drag-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .drag-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            cursor: grab;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .drag-item:hover {
+            border-color: var(--accent-purple);
+            background: rgba(155, 93, 229, 0.1);
+            transform: translateX(5px);
+        }
+
+        .drag-item.dragging {
+            opacity: 0.5;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 20px rgba(155, 93, 229, 0.3);
+        }
+
+        .drag-item.drag-over {
+            border-color: var(--accent-purple);
+            background: rgba(155, 93, 229, 0.15);
+        }
+
+        .drag-item.correct-order {
+            border-color: var(--success);
+            background: rgba(74, 222, 128, 0.1);
+        }
+
+        .drag-item.wrong-order {
+            border-color: var(--error);
+            background: rgba(248, 113, 113, 0.1);
+        }
+
+        .drag-handle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: grab;
+        }
+
+        .drag-position {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            min-width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background: var(--bg-card);
+            color: var(--accent-purple);
+        }
+
+        .drag-item-text {
+            flex: 1;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .drag-item.correct-order .drag-position {
+            background: var(--success);
+            color: var(--bg-primary);
+        }
+
+        .drag-item.wrong-order .drag-position {
+            background: var(--error);
+            color: var(--bg-primary);
+        }
+
+        .drag-submit-btn {
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, #7b3cc7 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .drag-submit-btn:hover {
+            background: linear-gradient(135deg, #b16ef0 0%, var(--accent-purple) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(155, 93, 229, 0.4);
+        }
+
+        .drag-feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .drag-feedback.correct {
+            background: rgba(74, 222, 128, 0.15);
+            border: 1px solid var(--success);
+            color: var(--success);
+        }
+
+        .drag-feedback.wrong {
+            background: rgba(248, 113, 113, 0.15);
+            border: 1px solid var(--error);
+            color: var(--error);
+        }
+
+        .drag-answer-section {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border-radius: 8px;
+        }
+
+        .drag-answer-title {
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .drag-correct-order {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .drag-correct-order .drag-item {
+            cursor: default;
+            border-color: var(--success);
+            background: rgba(74, 222, 128, 0.1);
+        }
+
+        .drag-correct-order .drag-item:hover {
+            transform: none;
+        }
     </style>
 </head>
 <body>
@@ -1010,6 +1177,14 @@
             <!-- Add Question Form -->
             <div class="admin-form" id="form-questions">
                 <div class="form-group">
+                    <label class="form-label">Question Type</label>
+                    <select class="form-select" id="questionType" onchange="toggleQuestionFields()">
+                        <option value="multiple-choice">Multiple Choice</option>
+                        <option value="data-sufficiency">Data Sufficiency</option>
+                        <option value="alphabetize">Alphabetize (Drag & Drop)</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label class="form-label">Select Subject</label>
                     <select class="form-select" id="questionSubject" onchange="loadTopicsForQuestion()">
                         <!-- Options populated by JS -->
@@ -1023,9 +1198,12 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Question</label>
-                    <div style="display: flex; gap: 0.5rem;">
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
                         <textarea class="form-textarea" id="questionText" placeholder="Enter your question here..."></textarea>
                         <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f; align-self: flex-start;" onclick="insertMath('questionText')" title="Insert Math">∑</button>
+                    </div>
+                    <div style="padding: 0.5rem; background: var(--bg-primary); border-radius: 4px; font-size: 0.75rem; color: var(--text-muted);">
+                        💡 Tip: Number prefixes (1., 2.) and letter prefixes (A., B.) will be automatically removed when saving. Common titles (St., Mr., Ms., Dr., etc.) are preserved.
                     </div>
                 </div>
 
@@ -1046,38 +1224,98 @@
                     <input type="hidden" id="tableData" value="">
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label">Choice A</label>
-                        <div style="display: flex; gap: 0.5rem;">
-                            <input type="text" class="form-input" id="choiceA" placeholder="Option A">
-                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceA')" title="Insert Math">∑</button>
+                <!-- Multiple Choice Fields -->
+                <div id="multipleChoiceFields">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Choice A</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <input type="text" class="form-input" id="choiceA" placeholder="Option A">
+                                <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceA')" title="Insert Math">∑</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Choice B</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <input type="text" class="form-input" id="choiceB" placeholder="Option B">
+                                <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceB')" title="Insert Math">∑</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Choice B</label>
-                        <div style="display: flex; gap: 0.5rem;">
-                            <input type="text" class="form-input" id="choiceB" placeholder="Option B">
-                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceB')" title="Insert Math">∑</button>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Choice C</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <input type="text" class="form-input" id="choiceC" placeholder="Option C">
+                                <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceC')" title="Insert Math">∑</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Choice D</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <input type="text" class="form-input" id="choiceD" placeholder="Option D">
+                                <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceD')" title="Insert Math">∑</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-row">
+
+                <!-- Data Sufficiency Fields -->
+                <div id="dataSufficiencyFields" style="display: none;">
                     <div class="form-group">
-                        <label class="form-label">Choice C</label>
-                        <div style="display: flex; gap: 0.5rem;">
-                            <input type="text" class="form-input" id="choiceC" placeholder="Option C">
-                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceC')" title="Insert Math">∑</button>
+                        <label class="form-label" style="color: var(--accent-cyan);">📝 Data Sufficiency Directions</label>
+                        <div style="padding: 1rem; background: var(--bg-primary); border-radius: 6px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+                            Each data sufficiency problem consists of a question and two statements, labeled (1) and (2). You have to decide whether the data given in the statements are sufficient for answering the questions.
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Choice D</label>
+                        <label class="form-label">Statement (1)</label>
                         <div style="display: flex; gap: 0.5rem;">
-                            <input type="text" class="form-input" id="choiceD" placeholder="Option D">
-                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f;" onclick="insertMath('choiceD')" title="Insert Math">∑</button>
+                            <textarea class="form-textarea" id="statement1" placeholder="Enter the first statement..." style="min-height: 80px;"></textarea>
+                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f; align-self: flex-start;" onclick="insertMath('statement1')" title="Insert Math">∑</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Statement (2)</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <textarea class="form-textarea" id="statement2" placeholder="Enter the second statement..." style="min-height: 80px;"></textarea>
+                            <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: 1px solid #d4a853; color: #0a0a0f; align-self: flex-start;" onclick="insertMath('statement2')" title="Insert Math">∑</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Alphabetize Fields -->
+                <div id="alphabetizeFields" style="display: none;">
+                    <div class="form-group">
+                        <label class="form-label" style="color: var(--accent-purple);">📝 Alphabetize Directions</label>
+                        <div style="padding: 1rem; background: var(--bg-primary); border-radius: 6px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+                            Enter the items to be arranged in alphabetical order. Users will drag and drop to reorder them.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Items to Alphabetize (one per line)</label>
+                        <textarea class="form-textarea" id="alphabetizeItems" placeholder="Enter items to alphabetize (one per line):&#10;Apple&#10;Banana&#10;Cherry&#10;Date"></textarea>
+                        <div style="margin-top: 0.5rem; padding: 0.5rem; background: var(--bg-primary); border-radius: 4px; font-size: 0.75rem; color: var(--text-muted);">
+                            💡 Tip: You can paste items with prefixes like "a. Apple" or "1. Apple" - they'll be cleaned automatically
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Items Display Style</label>
+                        <select class="form-select" id="alphabetizeStyle">
+                            <option value="words">Words</option>
+                            <option value="names">Names</option>
+                            <option value="phrases">Phrases</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Custom Correct Order (Optional)</label>
+                        <textarea class="form-textarea" id="alphabetizeCorrectOrder" placeholder="Leave empty for auto-calculated alphabetical order&#10;Or specify the correct order (one per line):&#10;Apple&#10;Banana&#10;Cherry"></textarea>
+                        <div style="margin-top: 0.5rem; padding: 0.5rem; background: var(--bg-primary); border-radius: 4px; font-size: 0.75rem; color: var(--text-muted);">
+                            💡 Tip: Use this if you want a specific order different from alphabetical (e.g., reverse alphabetical)
+                        </div>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label class="form-label">Correct Answer</label>
                     <select class="form-select" id="correctAnswer">
@@ -1085,6 +1323,13 @@
                         <option value="B">B</option>
                         <option value="C">C</option>
                         <option value="D">D</option>
+                    </select>
+                    <select class="form-select" id="correctAnswerDS" style="display: none;">
+                        <option value="a">a. if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.</option>
+                        <option value="b">b. if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.</option>
+                        <option value="c">c. if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.</option>
+                        <option value="d">d. if each statement ALONE is sufficient.</option>
+                        <option value="e">e. if statement (1) and (2) TOGETHER are not sufficient.</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -1107,6 +1352,8 @@
                 <button class="btn btn-primary btn-save" onclick="addQuestion()">Add Question</button>
 
                 <button class="btn" style="margin-top: 0.5rem;" onclick="addSampleTableQuestion()">➕ Add Sample Question with Table</button>
+                <button class="btn" style="margin-top: 0.5rem;" onclick="addSampleDataSufficiencyQuestion()">➕ Add Sample Data Sufficiency</button>
+                <button class="btn" style="margin-top: 0.5rem;" onclick="addSampleAlphabetizeQuestion()">➕ Add Sample Alphabetize</button>
 
                 <div style="margin-top: 2rem;">
                     <h3 style="color: var(--text-secondary); margin-bottom: 1rem;">Existing Questions</h3>
@@ -1146,15 +1393,17 @@
                         { id: 1, subjectId: 1, name: 'Grammar' },
                         { id: 2, subjectId: 1, name: 'Vocabulary' },
                         { id: 3, subjectId: 1, name: 'Reading Comprehension' },
-                        { id: 4, subjectId: 2, name: 'Algebra' },
-                        { id: 5, subjectId: 2, name: 'Number Series' },
-                        { id: 6, subjectId: 2, name: 'Word Problems' },
-                        { id: 7, subjectId: 3, name: 'Grammar at Pangungusap' },
-                        { id: 8, subjectId: 3, name: 'Vocabulary' },
-                        { id: 9, subjectId: 4, name: 'Philippine Constitution' },
-                        { id: 10, subjectId: 4, name: 'Current Events' },
-                        { id: 11, subjectId: 5, name: 'Logical Reasoning' },
-                        { id: 12, subjectId: 5, name: 'Data Interpretation' }
+                        { id: 4, subjectId: 1, name: 'Alphabetizing' },
+                        { id: 5, subjectId: 2, name: 'Algebra' },
+                        { id: 6, subjectId: 2, name: 'Number Series' },
+                        { id: 7, subjectId: 2, name: 'Word Problems' },
+                        { id: 8, subjectId: 3, name: 'Grammar at Pangungusap' },
+                        { id: 9, subjectId: 3, name: 'Vocabulary' },
+                        { id: 10, subjectId: 4, name: 'Philippine Constitution' },
+                        { id: 11, subjectId: 4, name: 'Current Events' },
+                        { id: 12, subjectId: 5, name: 'Logical Reasoning' },
+                        { id: 13, subjectId: 5, name: 'Data Interpretation' },
+                        { id: 14, subjectId: 5, name: 'Data Sufficiency' }
                     ],
                     questions: [
                         {
@@ -1487,21 +1736,82 @@
             filteredQuestions.forEach((q, index) => {
                 const subject = data.subjects.find(s => s.id === q.subjectId);
                 const topic = data.topics.find(t => t.id === q.topicId);
+                const qType = q.questionType || 'multiple-choice';
+                const isDataSufficiency = qType === 'data-sufficiency';
+                const isAlphabetize = qType === 'alphabetize';
+
+                // Determine if we should use lowercase or uppercase letters
+                const choiceKeys = isDataSufficiency 
+                    ? ['a', 'b', 'c', 'd', 'e'] 
+                    : Object.keys(q.choices);
+
+                // Check if this is an alphabetize question
+                if (isAlphabetize) {
+                    const items = q.choices.items || [];
+                    const sortedItems = q.choices.sortedItems || [];
+                    
+                    contentArea.innerHTML += `
+                        <div class="question-card" id="question-${q.id}">
+                            <div class="question-header">
+                                <div>
+                                    <span class="question-number">Question ${index + 1} 📝 A-Z</span>
+                                </div>
+                                <div class="question-topic">${subject?.name || ''} • ${topic?.name || ''}</div>
+                            </div>
+                            <div class="question-text">${q.question}</div>
+                            <div class="drag-container">
+                                <div class="drag-instruction">
+                                    👆 Drag and drop the items below to arrange them in alphabetical order (A to Z), then click Submit Answer
+                                </div>
+                                <div class="drag-items-list" id="drag-list-${q.id}">
+                                    ${items.map((item, i) => `
+                                        <div class="drag-item" data-item="${item}" draggable="true" id="drag-item-${q.id}-${i}">
+                                            <span class="drag-handle">⋮⋮</span>
+                                            <span class="drag-position">${i + 1}</span>
+                                            <span class="drag-item-text">${item}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                <button class="drag-submit-btn" onclick="submitAlphabetizeAnswer(${q.id})">✅ Submit Answer</button>
+                                <div id="drag-feedback-${q.id}"></div>
+                                <div class="drag-answer-section" id="drag-answer-${q.id}" style="display: none;">
+                                    <div class="drag-answer-title">✓ Correct Alphabetical Order:</div>
+                                    <div class="drag-correct-order">
+                                        ${sortedItems.map((item, i) => `
+                                            <div class="drag-item">
+                                                <span class="drag-position">${i + 1}</span>
+                                                <span class="drag-item-text">${item}</span>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                    <div class="explanation" style="margin-top: 1rem;">
+                                        <div class="explanation-title">📚 Explanation</div>
+                                        <p class="explanation-text">${q.explanation}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Initialize drag and drop after rendering
+                    setTimeout(() => initDragAndDrop(q.id), 100);
+                    return;
+                }
 
                 contentArea.innerHTML += `
                     <div class="question-card" id="question-${q.id}">
                         <div class="question-header">
                             <div>
-                                <span class="question-number">Question ${index + 1}</span>
+                                <span class="question-number">Question ${index + 1}${isDataSufficiency ? ' 📊' : ''}</span>
                             </div>
                             <div class="question-topic">${subject?.name || ''} • ${topic?.name || ''}</div>
                         </div>
                         <div class="question-text">${q.question}</div>
                         <div class="choices-container">
-                            ${Object.entries(q.choices).map(([letter, text]) => `
+                            ${choiceKeys.map(letter => `
                                 <div class="choice" id="choice-${q.id}-${letter}" onclick="selectChoice(${q.id}, '${letter}')">
-                                    <span class="choice-letter">${letter}</span>
-                                    <span class="choice-text">${text}</span>
+                                    <span class="choice-letter">${letter.toUpperCase()}</span>
+                                    <span class="choice-text">${q.choices[letter]}</span>
                                 </div>
                             `).join('')}
                         </div>
@@ -1514,7 +1824,7 @@
                                 <div class="answer-inner">
                                     <div class="final-answer">
                                         <span class="final-answer-label">✓ CORRECT ANSWER:</span>
-                                        <span class="final-answer-value">${q.correctAnswer}</span>
+                                        <span class="final-answer-value">${q.correctAnswer.toUpperCase()}</span>
                                     </div>
                                     <div class="explanation">
                                         <div class="explanation-title">📚 Explanation</div>
@@ -1566,14 +1876,19 @@
             const selectedEl = document.getElementById(`choice-${questionId}-${letter}`);
             selectedEl.classList.add('selected');
 
-            // Show correct/wrong
-            if (letter === question.correctAnswer) {
+            // Show correct/wrong (case-insensitive comparison)
+            const correctAnswer = question.correctAnswer.toLowerCase();
+            const selectedLetter = letter.toLowerCase();
+            
+            if (selectedLetter === correctAnswer) {
                 selectedEl.classList.add('correct');
             } else {
                 selectedEl.classList.add('wrong');
-                // Also highlight correct answer
-                const correctEl = document.getElementById(`choice-${questionId}-${question.correctAnswer}`);
-                correctEl.classList.add('correct');
+                // Also highlight correct answer - find the element with the correct answer letter
+                const correctEl = document.querySelector(`#choice-${questionId}-${question.correctAnswer}`);
+                if (correctEl) {
+                    correctEl.classList.add('correct');
+                }
             }
 
             // Auto open answer
@@ -1590,6 +1905,131 @@
             const answerToggle = document.querySelector(`[onclick="toggleAnswer(${questionId})"]`);
             answerContent.classList.toggle('open');
             answerToggle.classList.toggle('open');
+        }
+
+        // Drag and Drop Functions for Alphabetize Questions
+        function initDragAndDrop(questionId) {
+            const container = document.getElementById(`drag-list-${questionId}`);
+            if (!container) return;
+
+            const items = container.querySelectorAll('.drag-item');
+            let draggedItem = null;
+
+            items.forEach(item => {
+                item.addEventListener('dragstart', function(e) {
+                    draggedItem = this;
+                    this.classList.add('dragging');
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+
+                item.addEventListener('dragend', function() {
+                    this.classList.remove('dragging');
+                    draggedItem = null;
+                    updateDragPositions(questionId);
+                });
+
+                item.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = 'move';
+                    this.classList.add('drag-over');
+                });
+
+                item.addEventListener('dragleave', function() {
+                    this.classList.remove('drag-over');
+                });
+
+                item.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('drag-over');
+                    
+                    if (draggedItem && draggedItem !== this) {
+                        const allItems = [...container.querySelectorAll('.drag-item')];
+                        const draggedIndex = allItems.indexOf(draggedItem);
+                        const dropIndex = allItems.indexOf(this);
+                        
+                        if (draggedIndex < dropIndex) {
+                            this.parentNode.insertBefore(draggedItem, this.nextSibling);
+                        } else {
+                            this.parentNode.insertBefore(draggedItem, this);
+                        }
+                    }
+                });
+
+                // Touch support for mobile
+                item.addEventListener('touchstart', function(e) {
+                    item.classList.add('dragging');
+                });
+
+                item.addEventListener('touchmove', function(e) {
+                    e.preventDefault();
+                    const touch = e.touches[0];
+                    const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+                    const dropTarget = elementBelow?.closest('.drag-item');
+                    
+                    if (dropTarget && dropTarget !== item && container.contains(dropTarget)) {
+                        const rect = dropTarget.getBoundingClientRect();
+                        const midY = rect.top + rect.height / 2;
+                        
+                        if (touch.clientY < midY) {
+                            container.insertBefore(item, dropTarget);
+                        } else {
+                            container.insertBefore(item, dropTarget.nextSibling);
+                        }
+                    }
+                });
+
+                item.addEventListener('touchend', function() {
+                    item.classList.remove('dragging');
+                    updateDragPositions(questionId);
+                });
+            });
+        }
+
+        function updateDragPositions(questionId) {
+            const container = document.getElementById(`drag-list-${questionId}`);
+            if (!container) return;
+
+            const items = container.querySelectorAll('.drag-item');
+            items.forEach((item, index) => {
+                item.querySelector('.drag-position').textContent = index + 1;
+            });
+        }
+
+        function submitAlphabetizeAnswer(questionId) {
+            const question = data.questions.find(q => q.id === questionId);
+            if (!question) return;
+
+            const container = document.getElementById(`drag-list-${questionId}`);
+            const items = container.querySelectorAll('.drag-item');
+            const userOrder = [...items].map(item => item.dataset.item);
+            const correctOrder = question.choices.sortedItems;
+
+            // Check if order is correct
+            const isCorrect = userOrder.every((item, index) => 
+                item.toLowerCase() === correctOrder[index].toLowerCase()
+            );
+
+            // Show feedback
+            const feedbackEl = document.getElementById(`drag-feedback-${questionId}`);
+            if (isCorrect) {
+                feedbackEl.innerHTML = `
+                    <div class="drag-feedback correct">
+                        🎉 Correct! You arranged the items in alphabetical order!
+                    </div>
+                `;
+                items.forEach(item => item.classList.add('correct-order'));
+            } else {
+                feedbackEl.innerHTML = `
+                    <div class="drag-feedback wrong">
+                        ❌ Not quite right. The correct order is shown below.
+                    </div>
+                `;
+                items.forEach(item => item.classList.add('wrong-order'));
+            }
+
+            // Show the answer section
+            const answerEl = document.getElementById(`drag-answer-${questionId}`);
+            answerEl.style.display = 'block';
         }
 
         // Search Function
@@ -1753,50 +2193,236 @@
 
         // Remove letter/number prefixes from pasted content (e.g., "a. ", "1. ", "b. ", "2. ")
         function cleanChoiceText(text) {
-            // Remove patterns like "a. ", "b. ", "c. ", "d. " (case insensitive) at the start
+            // First, handle common titles that shouldn't be removed (St., Mr., Ms., Dr., etc.)
+            // Check if the text starts with a title
+            const titlePattern = /^(St\.|Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Hon\.|Gov\.|Sen\.|Rep\.|Captain\.|Colonel\.|General\.|Lt\.|Pvt\.|Corp\.|Sgt\.)/i;
+            
+            if (titlePattern.test(text)) {
+                // Text starts with a title, don't remove anything
+                return text.trim();
+            }
+            
+            // Remove patterns like "a. ", "b. ", "c. ", "d. " at the start (case insensitive)
             // Also remove numbered prefixes like "1. ", "2. " up to "100. "
-            return text.replace(/^([a-dA-D]|\d{1,3})\.\s*/, '').trim();
+            let cleaned = text.replace(/^[a-zA-Z]\.\s*/, '').replace(/^\d{1,3}\.\s*/, '');
+            
+            return cleaned.trim();
         }
 
-        // Clean question text (for numbered lists like "1. ", "2. " up to "100. ")
+        // Clean question text (for numbered lists like "1. ", "2. " up to "100." and letter prefixes like "A. ", "B. ")
         function cleanQuestionText(text) {
+            // First, check for common titles that we should preserve
+            const titlePattern = /^(St\.|Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Hon\.|Gov\.|Sen\.|Rep\.|Captain\.|Colonel\.|General\.|Lt\.|Pvt\.|Corp\.|Sgt\.)/i;
+            
             // Remove numbered prefixes like "1. ", "2. " up to "100. " at the start
-            return text.replace(/^\d{1,3}\.\s*/, '').trim();
+            let cleaned = text.replace(/^\d{1,3}\.\s*/, '');
+            
+            // Check if remaining text starts with a title - if so, don't remove anything
+            if (titlePattern.test(cleaned)) {
+                return cleaned.trim();
+            }
+            
+            // Remove letter prefixes like "A. ", "B. ", "C. ", "D. " at the START of text only
+            // (case insensitive)
+            cleaned = cleaned.replace(/^[a-zA-Z]\.\s*/, '');
+            
+            return cleaned.trim();
+        }
+
+        // Clean alphabetize items (remove prefixes like "a. ", "A. ", "1. ", etc.)
+        function cleanAlphabetizeItems(text) {
+            // Common titles that should NOT be removed
+            const titlePattern = /^(St\.|Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Hon\.|Gov\.|Sen\.|Rep\.|Captain\.|Colonel\.|General\.|Lt\.|Pvt\.|Corp\.|Sgt\.)/i;
+            
+            // Split by newlines, then clean each line
+            return text.split('\n').map(line => {
+                // Check if line starts with a title
+                if (titlePattern.test(line.trim())) {
+                    return line.trim();
+                }
+                
+                // Remove patterns like "a. ", "A. ", "b. ", "B. ", "1. ", "2. " up to "100. " at the start
+                let cleaned = line.replace(/^[a-zA-Z]\.\s*/, '').replace(/^\d{1,3}\.\s*/, '');
+                
+                return cleaned.trim();
+            });
+        }
+
+        // Sort items alphabetically - ignores stop words for proper alphabetical ordering
+        function sortAlphabetically(items) {
+            const stopWords = ['for', 'of', 'and', 'the', 'a', 'an', 'in', 'on', 'at', 'to', 'from', 'by'];
+            
+            return [...items].sort((a, b) => {
+                // Extract meaningful words (without stop words) for comparison
+                const getKey = (str) => {
+                    return str.toLowerCase().split(/\s+/)
+                        .filter(word => !stopWords.includes(word))
+                        .join(' ');
+                };
+                
+                const keyA = getKey(a);
+                const keyB = getKey(b);
+                
+                return keyA.localeCompare(keyB);
+            });
+        }
+
+        // Clean Data Sufficiency statement text (for numbered lists like "1) ", "2) " up to "100) ")
+        function cleanDSText(text) {
+            // Remove numbered prefixes with parenthesis like "1) ", "2) " up to "100) " at the start
+            return text.replace(/^\d{1,3}\)\s*/, '').trim();
+        }
+
+        // Toggle between Multiple Choice, Data Sufficiency, and Alphabetize fields
+        function toggleQuestionFields() {
+            const questionType = document.getElementById('questionType').value;
+            const mcFields = document.getElementById('multipleChoiceFields');
+            const dsFields = document.getElementById('dataSufficiencyFields');
+            const alphaFields = document.getElementById('alphabetizeFields');
+            const correctAnswer = document.getElementById('correctAnswer');
+            const correctAnswerDS = document.getElementById('correctAnswerDS');
+            
+            if (questionType === 'data-sufficiency') {
+                mcFields.style.display = 'none';
+                dsFields.style.display = 'block';
+                alphaFields.style.display = 'none';
+                correctAnswer.style.display = 'none';
+                correctAnswerDS.style.display = 'block';
+            } else if (questionType === 'alphabetize') {
+                mcFields.style.display = 'none';
+                dsFields.style.display = 'none';
+                alphaFields.style.display = 'block';
+                correctAnswer.style.display = 'none';
+                correctAnswerDS.style.display = 'none';
+            } else {
+                mcFields.style.display = 'block';
+                dsFields.style.display = 'none';
+                alphaFields.style.display = 'none';
+                correctAnswer.style.display = 'block';
+                correctAnswerDS.style.display = 'none';
+            }
         }
 
         function addQuestion() {
+            const questionType = document.getElementById('questionType').value;
             const subjectId = parseInt(document.getElementById('questionSubject').value);
             const topicId = parseInt(document.getElementById('questionTopic').value);
             let question = convertNewlinesToBr(cleanQuestionText(document.getElementById('questionText').value));
-            const choiceA = cleanChoiceText(document.getElementById('choiceA').value);
-            const choiceB = cleanChoiceText(document.getElementById('choiceB').value);
-            const choiceC = cleanChoiceText(document.getElementById('choiceC').value);
-            const choiceD = cleanChoiceText(document.getElementById('choiceD').value);
-            const correctAnswer = document.getElementById('correctAnswer').value;
-            const explanation = convertNewlinesToBr(document.getElementById('explanation').value.trim());
+            
+            // Get correct answer based on question type
+            let correctAnswer;
+            let choices;
+            
+            if (questionType === 'data-sufficiency') {
+                correctAnswer = document.getElementById('correctAnswerDS').value;
+                const statement1 = convertNewlinesToBr(cleanDSText(document.getElementById('statement1').value.trim()));
+                const statement2 = convertNewlinesToBr(cleanDSText(document.getElementById('statement2').value.trim()));
+                
+                if (!statement1 || !statement2) {
+                    alert('Please fill in both statements for Data Sufficiency questions');
+                    return;
+                }
+                
+                // Build the question with statements
+                question = question + '<br><br><strong>(1)</strong> ' + statement1 + '<br><strong>(2)</strong> ' + statement2;
+                
+                // Data Sufficiency uses fixed choices
+                choices = {
+                    a: 'if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.',
+                    b: 'if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.',
+                    c: 'if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.',
+                    d: 'if each statement ALONE is sufficient.',
+                    e: 'if statement (1) and (2) TOGETHER are not sufficient.'
+                };
+            } else if (questionType === 'alphabetize') {
+                // Get items from textarea
+                const itemsText = document.getElementById('alphabetizeItems').value.trim();
+                if (!itemsText) {
+                    alert('Please enter items to alphabetize');
+                    return;
+                }
+                
+                // Clean items (remove prefixes like "a. ", "A. ", etc.)
+                let items = cleanAlphabetizeItems(itemsText);
+                items = items.filter(item => item.length > 0);
+                
+                if (items.length < 2) {
+                    alert('Please enter at least 2 items to alphabetize');
+                    return;
+                }
+                
+                // Get custom correct order if provided
+                const customOrderText = document.getElementById('alphabetizeCorrectOrder').value.trim();
+                let sortedItems;
+                
+                if (customOrderText) {
+                    // Use custom order
+                    sortedItems = cleanAlphabetizeItems(customOrderText);
+                    sortedItems = sortedItems.filter(item => item.length > 0);
+                } else {
+                    // Sort items alphabetically to get correct answer (ignoring "for" and "of")
+                    sortedItems = sortAlphabetically(items);
+                }
+                
+                // Store items in choices as an array (we'll handle this specially in rendering)
+                choices = {
+                    items: items,
+                    sortedItems: sortedItems
+                };
+                
+                // The correct answer is the sorted items joined by |
+                correctAnswer = sortedItems.join('|');
+                
+                // Add instruction to question
+                question = question + '<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>';
+            } else {
+                correctAnswer = document.getElementById('correctAnswer').value;
+                choices = {
+                    A: cleanChoiceText(document.getElementById('choiceA').value),
+                    B: cleanChoiceText(document.getElementById('choiceB').value),
+                    C: cleanChoiceText(document.getElementById('choiceC').value),
+                    D: cleanChoiceText(document.getElementById('choiceD').value)
+                };
+            }
+            
+            const explanation = convertNewlinesToBr(cleanQuestionText(document.getElementById('explanation').value.trim()));
 
             // Check if there's table data to append
             const tableData = document.getElementById('tableData').value;
             if (tableData) {
                 question += '\n' + tableData;
             }
-
-            if (!subjectId || !topicId || !question || !choiceA || !choiceB || !choiceC || !choiceD || !explanation) {
-                alert('Please fill in all fields');
-                return;
+            
+            // Validate fields based on question type
+            if (questionType === 'multiple-choice') {
+                const choiceAVal = cleanChoiceText(document.getElementById('choiceA').value);
+                const choiceBVal = cleanChoiceText(document.getElementById('choiceB').value);
+                const choiceCVal = cleanChoiceText(document.getElementById('choiceC').value);
+                const choiceDVal = cleanChoiceText(document.getElementById('choiceD').value);
+                if (!subjectId || !topicId || !question || !choiceAVal || !choiceBVal || !choiceCVal || !choiceDVal || !explanation) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+            } else if (questionType === 'alphabetize') {
+                const itemsText = document.getElementById('alphabetizeItems').value.trim();
+                if (!subjectId || !topicId || !question || !itemsText || !explanation) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+            } else {
+                if (!subjectId || !topicId || !question || !explanation) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
             }
 
             const newQuestion = {
                 id: Date.now(),
                 subjectId: subjectId,
                 topicId: topicId,
+                questionType: questionType,
                 question: question,
-                choices: {
-                    A: choiceA,
-                    B: choiceB,
-                    C: choiceC,
-                    D: choiceD
-                },
+                choices: choices,
                 correctAnswer: correctAnswer,
                 explanation: explanation
             };
@@ -1833,6 +2459,56 @@
             renderSidebar();
             renderContent();
             alert('Sample question with table added! Check the Data Interpretation topic.');
+        }
+
+        function addSampleDataSufficiencyQuestion() {
+            const sampleQuestion = {
+                id: Date.now(),
+                subjectId: 5,
+                topicId: 13,
+                questionType: 'data-sufficiency',
+                question: "By what percent was the price per kilo of chicken increased?<br><br><strong>(1)</strong> The price per kilo of chicken was increased by Php20<br><strong>(2)</strong> The price per kilo of chicken was increased by Php120",
+                choices: {
+                    a: 'if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.',
+                    b: 'if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.',
+                    c: 'if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.',
+                    d: 'if each statement ALONE is sufficient.',
+                    e: 'if statement (1) and (2) TOGETHER are not sufficient.'
+                },
+                correctAnswer: "c",
+                explanation: "Statement (1) tells us the price increased by Php20, but we don't know the original price to calculate the percentage increase. Statement (2) tells us the price increased by Php120, but again we don't know the original price. However, when we use BOTH statements together, we cannot determine the original price either - we only know the DIFFERENCE between the two price increases is Php100, but this still doesn't give us the original price. Wait, actually both statements together still don't give us the original price! Let me reconsider... Actually, the answer should be <strong>e</strong> - neither statement alone nor both together give us the original price to calculate the percentage increase.<br><br>Actually, re-reading the problem - there's no way to determine the percentage increase from either statement alone or both together without knowing the original price. The answer is <strong>e</strong>."
+            };
+            data.questions.push(sampleQuestion);
+            saveData();
+            loadAdminData();
+            renderSidebar();
+            renderContent();
+            alert('Sample Data Sufficiency question added! Check the Data Sufficiency topic.');
+        }
+
+        function addSampleAlphabetizeQuestion() {
+            const items = ['Zebra', 'Apple', 'Mango', 'Banana', 'Cherry'];
+            const sortedItems = sortAlphabetically(items);
+            
+            const sampleQuestion = {
+                id: Date.now(),
+                subjectId: 1,
+                topicId: 4,
+                questionType: 'alphabetize',
+                question: "Arrange the following words in alphabetical order:",
+                choices: {
+                    items: items,
+                    sortedItems: sortedItems
+                },
+                correctAnswer: sortedItems.join('|'),
+                explanation: "When arranging in alphabetical order (A to Z), we compare the first letters: Apple (A), Banana (B), Cherry (C), Mango (M), and Zebra (Z). The correct order is: Apple, Banana, Cherry, Mango, Zebra."
+            };
+            data.questions.push(sampleQuestion);
+            saveData();
+            loadAdminData();
+            renderSidebar();
+            renderContent();
+            alert('Sample Alphabetize question added! Check the Alphabetizing topic.');
         }
 
         function deleteSubject(id) {
@@ -1872,18 +2548,62 @@
             const question = data.questions.find(q => q.id === id);
             if (!question) return;
 
+            // Determine question type
+            const qType = question.questionType || 'multiple-choice';
+            document.getElementById('questionType').value = qType;
+            toggleQuestionFields();
+
             // Populate the form with question data
             document.getElementById('questionSubject').value = question.subjectId;
             loadTopicsForQuestion();
             setTimeout(() => {
                 document.getElementById('questionTopic').value = question.topicId;
             }, 100);
-            document.getElementById('questionText').value = convertBrToNewlines(question.question);
-            document.getElementById('choiceA').value = question.choices.A;
-            document.getElementById('choiceB').value = question.choices.B;
-            document.getElementById('choiceC').value = question.choices.C;
-            document.getElementById('choiceD').value = question.choices.D;
-            document.getElementById('correctAnswer').value = question.correctAnswer;
+            
+            // Handle question text (extract statements if Data Sufficiency)
+            if (qType === 'data-sufficiency') {
+                // Extract the main question and statements
+                const qText = question.question;
+                const statement1Match = qText.match(/<strong>\(1\)<\/strong>\s*(.*?)(?=<strong>\(2\)<\/strong>|$)/s);
+                const statement2Match = qText.match(/<strong>\(2\)<\/strong>\s*(.*)$/s);
+                
+                // Get the main question part (before the statements)
+                const mainQuestion = qText.split('<strong>')[0];
+                document.getElementById('questionText').value = convertBrToNewlines(mainQuestion);
+                
+                // Set statement values
+                document.getElementById('statement1').value = statement1Match ? convertBrToNewlines(statement1Match[1].trim()) : '';
+                document.getElementById('statement2').value = statement2Match ? convertBrToNewlines(statement2Match[1].trim()) : '';
+                
+                // Set the correct answer for Data Sufficiency
+                document.getElementById('correctAnswerDS').value = question.correctAnswer;
+            } else if (qType === 'alphabetize') {
+                // Extract main question (before the instruction)
+                const mainQuestion = question.question.split('<br><br>')[0];
+                document.getElementById('questionText').value = convertBrToNewlines(mainQuestion);
+                
+                // Set alphabetize items
+                const items = question.choices.items || [];
+                document.getElementById('alphabetizeItems').value = items.join('\n');
+                
+                // Set custom correct order if different from alphabetical
+                const sortedItems = question.choices.sortedItems || [];
+                const autoSorted = sortAlphabetically(items);
+                const isAutoSorted = sortedItems.length === autoSorted.length && 
+                    sortedItems.every((item, idx) => item.toLowerCase() === autoSorted[idx].toLowerCase());
+                
+                if (!isAutoSorted) {
+                    document.getElementById('alphabetizeCorrectOrder').value = sortedItems.join('\n');
+                }
+            } else {
+                document.getElementById('questionText').value = convertBrToNewlines(question.question);
+                document.getElementById('choiceA').value = question.choices.A || '';
+                document.getElementById('choiceB').value = question.choices.B || '';
+                document.getElementById('choiceC').value = question.choices.C || '';
+                document.getElementById('choiceD').value = question.choices.D || '';
+                document.getElementById('correctAnswer').value = question.correctAnswer;
+            }
+            
             document.getElementById('explanation').value = convertBrToNewlines(question.explanation);
 
             // Change button to Update
@@ -1896,19 +2616,114 @@
         }
 
         function updateQuestion(id) {
+            const questionType = document.getElementById('questionType').value;
             const subjectId = parseInt(document.getElementById('questionSubject').value);
             const topicId = parseInt(document.getElementById('questionTopic').value);
-            const question = convertNewlinesToBr(cleanQuestionText(document.getElementById('questionText').value));
-            const choiceA = cleanChoiceText(document.getElementById('choiceA').value);
-            const choiceB = cleanChoiceText(document.getElementById('choiceB').value);
-            const choiceC = cleanChoiceText(document.getElementById('choiceC').value);
-            const choiceD = cleanChoiceText(document.getElementById('choiceD').value);
-            const correctAnswer = document.getElementById('correctAnswer').value;
-            const explanation = convertNewlinesToBr(document.getElementById('explanation').value.trim());
+            let question = convertNewlinesToBr(cleanQuestionText(document.getElementById('questionText').value));
+            let correctAnswer;
+            let choices;
+            
+            if (questionType === 'data-sufficiency') {
+                correctAnswer = document.getElementById('correctAnswerDS').value;
+                const statement1 = convertNewlinesToBr(cleanDSText(document.getElementById('statement1').value.trim()));
+                const statement2 = convertNewlinesToBr(cleanDSText(document.getElementById('statement2').value.trim()));
+                
+                if (!statement1 || !statement2) {
+                    alert('Please fill in both statements for Data Sufficiency questions');
+                    return;
+                }
+                
+                // Build the question with statements
+                question = question + '<br><br><strong>(1)</strong> ' + statement1 + '<br><strong>(2)</strong> ' + statement2;
+                
+                // Data Sufficiency uses fixed choices
+                choices = {
+                    a: 'if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.',
+                    b: 'if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.',
+                    c: 'if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.',
+                    d: 'if each statement ALONE is sufficient.',
+                    e: 'if statement (1) and (2) TOGETHER are not sufficient.'
+                };
+            } else if (questionType === 'alphabetize') {
+                // Get items from textarea
+                const itemsText = document.getElementById('alphabetizeItems').value.trim();
+                if (!itemsText) {
+                    alert('Please enter items to alphabetize');
+                    return;
+                }
+                
+                // Clean items (remove prefixes like "a. ", "A. ", etc.)
+                let items = cleanAlphabetizeItems(itemsText);
+                items = items.filter(item => item.length > 0);
+                
+                if (items.length < 2) {
+                    alert('Please enter at least 2 items to alphabetize');
+                    return;
+                }
+                
+                // Get custom correct order if provided
+                const customOrderText = document.getElementById('alphabetizeCorrectOrder').value.trim();
+                let sortedItems;
+                
+                if (customOrderText) {
+                    // Use custom order
+                    sortedItems = cleanAlphabetizeItems(customOrderText);
+                    sortedItems = sortedItems.filter(item => item.length > 0);
+                } else {
+                    // Sort items alphabetically to get correct answer (ignoring "for" and "of")
+                    sortedItems = sortAlphabetically(items);
+                }
+                
+                // Store items in choices as an array
+                choices = {
+                    items: items,
+                    sortedItems: sortedItems
+                };
+                
+                // The correct answer is the sorted items joined by |
+                correctAnswer = sortedItems.join('|');
+                
+                // Add instruction to question
+                question = question + '<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>';
+            } else {
+                correctAnswer = document.getElementById('correctAnswer').value;
+                choices = {
+                    A: cleanChoiceText(document.getElementById('choiceA').value),
+                    B: cleanChoiceText(document.getElementById('choiceB').value),
+                    C: cleanChoiceText(document.getElementById('choiceC').value),
+                    D: cleanChoiceText(document.getElementById('choiceD').value)
+                };
+            }
+            
+            const explanation = convertNewlinesToBr(cleanQuestionText(document.getElementById('explanation').value.trim()));
 
-            if (!subjectId || !topicId || !question || !choiceA || !choiceB || !choiceC || !choiceD || !explanation) {
-                alert('Please fill in all fields');
-                return;
+            // Check if there's table data to append
+            const tableData = document.getElementById('tableData').value;
+            if (tableData) {
+                question += '\n' + tableData;
+            }
+
+            // Validate
+            if (questionType === 'multiple-choice') {
+                const choiceAVal = cleanChoiceText(document.getElementById('choiceA').value);
+                const choiceBVal = cleanChoiceText(document.getElementById('choiceB').value);
+                const choiceCVal = cleanChoiceText(document.getElementById('choiceC').value);
+                const choiceDVal = cleanChoiceText(document.getElementById('choiceD').value);
+                if (!subjectId || !topicId || !question || !choiceAVal || !choiceBVal || !choiceCVal || !choiceDVal || !explanation) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+            } else if (questionType === 'alphabetize') {
+                const itemsText = document.getElementById('alphabetizeItems').value.trim();
+                if (!subjectId || !topicId || !question || !itemsText || !explanation) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+            } else {
+                if (!subjectId || !topicId || !question || !explanation) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
             }
 
             const questionIndex = data.questions.findIndex(q => q.id === id);
@@ -1917,13 +2732,9 @@
                     id: id,
                     subjectId: subjectId,
                     topicId: topicId,
+                    questionType: questionType,
                     question: question,
-                    choices: {
-                        A: choiceA,
-                        B: choiceB,
-                        C: choiceC,
-                        D: choiceD
-                    },
+                    choices: choices,
                     correctAnswer: correctAnswer,
                     explanation: explanation
                 };
@@ -1939,11 +2750,17 @@
         }
 
         function resetQuestionForm() {
+            document.getElementById('questionType').value = 'multiple-choice';
+            toggleQuestionFields();
             document.getElementById('questionText').value = '';
             document.getElementById('choiceA').value = '';
             document.getElementById('choiceB').value = '';
             document.getElementById('choiceC').value = '';
             document.getElementById('choiceD').value = '';
+            document.getElementById('statement1').value = '';
+            document.getElementById('statement2').value = '';
+            document.getElementById('alphabetizeItems').value = '';
+            document.getElementById('alphabetizeCorrectOrder').value = '';
             document.getElementById('explanation').value = '';
             document.getElementById('tableData').value = '';
             document.getElementById('tablePreview').innerHTML = '';
