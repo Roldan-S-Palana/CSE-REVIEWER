@@ -44,7 +44,6 @@
             line-height: 1.7;
         }
 
-        /* Background Pattern */
         body::before {
             content: '';
             position: fixed;
@@ -61,7 +60,6 @@
             z-index: -1;
         }
 
-        /* Header */
         .header {
             background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
             border-bottom: 1px solid var(--border-gold);
@@ -69,7 +67,6 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(10px);
         }
 
         .header-content {
@@ -160,7 +157,6 @@
             transform: translateY(-1px);
         }
 
-        /* Search Bar */
         .search-container {
             position: relative;
             flex: 1;
@@ -198,7 +194,6 @@
             font-size: 1rem;
         }
 
-        /* Main Content */
         .main-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -208,7 +203,6 @@
             gap: 2rem;
         }
 
-        /* Sidebar */
         .sidebar {
             position: sticky;
             top: 100px;
@@ -289,7 +283,6 @@
             color: var(--text-muted);
         }
 
-        /* Content Area */
         .content-area {
             min-width: 0;
         }
@@ -313,7 +306,6 @@
             font-size: 0.95rem;
         }
 
-        /* Question Cards */
         .question-card {
             background: var(--bg-card);
             border: 1px solid var(--border-gold);
@@ -390,7 +382,6 @@
             background: var(--bg-card);
         }
 
-        /* Choices */
         .choices-container {
             padding: 0 1.5rem 1.5rem;
             display: flex;
@@ -460,7 +451,6 @@
             line-height: 1.6;
         }
 
-        /* Answer Section */
         .answer-section {
             border-top: 1px solid var(--border-gold);
         }
@@ -564,7 +554,6 @@
             line-height: 1.7;
         }
 
-        /* Admin Panel */
         .admin-panel {
             display: none;
             position: fixed;
@@ -695,7 +684,6 @@
             margin-top: 1rem;
         }
 
-        /* Empty State */
         .empty-state {
             text-align: center;
             padding: 4rem 2rem;
@@ -712,7 +700,6 @@
             font-size: 1.1rem;
         }
 
-        /* Stats */
         .stats-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -742,7 +729,6 @@
             letter-spacing: 1px;
         }
 
-        /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -752,7 +738,6 @@
             cursor: pointer;
         }
 
-        /* Responsive */
         @media (max-width: 1024px) {
             .main-container {
                 grid-template-columns: 1fr;
@@ -844,22 +829,15 @@
             }
         }
 
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes magicGlowGold {
-            0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.5), 0 0 40px rgba(212, 168, 83, 0.3), inset 0 0 20px rgba(212, 168, 83, 0.1); border-color: #d4a853; }
-            50% { box-shadow: 0 0 30px rgba(212, 168, 83, 0.8), 0 0 60px rgba(212, 168, 83, 0.5), inset 0 0 30px rgba(212, 168, 83, 0.2); border-color: #f0d78c; }
         }
 
         .question-card {
             animation: fadeIn 0.4s ease;
         }
 
-        /* Scroll to highlight */
         .search-highlight {
             background: var(--accent-gold);
             color: var(--bg-primary);
@@ -867,7 +845,6 @@
             border-radius: 2px;
         }
 
-        /* Table Builder */
         #tableCells input {
             padding: 0.5rem;
             font-size: 0.85rem;
@@ -890,7 +867,6 @@
             color: var(--accent-gold);
         }
 
-        /* Drag and Drop Alphabetize Styles */
         .drag-container {
             padding: 1.5rem;
         }
@@ -922,6 +898,7 @@
             cursor: grab;
             transition: all 0.2s ease;
             user-select: none;
+            -webkit-user-select: none;
         }
 
         .drag-item:hover {
@@ -1056,10 +1033,25 @@
         .drag-correct-order .drag-item:hover {
             transform: none;
         }
+
+        /* Fraction styling for proper vertical alignment */
+        .question-text sup, .explanation-text sup,
+        .question-text sub, .explanation-text sub {
+            line-height: 1;
+        }
+        
+        .question-text sup.fraction, .explanation-text sup.fraction {
+            vertical-align: super;
+            font-size: 0.7em;
+        }
+        
+        .question-text sub.fraction, .explanation-text sub.fraction {
+            vertical-align: sub;
+            font-size: 0.7em;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-content">
             <div class="logo">
@@ -1094,19 +1086,15 @@
         </div>
     </header>
 
-    <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
-    <!-- Main Container -->
     <div class="main-container">
-        <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-section">
                 <div class="sidebar-header">
                     <span>📚</span> Subjects
                 </div>
                 <ul class="topic-list" id="subjectsList">
-                    <!-- Subjects will be populated here -->
                 </ul>
             </div>
 
@@ -1115,18 +1103,14 @@
                     <span>📖</span> Topics
                 </div>
                 <ul class="topic-list" id="topicsList">
-                    <!-- Topics will be populated here -->
                 </ul>
             </div>
         </aside>
 
-        <!-- Content Area -->
         <main class="content-area" id="contentArea">
-            <!-- Content will be populated here -->
         </main>
     </div>
 
-    <!-- Admin Panel -->
     <div class="admin-panel" id="adminPanel">
         <div class="admin-container">
             <div class="admin-header">
@@ -1140,7 +1124,6 @@
                 <button class="admin-tab" onclick="showAdminTab('questions')">Questions</button>
             </div>
 
-            <!-- Add Subject Form -->
             <div class="admin-form active" id="form-subjects">
                 <div class="form-group">
                     <label class="form-label">Subject Name</label>
@@ -1154,12 +1137,10 @@
                 </div>
             </div>
 
-            <!-- Add Topic Form -->
             <div class="admin-form" id="form-topics">
                 <div class="form-group">
                     <label class="form-label">Select Subject</label>
                     <select class="form-select" id="topicSubject">
-                        <!-- Options populated by JS -->
                     </select>
                 </div>
                 <div class="form-group">
@@ -1174,7 +1155,6 @@
                 </div>
             </div>
 
-            <!-- Add Question Form -->
             <div class="admin-form" id="form-questions">
                 <div class="form-group">
                     <label class="form-label">Question Type</label>
@@ -1187,13 +1167,11 @@
                 <div class="form-group">
                     <label class="form-label">Select Subject</label>
                     <select class="form-select" id="questionSubject" onchange="loadTopicsForQuestion()">
-                        <!-- Options populated by JS -->
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Select Topic</label>
                     <select class="form-select" id="questionTopic">
-                        <!-- Options populated by JS -->
                     </select>
                 </div>
                 <div class="form-group">
@@ -1207,7 +1185,6 @@
                     </div>
                 </div>
 
-                <!-- Table Builder -->
                 <div class="form-group">
                     <label class="form-label">📊 Add Table (Optional)</label>
                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
@@ -1224,7 +1201,6 @@
                     <input type="hidden" id="tableData" value="">
                 </div>
 
-                <!-- Multiple Choice Fields -->
                 <div id="multipleChoiceFields">
                     <div class="form-row">
                         <div class="form-group">
@@ -1260,7 +1236,6 @@
                     </div>
                 </div>
 
-                <!-- Data Sufficiency Fields -->
                 <div id="dataSufficiencyFields" style="display: none;">
                     <div class="form-group">
                         <label class="form-label" style="color: var(--accent-cyan);">📝 Data Sufficiency Directions</label>
@@ -1284,7 +1259,6 @@
                     </div>
                 </div>
 
-                <!-- Alphabetize Fields -->
                 <div id="alphabetizeFields" style="display: none;">
                     <div class="form-group">
                         <label class="form-label" style="color: var(--accent-purple);">📝 Alphabetize Directions</label>
@@ -1346,14 +1320,10 @@
                         • Use &lt;strong&gt; for bold text<br>
                         • Use &amp;divide; for ÷ symbol<br>
                         • Use &amp;times; for × symbol<br>
-                        • For fractions, use: &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; → ¹⁄₂
+                        • For fractions, use: &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; → ¹⁄₂ (or click the fraction buttons below)
                     </div>
                 </div>
                 <button class="btn btn-primary btn-save" onclick="addQuestion()">Add Question</button>
-
-                <button class="btn" style="margin-top: 0.5rem;" onclick="addSampleTableQuestion()">➕ Add Sample Question with Table</button>
-                <button class="btn" style="margin-top: 0.5rem;" onclick="addSampleDataSufficiencyQuestion()">➕ Add Sample Data Sufficiency</button>
-                <button class="btn" style="margin-top: 0.5rem;" onclick="addSampleAlphabetizeQuestion()">➕ Add Sample Alphabetize</button>
 
                 <div style="margin-top: 2rem;">
                     <h3 style="color: var(--text-secondary); margin-bottom: 1rem;">Existing Questions</h3>
@@ -1364,23 +1334,19 @@
     </div>
 
     <script>
-        // Data Storage
         let data = {
             subjects: [],
             topics: [],
             questions: []
         };
 
-        // Initialize with sample data
         function initData() {
             const savedData = localStorage.getItem('cseReviewerData');
             if (savedData) {
                 data = JSON.parse(savedData);
-                // Remove duplicate questions
                 data.questions = removeDuplicateQuestions(data.questions);
                 saveData();
             } else {
-                // Default sample data for Civil Service Exam
                 data = {
                     subjects: [
                         { id: 1, name: 'English' },
@@ -1594,12 +1560,10 @@
             }
         }
 
-        // Auto-convert newlines to <br> for textareas
         function convertNewlinesToBr(text) {
             return text.replace(/\n/g, '<br>');
         }
 
-        // Convert <br> back to newlines for editing
         function convertBrToNewlines(text) {
             return text.replace(/<br\s*\/?>/gi, '\n');
         }
@@ -1608,14 +1572,12 @@
             localStorage.setItem('cseReviewerData', JSON.stringify(data));
         }
 
-        // Remove duplicate questions based on question content
         function removeDuplicateQuestions(questions) {
             const seen = new Set();
             const uniqueQuestions = [];
             let duplicatesRemoved = 0;
             
             questions.forEach(q => {
-                // Normalize question text for comparison (trim and remove extra spaces)
                 const normalizedQuestion = q.question.trim();
                 
                 if (!seen.has(normalizedQuestion)) {
@@ -1623,7 +1585,6 @@
                     uniqueQuestions.push(q);
                 } else {
                     duplicatesRemoved++;
-                    console.log('Duplicate removed:', normalizedQuestion.substring(0, 50) + '...');
                 }
             });
             
@@ -1634,12 +1595,10 @@
             return uniqueQuestions;
         }
 
-        // Render Functions
         function renderSidebar() {
             const subjectsList = document.getElementById('subjectsList');
             const topicsList = document.getElementById('topicsList');
 
-            // Render subjects
             subjectsList.innerHTML = `
                 <li class="topic-item active" onclick="filterBySubject(null)">
                     <span>📚 All Subjects</span>
@@ -1656,7 +1615,6 @@
                 `;
             });
 
-            // Render topics
             topicsList.innerHTML = `
                 <li class="topic-item active" onclick="filterByTopic(null)">
                     <span>📖 All Topics</span>
@@ -1689,7 +1647,6 @@
                 filteredQuestions = filteredQuestions.filter(q => q.topicId === currentTopicFilter);
             }
 
-            // Get subject and topic names
             const subjectName = currentSubjectFilter 
                 ? data.subjects.find(s => s.id === currentSubjectFilter)?.name 
                 : 'All Subjects';
@@ -1697,7 +1654,6 @@
                 ? data.topics.find(t => t.id === currentTopicFilter)?.name 
                 : 'All Topics';
 
-            // Stats
             const totalQuestions = data.questions.length;
             const answeredQuestions = filteredQuestions.length;
 
@@ -1740,12 +1696,10 @@
                 const isDataSufficiency = qType === 'data-sufficiency';
                 const isAlphabetize = qType === 'alphabetize';
 
-                // Determine if we should use lowercase or uppercase letters
                 const choiceKeys = isDataSufficiency 
                     ? ['a', 'b', 'c', 'd', 'e'] 
                     : Object.keys(q.choices);
 
-                // Check if this is an alphabetize question
                 if (isAlphabetize) {
                     const items = q.choices.items || [];
                     const sortedItems = q.choices.sortedItems || [];
@@ -1793,7 +1747,6 @@
                         </div>
                     `;
                     
-                    // Initialize drag and drop after rendering
                     setTimeout(() => initDragAndDrop(q.id), 100);
                     return;
                 }
@@ -1838,14 +1791,12 @@
             });
         }
 
-        // Filter Functions
         function filterBySubject(subjectId) {
             currentSubjectFilter = subjectId;
             currentTopicFilter = null;
             renderSidebar();
             renderContent();
             
-            // Update active state
             document.querySelectorAll('.topic-item').forEach(item => {
                 item.classList.remove('active');
             });
@@ -1862,21 +1813,17 @@
             renderContent();
         }
 
-        // Interaction Functions
         function selectChoice(questionId, letter) {
             const question = data.questions.find(q => q.id === questionId);
             if (!question) return;
 
-            // Remove previous selections
             document.querySelectorAll(`[id^="choice-${questionId}-"]`).forEach(el => {
                 el.classList.remove('selected', 'correct', 'wrong');
             });
 
-            // Add selection class
             const selectedEl = document.getElementById(`choice-${questionId}-${letter}`);
             selectedEl.classList.add('selected');
 
-            // Show correct/wrong (case-insensitive comparison)
             const correctAnswer = question.correctAnswer.toLowerCase();
             const selectedLetter = letter.toLowerCase();
             
@@ -1884,14 +1831,12 @@
                 selectedEl.classList.add('correct');
             } else {
                 selectedEl.classList.add('wrong');
-                // Also highlight correct answer - find the element with the correct answer letter
                 const correctEl = document.querySelector(`#choice-${questionId}-${question.correctAnswer}`);
                 if (correctEl) {
                     correctEl.classList.add('correct');
                 }
             }
 
-            // Auto open answer
             const answerContent = document.getElementById(`answer-${questionId}`);
             const answerToggle = document.querySelector(`[onclick="toggleAnswer(${questionId})"]`);
             if (!answerContent.classList.contains('open')) {
@@ -1907,7 +1852,6 @@
             answerToggle.classList.toggle('open');
         }
 
-        // Drag and Drop Functions for Alphabetize Questions
         function initDragAndDrop(questionId) {
             const container = document.getElementById(`drag-list-${questionId}`);
             if (!container) return;
@@ -1955,7 +1899,6 @@
                     }
                 });
 
-                // Touch support for mobile
                 item.addEventListener('touchstart', function(e) {
                     item.classList.add('dragging');
                 });
@@ -2004,12 +1947,10 @@
             const userOrder = [...items].map(item => item.dataset.item);
             const correctOrder = question.choices.sortedItems;
 
-            // Check if order is correct
             const isCorrect = userOrder.every((item, index) => 
                 item.toLowerCase() === correctOrder[index].toLowerCase()
             );
 
-            // Show feedback
             const feedbackEl = document.getElementById(`drag-feedback-${questionId}`);
             if (isCorrect) {
                 feedbackEl.innerHTML = `
@@ -2027,23 +1968,19 @@
                 items.forEach(item => item.classList.add('wrong-order'));
             }
 
-            // Show the answer section
             const answerEl = document.getElementById(`drag-answer-${questionId}`);
             answerEl.style.display = 'block';
         }
 
-        // Search Function
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
             if (searchTerm.length < 2) {
-                // Reset highlights
                 document.querySelectorAll('.search-highlight').forEach(el => {
                     el.outerHTML = el.textContent;
                 });
                 return;
             }
 
-            // Filter questions by search term
             const questionCards = document.querySelectorAll('.question-card');
             questionCards.forEach(card => {
                 const text = card.textContent.toLowerCase();
@@ -2055,7 +1992,6 @@
             });
         });
 
-        // Ctrl+F focus search
         document.addEventListener('keydown', function(e) {
             if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
                 e.preventDefault();
@@ -2063,7 +1999,6 @@
             }
         });
 
-        // Admin Functions
         function openAdmin() {
             document.getElementById('adminPanel').classList.add('active');
             loadAdminData();
@@ -2080,14 +2015,12 @@
             event.target.classList.add('active');
             document.getElementById(`form-${tab}`).classList.add('active');
 
-            // Reset question form when switching to questions tab
             if (tab === 'questions') {
                 resetQuestionForm();
             }
         }
 
         function loadAdminData() {
-            // Load subjects for dropdowns
             const subjectSelects = ['topicSubject', 'questionSubject'];
             subjectSelects.forEach(id => {
                 const select = document.getElementById(id);
@@ -2097,7 +2030,6 @@
                 });
             });
 
-            // Load admin subjects list
             const adminSubjectsList = document.getElementById('adminSubjectsList');
             adminSubjectsList.innerHTML = data.subjects.map(s => `
                 <div class="topic-item">
@@ -2106,7 +2038,6 @@
                 </div>
             `).join('');
 
-            // Load admin topics list
             const adminTopicsList = document.getElementById('adminTopicsList');
             adminTopicsList.innerHTML = data.topics.map(t => {
                 const subject = data.subjects.find(s => s.id === t.subjectId);
@@ -2118,7 +2049,6 @@
                 `;
             }).join('');
 
-            // Load admin questions list
             const adminQuestionsList = document.getElementById('adminQuestionsList');
             adminQuestionsList.innerHTML = data.questions.map((q, index) => {
                 const subject = data.subjects.find(s => s.id === q.subjectId);
@@ -2191,69 +2121,50 @@
             alert('Topic added successfully!');
         }
 
-        // Remove letter/number prefixes from pasted content (e.g., "a. ", "1. ", "b. ", "2. ")
         function cleanChoiceText(text) {
-            // First, handle common titles that shouldn't be removed (St., Mr., Ms., Dr., etc.)
-            // Check if the text starts with a title
             const titlePattern = /^(St\.|Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Hon\.|Gov\.|Sen\.|Rep\.|Captain\.|Colonel\.|General\.|Lt\.|Pvt\.|Corp\.|Sgt\.)/i;
             
             if (titlePattern.test(text)) {
-                // Text starts with a title, don't remove anything
                 return text.trim();
             }
             
-            // Remove patterns like "a. ", "b. ", "c. ", "d. " at the start (case insensitive)
-            // Also remove numbered prefixes like "1. ", "2. " up to "100. "
             let cleaned = text.replace(/^[a-zA-Z]\.\s*/, '').replace(/^\d{1,3}\.\s*/, '');
             
             return cleaned.trim();
         }
 
-        // Clean question text (for numbered lists like "1. ", "2. " up to "100." and letter prefixes like "A. ", "B. ")
         function cleanQuestionText(text) {
-            // First, check for common titles that we should preserve
             const titlePattern = /^(St\.|Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Hon\.|Gov\.|Sen\.|Rep\.|Captain\.|Colonel\.|General\.|Lt\.|Pvt\.|Corp\.|Sgt\.)/i;
             
-            // Remove numbered prefixes like "1. ", "2. " up to "100. " at the start
             let cleaned = text.replace(/^\d{1,3}\.\s*/, '');
             
-            // Check if remaining text starts with a title - if so, don't remove anything
             if (titlePattern.test(cleaned)) {
                 return cleaned.trim();
             }
             
-            // Remove letter prefixes like "A. ", "B. ", "C. ", "D. " at the START of text only
-            // (case insensitive)
             cleaned = cleaned.replace(/^[a-zA-Z]\.\s*/, '');
             
             return cleaned.trim();
         }
 
-        // Clean alphabetize items (remove prefixes like "a. ", "A. ", "1. ", etc.)
         function cleanAlphabetizeItems(text) {
-            // Common titles that should NOT be removed
             const titlePattern = /^(St\.|Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Hon\.|Gov\.|Sen\.|Rep\.|Captain\.|Colonel\.|General\.|Lt\.|Pvt\.|Corp\.|Sgt\.)/i;
             
-            // Split by newlines, then clean each line
             return text.split('\n').map(line => {
-                // Check if line starts with a title
                 if (titlePattern.test(line.trim())) {
                     return line.trim();
                 }
                 
-                // Remove patterns like "a. ", "A. ", "b. ", "B. ", "1. ", "2. " up to "100. " at the start
                 let cleaned = line.replace(/^[a-zA-Z]\.\s*/, '').replace(/^\d{1,3}\.\s*/, '');
                 
                 return cleaned.trim();
             });
         }
 
-        // Sort items alphabetically - ignores stop words for proper alphabetical ordering
         function sortAlphabetically(items) {
             const stopWords = ['for', 'of', 'and', 'the', 'a', 'an', 'in', 'on', 'at', 'to', 'from', 'by'];
             
             return [...items].sort((a, b) => {
-                // Extract meaningful words (without stop words) for comparison
                 const getKey = (str) => {
                     return str.toLowerCase().split(/\s+/)
                         .filter(word => !stopWords.includes(word))
@@ -2267,13 +2178,10 @@
             });
         }
 
-        // Clean Data Sufficiency statement text (for numbered lists like "1) ", "2) " up to "100) ")
         function cleanDSText(text) {
-            // Remove numbered prefixes with parenthesis like "1) ", "2) " up to "100) " at the start
             return text.replace(/^\d{1,3}\)\s*/, '').trim();
         }
 
-        // Toggle between Multiple Choice, Data Sufficiency, and Alphabetize fields
         function toggleQuestionFields() {
             const questionType = document.getElementById('questionType').value;
             const mcFields = document.getElementById('multipleChoiceFields');
@@ -2309,7 +2217,6 @@
             const topicId = parseInt(document.getElementById('questionTopic').value);
             let question = convertNewlinesToBr(cleanQuestionText(document.getElementById('questionText').value));
             
-            // Get correct answer based on question type
             let correctAnswer;
             let choices;
             
@@ -2323,10 +2230,8 @@
                     return;
                 }
                 
-                // Build the question with statements
                 question = question + '<br><br><strong>(1)</strong> ' + statement1 + '<br><strong>(2)</strong> ' + statement2;
                 
-                // Data Sufficiency uses fixed choices
                 choices = {
                     a: 'if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.',
                     b: 'if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.',
@@ -2335,14 +2240,12 @@
                     e: 'if statement (1) and (2) TOGETHER are not sufficient.'
                 };
             } else if (questionType === 'alphabetize') {
-                // Get items from textarea
                 const itemsText = document.getElementById('alphabetizeItems').value.trim();
                 if (!itemsText) {
                     alert('Please enter items to alphabetize');
                     return;
                 }
                 
-                // Clean items (remove prefixes like "a. ", "A. ", etc.)
                 let items = cleanAlphabetizeItems(itemsText);
                 items = items.filter(item => item.length > 0);
                 
@@ -2351,29 +2254,23 @@
                     return;
                 }
                 
-                // Get custom correct order if provided
                 const customOrderText = document.getElementById('alphabetizeCorrectOrder').value.trim();
                 let sortedItems;
                 
                 if (customOrderText) {
-                    // Use custom order
                     sortedItems = cleanAlphabetizeItems(customOrderText);
                     sortedItems = sortedItems.filter(item => item.length > 0);
                 } else {
-                    // Sort items alphabetically to get correct answer (ignoring "for" and "of")
                     sortedItems = sortAlphabetically(items);
                 }
                 
-                // Store items in choices as an array (we'll handle this specially in rendering)
                 choices = {
                     items: items,
                     sortedItems: sortedItems
                 };
                 
-                // The correct answer is the sorted items joined by |
                 correctAnswer = sortedItems.join('|');
                 
-                // Add instruction to question
                 question = question + '<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>';
             } else {
                 correctAnswer = document.getElementById('correctAnswer').value;
@@ -2387,13 +2284,11 @@
             
             const explanation = convertNewlinesToBr(cleanQuestionText(document.getElementById('explanation').value.trim()));
 
-            // Check if there's table data to append
             const tableData = document.getElementById('tableData').value;
             if (tableData) {
                 question += '\n' + tableData;
             }
             
-            // Validate fields based on question type
             if (questionType === 'multiple-choice') {
                 const choiceAVal = cleanChoiceText(document.getElementById('choiceA').value);
                 const choiceBVal = cleanChoiceText(document.getElementById('choiceB').value);
@@ -2429,7 +2324,6 @@
             data.questions.push(newQuestion);
             saveData();
             
-            // Clear form
             resetQuestionForm();
             
             loadAdminData();
@@ -2548,45 +2442,35 @@
             const question = data.questions.find(q => q.id === id);
             if (!question) return;
 
-            // Determine question type
             const qType = question.questionType || 'multiple-choice';
             document.getElementById('questionType').value = qType;
             toggleQuestionFields();
 
-            // Populate the form with question data
             document.getElementById('questionSubject').value = question.subjectId;
             loadTopicsForQuestion();
             setTimeout(() => {
                 document.getElementById('questionTopic').value = question.topicId;
             }, 100);
             
-            // Handle question text (extract statements if Data Sufficiency)
             if (qType === 'data-sufficiency') {
-                // Extract the main question and statements
                 const qText = question.question;
                 const statement1Match = qText.match(/<strong>\(1\)<\/strong>\s*(.*?)(?=<strong>\(2\)<\/strong>|$)/s);
                 const statement2Match = qText.match(/<strong>\(2\)<\/strong>\s*(.*)$/s);
                 
-                // Get the main question part (before the statements)
                 const mainQuestion = qText.split('<strong>')[0];
                 document.getElementById('questionText').value = convertBrToNewlines(mainQuestion);
                 
-                // Set statement values
                 document.getElementById('statement1').value = statement1Match ? convertBrToNewlines(statement1Match[1].trim()) : '';
                 document.getElementById('statement2').value = statement2Match ? convertBrToNewlines(statement2Match[1].trim()) : '';
                 
-                // Set the correct answer for Data Sufficiency
                 document.getElementById('correctAnswerDS').value = question.correctAnswer;
             } else if (qType === 'alphabetize') {
-                // Extract main question (before the instruction)
                 const mainQuestion = question.question.split('<br><br>')[0];
                 document.getElementById('questionText').value = convertBrToNewlines(mainQuestion);
                 
-                // Set alphabetize items
                 const items = question.choices.items || [];
                 document.getElementById('alphabetizeItems').value = items.join('\n');
                 
-                // Set custom correct order if different from alphabetical
                 const sortedItems = question.choices.sortedItems || [];
                 const autoSorted = sortAlphabetically(items);
                 const isAutoSorted = sortedItems.length === autoSorted.length && 
@@ -2606,12 +2490,10 @@
             
             document.getElementById('explanation').value = convertBrToNewlines(question.explanation);
 
-            // Change button to Update
             const saveBtn = document.querySelector('#form-questions .btn-save');
             saveBtn.textContent = 'Update Question';
             saveBtn.onclick = () => updateQuestion(id);
 
-            // Scroll to form
             document.querySelector('#form-questions').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -2633,10 +2515,8 @@
                     return;
                 }
                 
-                // Build the question with statements
                 question = question + '<br><br><strong>(1)</strong> ' + statement1 + '<br><strong>(2)</strong> ' + statement2;
                 
-                // Data Sufficiency uses fixed choices
                 choices = {
                     a: 'if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.',
                     b: 'if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.',
@@ -2645,14 +2525,12 @@
                     e: 'if statement (1) and (2) TOGETHER are not sufficient.'
                 };
             } else if (questionType === 'alphabetize') {
-                // Get items from textarea
                 const itemsText = document.getElementById('alphabetizeItems').value.trim();
                 if (!itemsText) {
                     alert('Please enter items to alphabetize');
                     return;
                 }
                 
-                // Clean items (remove prefixes like "a. ", "A. ", etc.)
                 let items = cleanAlphabetizeItems(itemsText);
                 items = items.filter(item => item.length > 0);
                 
@@ -2661,29 +2539,23 @@
                     return;
                 }
                 
-                // Get custom correct order if provided
                 const customOrderText = document.getElementById('alphabetizeCorrectOrder').value.trim();
                 let sortedItems;
                 
                 if (customOrderText) {
-                    // Use custom order
                     sortedItems = cleanAlphabetizeItems(customOrderText);
                     sortedItems = sortedItems.filter(item => item.length > 0);
                 } else {
-                    // Sort items alphabetically to get correct answer (ignoring "for" and "of")
                     sortedItems = sortAlphabetically(items);
                 }
                 
-                // Store items in choices as an array
                 choices = {
                     items: items,
                     sortedItems: sortedItems
                 };
                 
-                // The correct answer is the sorted items joined by |
                 correctAnswer = sortedItems.join('|');
                 
-                // Add instruction to question
                 question = question + '<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>';
             } else {
                 correctAnswer = document.getElementById('correctAnswer').value;
@@ -2697,13 +2569,11 @@
             
             const explanation = convertNewlinesToBr(cleanQuestionText(document.getElementById('explanation').value.trim()));
 
-            // Check if there's table data to append
             const tableData = document.getElementById('tableData').value;
             if (tableData) {
                 question += '\n' + tableData;
             }
 
-            // Validate
             if (questionType === 'multiple-choice') {
                 const choiceAVal = cleanChoiceText(document.getElementById('choiceA').value);
                 const choiceBVal = cleanChoiceText(document.getElementById('choiceB').value);
@@ -2740,7 +2610,6 @@
                 };
                 saveData();
                 
-                // Reset form
                 resetQuestionForm();
                 loadAdminData();
                 renderSidebar();
@@ -2767,65 +2636,63 @@
             document.getElementById('tablePreview').style.display = 'none';
             document.getElementById('tableBuilder').style.display = 'none';
             
-            // Reset button
             const saveBtn = document.querySelector('#form-questions .btn-save');
             saveBtn.textContent = 'Add Question';
             saveBtn.onclick = addQuestion;
         }
 
-        // Math notation insertion function
         function insertMath(inputId) {
-            // Close any existing popup first
             closeMathPopup();
             
             const input = document.getElementById(inputId);
             if (!input) return;
             
-            // Create math notation popup
             const popup = document.createElement('div');
             popup.id = 'mathPopup';
-            popup.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #1a1a25 0%, #0a0a0f 100%); border: 2px solid #d4a853; border-radius: 12px; padding: 1.5rem; z-index: 9999; box-shadow: 0 0 30px rgba(212, 168, 83, 0.8), 0 0 60px rgba(212, 168, 83, 0.4), inset 0 0 30px rgba(212, 168, 83, 0.1); max-width: 350px; width: 90%; animation: magicGlowGold 2s ease-in-out infinite;';
+            popup.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #1a1a25 0%, #0a0a0f 100%); border: 2px solid #d4a853; border-radius: 12px; padding: 1.5rem; z-index: 9999; box-shadow: 0 0 30px rgba(212, 168, 83, 0.8); max-width: 350px; width: 90%;';
             popup.innerHTML = `
-                <div style="margin-bottom: 0.75rem; color: #f0d78c; font-weight: 600; text-shadow: 0 0 10px rgba(212, 168, 83, 0.8); font-family: 'Cinzel', serif; font-size: 1.1rem;">✨ Math Notation ✨</div>
+                <div style="margin-bottom: 0.75rem; color: #f0d78c; font-weight: 600; font-family: 'Cinzel', serif; font-size: 1.1rem;">✨ Math Notation ✨</div>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>2</sup>', 6)" title="Superscript (x²)">x²</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sub>2</sub>', 6)" title="Subscript (x₂)">x₂</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '√', 1)" title="Square Root">√</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '∛', 1)" title="Cube Root">∛</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '÷', 1)" title="Division">÷</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '×', 1)" title="Multiplication">×</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '±', 1)" title="Plus/Minus">±</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '≠', 1)" title="Not Equal">≠</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '≈', 1)" title="Approximately">≈</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>3</sup>√', 7)" title="Cube Root Symbol">∛x</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>4</sup>√', 7)" title="Fourth Root">⁴√x</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', 'π', 1)" title="Pi">π</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '°', 1)" title="Degree">°</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '%', 1)" title="Percent">%</button>
-                    <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '∞', 1)" title="Infinity">∞</button>
-                </div>
-                <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(212, 168, 83, 0.3);">
-                    <div style="margin-bottom: 0.5rem; color: #c9a868; font-size: 0.85rem;">Fractions:</div>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;">
-                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>2</sub>', 14)" title="1/2">½</button>
-                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>3</sub>', 14)" title="1/3">⅓</button>
-                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>4</sub>', 14)" title="1/4">¼</button>
-                        <button class="btn" style="background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>3</sup>⁄<sub>4</sub>', 14)" title="3/4">¾</button>
-                    </div>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>2</sup>', 6)" title="Superscript (x²)">x²</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sub>2</sub>', 6)" title="Subscript (x₂)">x₂</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '√', 1)" title="Square Root">√</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '÷', 1)" title="Division">÷</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '×', 1)" title="Multiplication">×</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '±', 1)" title="Plus/Minus">±</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '≠', 1)" title="Not Equal">≠</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '≈', 1)" title="Approximately">≈</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', 'π', 1)" title="Pi">π</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>2</sub>', 14)" title="1/2">½</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>3</sub>', 14)" title="1/3">⅓</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>4</sub>', 14)" title="1/4">¼</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>2</sup>⁄<sub>3</sub>', 14)" title="2/3">⅔</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>3</sup>⁄<sub>4</sub>', 14)" title="3/4">¾</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>5</sub>', 14)" title="1/5">⅕</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>6</sub>', 14)" title="1/6">⅙</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '<sup>1</sup>⁄<sub>8</sub>', 14)" title="1/8">⅛</button>
+                    <button class="btn" style="background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="insertMathSymbol('${inputId}', '°', 1)" title="Degree">°</button>
                 </div>
                 <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(212, 168, 83, 0.3);">
                     <div style="margin-bottom: 0.5rem; color: #c9a868; font-size: 0.85rem;">Custom Power:</div>
                     <div style="display: flex; gap: 0.5rem;">
                         <input type="number" id="customPower" placeholder="Power" style="width: 60px; padding: 0.4rem; background: #1a1a25; border: 1px solid #d4a853; border-radius: 4px; color: #f0d78c;">
-                        <button class="btn" style="background: linear-gradient(135deg, #d4a853 0%, #a67c3d 100%); border: none; color: #0a0a0f;" onclick="insertCustomPower('${inputId}')">Add</button>
+                        <button class="btn" style="background: #d4a853; border: none; color: #0a0a0f;" onclick="insertCustomPower('${inputId}')">Add</button>
                     </div>
                 </div>
-                <button class="btn" style="margin-top: 0.75rem; width: 100%; background: linear-gradient(135deg, #2a2520 0%, #1a1a25 100%); border: 1px solid #d4a853; color: #f0d78c;" onclick="closeMathPopup()">Close ✕</button>
+                <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(212, 168, 83, 0.3);">
+                    <div style="margin-bottom: 0.5rem; color: #c9a868; font-size: 0.85rem;">Custom Fraction:</div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="number" id="customFractionNum" placeholder="Num" style="width: 50px; padding: 0.4rem; background: #1a1a25; border: 1px solid #d4a853; border-radius: 4px; color: #f0d78c;">
+                        <span style="color: #f0d78c; align-self: center;">/</span>
+                        <input type="number" id="customFractionDenom" placeholder="Denom" style="width: 50px; padding: 0.4rem; background: #1a1a25; border: 1px solid #d4a853; border-radius: 4px; color: #f0d78c;">
+                        <button class="btn" style="background: #d4a853; border: none; color: #0a0a0f;" onclick="insertCustomFraction('${inputId}')">Add</button>
+                    </div>
+                </div>
+                <button class="btn" style="margin-top: 0.75rem; width: 100%; background: #2a2520; border: 1px solid #d4a853; color: #f0d78c;" onclick="closeMathPopup()">Close ✕</button>
             `;
             
             document.body.appendChild(popup);
             
-            // Close popup when clicking outside
             document.addEventListener('click', function(e) {
                 if (!popup.contains(e.target) && e.target !== input && !e.target.matches('[onclick^="insertMath"]')) {
                     closeMathPopup();
@@ -2852,6 +2719,14 @@
             }
         }
 
+        function insertCustomFraction(inputId) {
+            const num = document.getElementById('customFractionNum').value;
+            const denom = document.getElementById('customFractionDenom').value;
+            if (num && denom) {
+                insertMathSymbol(inputId, '<sup>' + num + '</sup>⁄<sub>' + denom + '</sub>', num.length + denom.length + 14);
+            }
+        }
+
         function closeMathPopup() {
             const popup = document.getElementById('mathPopup');
             if (popup) {
@@ -2859,7 +2734,6 @@
             }
         }
 
-        // Table Builder Functions
         function generateTableBuilder() {
             const rows = parseInt(document.getElementById('tableRows').value) || 2;
             const cols = parseInt(document.getElementById('tableCols').value) || 2;
@@ -2868,7 +2742,6 @@
             container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
             container.innerHTML = '';
             
-            // Generate header row first
             for (let c = 0; c < cols; c++) {
                 const input = document.createElement('input');
                 input.type = 'text';
@@ -2879,7 +2752,6 @@
                 container.appendChild(input);
             }
             
-            // Generate data rows
             for (let r = 1; r <= rows; r++) {
                 for (let c = 0; c < cols; c++) {
                     const input = document.createElement('input');
@@ -2903,7 +2775,6 @@
             
             let tableHTML = '<table style="width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.9rem;">';
             
-            // Header row
             tableHTML += '<tr style="background: var(--bg-elevated);">';
             for (let c = 0; c < cols; c++) {
                 const val = inputs[c]?.value || `Header ${c + 1}`;
@@ -2911,7 +2782,6 @@
             }
             tableHTML += '</tr>';
             
-            // Data rows
             for (let r = 1; r <= rows; r++) {
                 tableHTML += '<tr>';
                 for (let c = 0; c < cols; c++) {
@@ -2936,7 +2806,6 @@
             
             let tableHTML = '<table class="question-table">';
             
-            // Header row
             tableHTML += '<tr>';
             for (let c = 0; c < cols; c++) {
                 const val = inputs[c]?.value || `Header ${c + 1}`;
@@ -2944,7 +2813,6 @@
             }
             tableHTML += '</tr>';
             
-            // Data rows
             for (let r = 1; r <= rows; r++) {
                 tableHTML += '<tr>';
                 for (let c = 0; c < cols; c++) {
@@ -2957,10 +2825,8 @@
             
             tableHTML += '</table>';
             
-            // Store table data in hidden field only (not in textarea to avoid escaping)
             document.getElementById('tableData').value = tableHTML;
             
-            // Show a preview in the tablePreview div
             const preview = document.getElementById('tablePreview');
             preview.innerHTML = '<p style="color: var(--accent-gold); margin-bottom: 0.5rem;">📊 Table Preview:</p>' + tableHTML;
             preview.style.display = 'block';
@@ -2968,13 +2834,11 @@
             alert('Table added! It will be attached when you save the question. Click "Add Question" to save.');
         }
 
-        // Mobile sidebar
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('open');
             document.getElementById('sidebarOverlay').classList.toggle('open');
         }
 
-        // Export data to JSON file
         function exportData() {
             const dataStr = JSON.stringify(data, null, 2);
             const blob = new Blob([dataStr], { type: 'application/json' });
@@ -2989,7 +2853,6 @@
             alert('Data exported successfully!');
         }
 
-        // Import data from JSON file
         function importData(input) {
             const file = input.files[0];
             if (!file) return;
@@ -2999,7 +2862,6 @@
                 try {
                     const importedData = JSON.parse(e.target.result);
                     
-                    // Validate the data structure
                     if (!importedData.subjects || !importedData.topics || !importedData.questions) {
                         alert('Invalid file format. Please select a valid CSE Reviewer data file.');
                         return;
@@ -3018,15 +2880,13 @@
                 }
             };
             reader.readAsText(file);
-            input.value = ''; // Reset file input
+            input.value = '';
         }
 
-        // Dark mode toggle (for potential light mode, but dark is default)
         function toggleDarkMode() {
             alert('Dark mode is default! 🌙');
         }
 
-        // Initialize
         initData();
         renderSidebar();
         renderContent();

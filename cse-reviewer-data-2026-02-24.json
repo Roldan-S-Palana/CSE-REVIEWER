@@ -1,0 +1,2058 @@
+{
+  "subjects": [
+    {
+      "id": 1,
+      "name": "English"
+    },
+    {
+      "id": 2,
+      "name": "Mathematics"
+    },
+    {
+      "id": 3,
+      "name": "Filipino"
+    },
+    {
+      "id": 4,
+      "name": "General Information"
+    },
+    {
+      "id": 5,
+      "name": "Analytical Ability"
+    },
+    {
+      "id": 1771738791141,
+      "name": "Clerical Operations"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "subjectId": 1,
+      "name": "Grammar"
+    },
+    {
+      "id": 2,
+      "subjectId": 1,
+      "name": "Vocabulary"
+    },
+    {
+      "id": 3,
+      "subjectId": 1,
+      "name": "Reading Comprehension"
+    },
+    {
+      "id": 4,
+      "subjectId": 2,
+      "name": "Algebra"
+    },
+    {
+      "id": 5,
+      "subjectId": 2,
+      "name": "Number Series"
+    },
+    {
+      "id": 6,
+      "subjectId": 2,
+      "name": "Word Problems"
+    },
+    {
+      "id": 7,
+      "subjectId": 3,
+      "name": "Grammar at Pangungusap"
+    },
+    {
+      "id": 8,
+      "subjectId": 3,
+      "name": "Vocabulary"
+    },
+    {
+      "id": 9,
+      "subjectId": 4,
+      "name": "Philippine Constitution"
+    },
+    {
+      "id": 10,
+      "subjectId": 4,
+      "name": "Current Events"
+    },
+    {
+      "id": 11,
+      "subjectId": 5,
+      "name": "Logical Reasoning"
+    },
+    {
+      "id": 12,
+      "subjectId": 5,
+      "name": "Data Interpretation"
+    },
+    {
+      "id": 1771732111873,
+      "subjectId": 2,
+      "name": "Data Sufficiency"
+    },
+    {
+      "id": 1771738822928,
+      "subjectId": 1771738791141,
+      "name": "Alphabetizing"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "subjectId": 1,
+      "topicId": 1,
+      "question": "Choose the correct sentence:",
+      "choices": {
+        "A": "She don't know the answer.",
+        "B": "She doesn't knows the answer.",
+        "C": "She doesn't know the answer.",
+        "D": "She do not knows the answer."
+      },
+      "correctAnswer": "C",
+      "explanation": "The correct form is 'doesn't know' because 'she' is a third-person singular subject, which requires 'doesn't' (does + not) followed by the base form of the verb."
+    },
+    {
+      "id": 2,
+      "subjectId": 1,
+      "topicId": 2,
+      "question": "What is the meaning of the word 'ubiquitous'?",
+      "choices": {
+        "A": "Rare or uncommon",
+        "B": "Existing or being everywhere at the same time",
+        "C": "Difficult to understand",
+        "D": "Extremely happy or joyful"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Ubiquitous' means omnipresent or existing everywhere at the same time. Example: 'Smartphones have become ubiquitous in modern society.'"
+    },
+    {
+      "id": 3,
+      "subjectId": 1,
+      "topicId": 3,
+      "question": "Read the passage and answer: The author uses the phrase 'break the ice' to mean:",
+      "choices": {
+        "A": "To make coffee",
+        "B": "To initiate conversation in a social setting",
+        "C": "To damage frozen water",
+        "D": "To end a relationship"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Break the ice' is an idiom meaning to initiate conversation or make people feel more comfortable in a social gathering. It originated from the practice of breaking ice in frozen waterways to allow ships to pass."
+    },
+    {
+      "id": 4,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Solve for x: 2x + 5 = 15",
+      "choices": {
+        "A": "x = 4",
+        "B": "x = 5",
+        "C": "x = 6",
+        "D": "x = 10"
+      },
+      "correctAnswer": "B",
+      "explanation": "2x + 5 = 15\n2x = 15 - 5\n2x = 10\nx = 10 ÷ 2\nx = 5"
+    },
+    {
+      "id": 5,
+      "subjectId": 2,
+      "topicId": 5,
+      "question": "What is the next number in the series: 2, 5, 10, 17, ?",
+      "choices": {
+        "A": "24",
+        "B": "26",
+        "C": "28",
+        "D": "30"
+      },
+      "correctAnswer": "B",
+      "explanation": "The pattern is adding consecutive odd numbers:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 9 = 26\nThe next odd number after 7 is 9."
+    },
+    {
+      "id": 6,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "If 3 workers can complete a task in 8 days, how many days will 6 workers take?",
+      "choices": {
+        "A": "4 days",
+        "B": "16 days",
+        "C": "12 days",
+        "D": "6 days"
+      },
+      "correctAnswer": "A",
+      "explanation": "This is an inverse proportion problem. More workers means less time.\nWorkers × Days = Constant\n3 × 8 = 6 × x\n24 = 6x\nx = 4 days"
+    },
+    {
+      "id": 7,
+      "subjectId": 3,
+      "topicId": 7,
+      "question": "Piliin ang wastong pangungusap:",
+      "choices": {
+        "A": "Si Maria ay mag-aaral.",
+        "B": "Si Maria ay nag-aaral.",
+        "C": "Si Maria ay nagaaral.",
+        "D": "Si Maria ay nag-aaral."
+      },
+      "correctAnswer": "B",
+      "explanation": "Ang tamang pang-ayon ng pandiwa ay 'nag-aaral' (nag + um + -an). Ginagamit ito kapag ang paksang pangungusap ay nasa kasalukuyang aspekto."
+    },
+    {
+      "id": 8,
+      "subjectId": 3,
+      "topicId": 8,
+      "question": "Ano ang kahulugan ng 'pagtitipid'?",
+      "choices": {
+        "A": "Pag gastos ng pera",
+        "B": "Maingat na paggamit ng pera o yaman",
+        "C": "Pagbibigay ng pera sa iba",
+        "D": "Pagtago ng pera"
+      },
+      "correctAnswer": "B",
+      "explanation": "Ang pagtitipid ay ang maingat na paggamit ng pera o anumang yaman upang ito ay tumagal at hindi masayang."
+    },
+    {
+      "id": 9,
+      "subjectId": 4,
+      "topicId": 9,
+      "question": "How many provinces are there in the Philippines as of 2023?",
+      "choices": {
+        "A": "81",
+        "B": "82",
+        "C": "83",
+        "D": "85"
+      },
+      "correctAnswer": "C",
+      "explanation": "As of 2023, the Philippines has 83 provinces. This was increased from 81 with the creation of Maguindanao del Norte and Maguindanao del Sur in 2022."
+    },
+    {
+      "id": 10,
+      "subjectId": 4,
+      "topicId": 9,
+      "question": "Who is the current President of the Philippines (as of 2023)?",
+      "choices": {
+        "A": "Rodrigo Duterte",
+        "B": "Ferdinand Marcos Jr.",
+        "C": "Leni Robredo",
+        "D": "Bongbong Marcos"
+      },
+      "correctAnswer": "B",
+      "explanation": "Ferdinand 'Bongbong' Marcos Jr. became the 17th President of the Philippines on May 30, 2022. He is the son of former President Ferdinand Marcos Sr."
+    },
+    {
+      "id": 11,
+      "subjectId": 5,
+      "topicId": 11,
+      "question": "All roses are flowers. Some flowers fade quickly. Therefore:",
+      "choices": {
+        "A": "All roses fade quickly",
+        "B": "Some roses fade quickly",
+        "C": "No roses fade quickly",
+        "D": "Cannot be determined"
+      },
+      "correctAnswer": "D",
+      "explanation": "This is a logical reasoning problem. We know all roses are flowers, and some flowers fade quickly. However, we cannot conclude that roses specifically are among those that fade quickly. More information is needed."
+    },
+    {
+      "id": 12,
+      "subjectId": 5,
+      "topicId": 12,
+      "question": "Study the table below and answer:\n\nProduct | Q1 | Q2 | Q3 | Q4\n-------|----|----|----|----\nA      | 100| 120 | 110 | 130\n\nWhich quarter showed the highest increase from the previous quarter?",
+      "choices": {
+        "A": "Q1 to Q2",
+        "B": "Q2 to Q3",
+        "C": "Q3 to Q4",
+        "D": "Q1 to Q4"
+      },
+      "correctAnswer": "A",
+      "explanation": "Q1 to Q2: (120-100)/100 = 20% increase\nQ2 to Q3: (110-120)/120 = -8.3% decrease\nQ3 to Q4: (130-110)/110 = 18.2% increase\nQ1 to Q4: (130-100)/100 = 30% increase\nThe highest percentage increase from one quarter to the next is Q1 to Q2 (20%)."
+    },
+    {
+      "id": 1771510888455,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "The length of a rectangle is 2cm less than twice its width. What is its width in cm, if its perimeter is 50cm?",
+      "choices": {
+        "A": "8",
+        "B": "9",
+        "C": "16",
+        "D": "25"
+      },
+      "correctAnswer": "B",
+      "explanation": "Problem:\nWidth = x cm\nLength = 2 × width − 2 = 2x − 2 cm\nPerimeter = 50 cm\n\nStep 1: Write perimeter formula\nPerimeter=2(Length+Width)\n50=2((2x−2)+x)\nCombine like terms 2x + 1x\n50=2(3x−2)\nMultiply 2 × 3x and 2 × (−2)\n50=6x−4\n\nStep 2: Solve for x\nTo cancel −4, we do the opposite operation.\n6x − 4 + 4 = 50 + 4\nLeft side:\n−4 + 4 = 0\nSo:\n6x + 0 = 6x\nRight side:\n50 + 4 = 54\nNow the equation becomes:\n6x = 54\nThat is how this line appears:\nx=54÷6=9 cm\n\n✅ Final Answer: b. 9 cm\n\n🔹 Quick Exam Shortcut\nExpress length in terms of width\nUse perimeter = 2(L + W) → solve for width ✔"
+    },
+    {
+      "id": 1771571469564,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "If 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55, then 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 = ?",
+      "choices": {
+        "A": "65",
+        "B": "155",
+        "C": "125",
+        "D": "550"
+      },
+      "correctAnswer": "B",
+      "explanation": "⚡ Fastest Technique: Pairing (Guaranteed exam win)<br> \nPair smallest with largest:<br> \n11 + 20 = 31<br> \n12 + 19 = 31<br> \n13 + 18 = 31<br> \n14 + 17 = 31<br> \n15 + 16 = 31<br> \n👉 That’s 5 pairs, each 31.<br> \nFinal:<br> \n31 × 5 = 155<br> \n✅ Answer: 155<br> \nTime: ~5 seconds ⏱️<br> \n________________________________________<br> \n🧠 Alternative Super-Short Formula (optional)<br> \nThis is an arithmetic sequence:<br> \nFirst = 11<br> \nLast = 20<br> \nCount = 10<br> \nFormula:<br> \nSum = (first + last) × count ÷ 2<br> \n= (11 + 20) × 10 ÷ 2<br> \n= 31 × 5<br> \n= 155<br> \n________________________________________<br> \n🎯 Exam Rule (memorize this)<br> \nIf numbers:<br> \ngo up by +1<br> \nare in a clean range<br> \n👉 PAIR or use the average, never brute-force."
+    },
+    {
+      "id": 1771572095937,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Evaluate: {16-(24-8)+22× 8-8}.",
+      "choices": {
+        "A": "40",
+        "B": "48",
+        "C": "48",
+        "D": "168"
+      },
+      "correctAnswer": "D",
+      "explanation": "⚡ Exam Technique: Kill the brackets first<br>\nStep 1: Parentheses<br>\n(24 − 8) = 16<br>\nNow the expression becomes:<br>\n16 − 16 + 22 × 8 − 8<br>\nStep 2: Multiplication before add/subtract<br>\n22 × 8 = 176<br>\nNow:<br>\n16 − 16 + 176 − 8<br>\nStep 3: Cancel fast<br>\n16 − 16 = 0<br>\nSo:<br>\n176 − 8 = 168<br>\n🧠 Speed Tricks Used Here<br>\nInstant cancellation (16 − 16)<br>\nBODMAS/PEMDAS awareness<br>\nAvoid unnecessary steps<br>\n🎯 Exam Tip<br>\nWhenever you see:<br>\n(something − something) that equals a nearby number<br>\nsame numbers appearing again<br>\n👉 Look for cancellations immediately — saves brain power.<br>"
+    },
+    {
+      "id": 1771572209911,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Find the product: 800 x 125.",
+      "choices": {
+        "A": "925",
+        "B": "1000",
+        "C": "10,000",
+        "D": "100,000"
+      },
+      "correctAnswer": "D",
+      "explanation": "⚡ FAST Technique (the only one you should use)<br>\nStep 1: Break 125<br>\n👉 125 = 1/8 of 1000<br>\nStep 2: Use the shortcut<br>\n800 × 125<br>\n= 800 × (1000 ÷ 8)<br>\nStep 3: Divide first (always divide before multiply)<br>\n800 ÷ 8 = 100<br>\nStep 4: Add the zeros<br>\n100 × 1000 = 100,000<br>\n✅ Answer: 100,000<br>\nTime spent: ~5 seconds <br>\n🧠 Why this works (remember this!)<br>\n125 → divide by 8, add 3 zeros<br>\n25 → divide by 4, add 2 zeros<br>\n5 → divide by 2, add 1 zero<br>\n________________________________________<br>\n🔥 More examples (same trick)<br>\n640 × 125<br>\n640 ÷ 8 = 80 → 80,000<br>\n400 × 25<br>\n400 ÷ 4 = 100 → 10,000<br>\n900 × 5<br>\n900 ÷ 2 = 450 → 4,500<br>\n________________________________________<br>\n📝 Exam Tip<br>\nIf you see:<br>\n125, 25, 5<br>\npaired with a multiple of 8 / 4 / 2<br>\n→ INSTANT calculation. No long multiplication. Ever.<br>"
+    },
+    {
+      "id": 1771572326065,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Find the quotient: 8 000   125",
+      "choices": {
+        "A": "48",
+        "B": "64",
+        "C": "80",
+        "D": "88"
+      },
+      "correctAnswer": "B",
+      "explanation": "⚡ FAST Technique (no long division)<br>\nKey idea:<br>\n125 = 1000 ÷ 8<br>\nSo dividing by 125 = multiply by 8, then divide by 1000<br>\n________________________________________<br>\nStep-by-step (mental math)<br>\n8,000 ÷ 125<br>\n= 8,000 × 8 ÷ 1000<br>\n1️⃣ Multiply first:<br>\n8,000 × 8 = 64,000<br>\n2️⃣ Remove 3 zeros:<br>\n64,000 ÷ 1000 = 64<br>\n✅ Answer: 64<br>\nTime: ~3 seconds ⏱️<br>\n________________________________________<br>\n🧠 Memory Hook<br>\n÷125 → ×8 ÷1000<br>\n÷25 → ×4 ÷100<br>\n÷5 → ×2 ÷10<br>\nIf you can see 1000 / 100 / 10, you’re golden.<br>\n________________________________________<br>\n❌ When to be careful<br>\nSame rule as before:<br>\nIf the number is not divisible cleanly<br>\nIf it creates messy decimals<br>\nExample:<br>\n7,500 ÷ 125<br>\n7,500 × 8 = 60,000 ÷ 1000 = 60 ✔ (still clean)<br>\nBut:<br>\n7,200 ÷ 125<br>\n7,200 × 8 = 57,600 ÷ 1000 = 57.6 ⚠️<br>\n________________________________________<br>\n🎯 Exam Tip<br>\nIf answers include whole numbers, this trick almost guarantees the right one.<br>\nIf choices include decimals, estimate first.<br>"
+    },
+    {
+      "id": 1771572459588,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Find the sum: 299 + 943 + 398 + 101",
+      "choices": {
+        "A": "1,531",
+        "B": "1,641",
+        "C": "1,741",
+        "D": "122,222"
+      },
+      "correctAnswer": "C",
+      "explanation": "⚡ Fast Technique: Pair to Round Numbers<br>\nLook for numbers that “complete” each other.<br>\n299 + 101 = 400<br>\n398 + 943 = 1,341<br>\nNow add:<br>\n400 + 1,341 = 1,741<br>\n✅ Answer: 1,741<br>\n________________________________________<br>\n🧠 Ultra-short exam mindset<br>\nThe moment you see:<br>\n299 (almost 300)<br>\n101 (almost 100)<br>\n👉 your brain should auto-pair them.<br>\nNo column math. No stress.<br>"
+    },
+    {
+      "id": 1771572630982,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "If 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55, then 101 + 102 + 103 + 104 + 105 + 106 + 107 + 108 + 109 + 110 = ?",
+      "choices": {
+        "A": "1,055",
+        "B": "1,065",
+        "C": "1,075",
+        "D": "5,500"
+      },
+      "correctAnswer": "A",
+      "explanation": "🎯 What’s the goal of the FIRST statement?<br>\n1 + 2 + 3 + … + 10 = 55<br>\nIts ONLY purpose is to remind you that:<br>\nthe sum of 10 consecutive numbers is 55<br>\nso you don’t need to add one-by-one again<br>\nThey’re basically saying:<br>\n“Hey, you already know the pattern. Reuse it.”<br>\n________________________________________<br>\n🧠 The Trick (this is the key idea)<br>\nLook at the second set:<br>\n101 + 102 + 103 + ... + 110<br>\nEach term is exactly 100 more than:<br>\n1 + 2 + 3 + ... + 10<br>\nSo the sum increases by:<br>\n100 × 10 = 1,000<br>\n________________________________________<br>\n⚡ Fast Solution (exam way)<br>\nStart from the given:<br>\n1 + 2 + ... + 10 = 55<br>\nAdd 100 to each of the 10 numbers:<br>\nExtra = 100 × 10 = 1,000<br>\nSo:<br>\n55 + 1,000 = 1,055<br>\n✅ Final Answer: <br>\n1,055<br>\nTime: ~5 seconds ⏱️<br>\n________________________________________<br>\n🧠 Alternative Trick (average method)<br>\nFirst number = 101<br>\nLast number = 110<br>\nAverage = (101 + 110) ÷ 2 = 105.5<br>\nCount = 10<br>\n105.5 × 10 = 1,055<br>\nSame answer ✔<br>\n________________________________________<br>\n🔥 Exam Rule to Remember<br>\nWhen they give you a simple sum in the first statement, it’s:<br>\nNOT extra info<br>\nNOT for confusion<br>\nA direct hint to scale or shift the numbers<br>\nIf numbers increase by a constant → multiply that constant by how many numbers there are.<br>"
+    },
+    {
+      "id": 1771572848746,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "What is the remainder when 192 888 is divided by 8?",
+      "choices": {
+        "A": "0",
+        "B": "4",
+        "C": "8",
+        "D": "24,111"
+      },
+      "correctAnswer": "A",
+      "explanation": "⚡ The Trick (for ÷8)<br>\nTo check divisibility by 8, you ONLY look at the last 3 digits.<br>\nWhy?<br>\nBecause 1,000 is divisible by 8, so everything before the last 3 digits doesn’t affect the remainder.<br>\n________________________________________<br>\nStep 1: Look at the last 3 digits<br>\n192,888 → 888<br>\nStep 2: Divide 888 by 8<br>\n888 ÷ 8 = 111 exactly<br>\nNo decimal, no remainder.<br>\n________________________________________<br>\n✅ Final Answer:<br>\nRemainder = 0<br>\n________________________________________<br>\n🧠 Exam Memory Hooks<br>\n÷2 → last digit<br>\n÷4 → last 2 digits<br>\n÷8 → last 3 digits<br>\nIf those digits divide cleanly → remainder 0.<br>\n________________________________________<br>\n🎯 CSC Trap Awareness<br>\nThey expect people to:<br>\nattempt long division ❌<br>\nwaste time ❌<br>\nYou just:<br>\nglance<br>\ndecide<br>\nmove on ✔<br>"
+    },
+    {
+      "id": 1771573033541,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Rounding 299,943 to the nearest thousands, the result is",
+      "choices": {
+        "A": "299 940",
+        "B": "299 000",
+        "C": "299 900",
+        "D": "300 000"
+      },
+      "correctAnswer": "D",
+      "explanation": "Here’s your text with `<br>` added at the end of each line:\n\n⚡ The Trick<br>\nWhen rounding to the nearest thousand, you:<br>\n👉 look at the hundreds digit (the digit right after the thousands).<br>\n________________________________________<br>\nStep-by-step (mental, fast)<br>\n299,943<br>\nThousands digit = 9<br>\nHundreds digit = 9 (which is ≥ 5)<br>\nSo you round UP.<br>\n________________________________________<br>\nWhat happens when you round up?<br>\n299,943 → 300,000<br>\nAll digits after the thousands become zeros.<br>\n________________________________________<br>\n✅ Final Answer:<br>\n300,000<br>\n________________________________________<br>\n🧠 Memory Rule (burn this in)<br>\nNearest 10 → look at ones<br>\nNearest 100 → look at tens<br>\nNearest 1,000 → look at hundreds<br>\n≥5 → round up<br>\n<5 → round down<br>\n________________________________________<br>\n🎯 CSC Trick Awareness<br>\nThey like using:<br>\nnumbers very close to the next thousand<br>\nlots of 9s (to trigger hesitation)<br>\nDon’t hesitate. The rule is mechanical.<br>"
+    },
+    {
+      "id": 1771573214504,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "If 23 + 28 + 37 + x + 53 = 168 and 23 + 28 + 40 + y + 50 = 120. Find the value of x – y?",
+      "choices": {
+        "A": "36",
+        "B": "40",
+        "C": "56",
+        "D": "64"
+      },
+      "correctAnswer": "B",
+      "explanation": "Problem:<br>\n23+28+37+x+53=168  23 + 28 + 37 + x + 53 = 168 23+28+37+x+53=168<br>\n23+28+40+y+50=120  23 + 28 + 40 + y + 50 = 120 23+28+40+y+50=120<br>\nFind: x−y=?x - y = ?x−y=?<br>\n________________________________________<br>\n⚡ Step 1: Sum the known numbers in each equation<br>\nFirst equation:<br>\n23 + 28 + 37 + 53 = ?<br>\n23 + 28 = 51<br>\n51 + 37 = 88<br>\n88 + 53 = 141<br>\nSo first equation:<br>\n141 + x = 168 → x = 168 - 141 = 27<br>\nSecond equation:<br>\n23 + 28 + 40 + 50 = ?<br>\n23 + 28 = 51<br>\n51 + 40 = 91<br>\n91 + 50 = 141<br>\nSo second equation:<br>\n141 + y = 120 → y = 120 - 141 = -21<br>\n________________________________________<br>\n⚡ Step 2: Subtract<br>\nx - y = 27 - (-21) = 27 + 21 = 48<br>\n✅ Answer: 48<br>\n________________________________________<br>\n🧠 Trick / Exam Shortcut<br>\nInstead of solving x and y fully, notice both sums share 23 + 28 → 51.<br>\nYou can subtract equations cleverly:<br>\n(23+28+37+x+53)−(23+28+40+y+50)=168−120(23 + 28 + 37 + x + 53) - (23 + 28 + 40 + y + 50) = 168 - 120(23+28+37+x+53)−(23+28+40+y+50)=168−120<br>\nSimplify shared numbers:<br>\n(37 + x + 53) - (40 + y + 50) = 48<br>\n(90 + x) - (90 + y) = x - y = 48<br>\nBoom ✅ — you get the answer without solving for x or y individually.<br>\n________________________________________<br>\n🔥 Exam Tip<br>\nLook for shared sums → cancel them first<br>\nThis saves 20–30 seconds<br>\nCSC loves giving “x – y” instead of x or y alone<br>"
+    },
+    {
+      "id": 1771573445402,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "398.101 is read as",
+      "choices": {
+        "A": "three hundred ninety eight, one hundred one.",
+        "B": "three hundred ninety eight and one hundred one.",
+        "C": "three hundred ninety eight and one hundred one hundredths",
+        "D": "three hundred ninety eight and one hundred one thousands"
+      },
+      "correctAnswer": "D",
+      "explanation": "Here’s your text with `<br>` added at the end of each line:\n\nCome on Just read it hahaha<br>\n⚡ Step 1: Break it down<br>\n398 → “three hundred ninety-eight”<br>\n.101 → “point one zero one” (decimal)<br>\n________________________________________<br>\nStep 2: Combine<br>\n398.101 = three hundred ninety-eight point one zero one<br>\n✅ Answer: “three hundred ninety-eight point one zero one”<br>\n________________________________________<br>\n🧠 Exam Tip / Trick<br>\nDon’t overthink — they may try to confuse with:<br>\n“hundreds” vs “thousands”<br>\ndecimals as “hundredths” (but 0.101 is “one zero one”)<br>\nJust read each digit after the decimal individually for Sub-Prof.<br>"
+    },
+    {
+      "id": 1771573625610,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A number is divisible by 8 if its last three digits is divisible by 8. Which of the following numbers is divisible by 8?",
+      "choices": {
+        "A": "9 208",
+        "B": "6 236",
+        "C": "88 254",
+        "D": "8 886"
+      },
+      "correctAnswer": "A",
+      "explanation": "Rule / Trick<br>\nA number is divisible by 8 if the last three digits form a number divisible by 8.<br>\nNo need to worry about the digits before the last three.<br>\n________________________________________<br>\nStep 1: Look at the last three digits of each option<br>\n9,208 → last three digits = 208<br>\n6,236 → last three digits = 236<br>\n88,254 → last three digits = 254<br>\n8,886 → last three digits = 886<br>\n________________________________________<br>\nStep 2: Check divisibility by 8<br>\n208 ÷ 8 = 26 → divisible ✅<br>\n236 ÷ 8 = 29.5 → not divisible ❌<br>\n254 ÷ 8 = 31.75 → not divisible ❌<br>\n886 ÷ 8 = 110.75 → not divisible ❌<br>\n________________________________________<br>\n✅ Step 3: Answer<br>\nOption a. 9,208 is divisible by 8.<br>\n________________________________________<br>\n🧠 Exam Shortcut<br>\nLook only at last 3 digits<br>\nIf divisible → ✅<br>\nOtherwise → ❌<br>\nNever try long division for the whole number.<br>"
+    },
+    {
+      "id": 1771573827966,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Which of the following statements is true?",
+      "choices": {
+        "A": "If a number is divisible by 5, then it is divisible by 10.",
+        "B": "If a number is divisible by 10, then it is divisible by 5.",
+        "C": "If a number is divisble by 3, then it is divisible by 6",
+        "D": "If a number is divisible by 4, then it is divisible by 8"
+      },
+      "correctAnswer": "B",
+      "explanation": "🧠 Exam Shortcut / Trick<br>\nAlways think “reverse the arrow”:<br>\nDivisible by bigger → smaller ✅<br>\nSmaller → bigger ❌ (not guaranteed)<br>\nExamples save you time; no need to test all numbers in your head.<br>"
+    },
+    {
+      "id": 1771643941987,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Simplify: ½ (128 – 84) – ½ (128 – 84)",
+      "choices": {
+        "A": "0",
+        "B": "20",
+        "C": "44",
+        "D": "64"
+      },
+      "correctAnswer": "C",
+      "explanation": "⚡ Step 1: Notice the repetition<br>\nYou have:<br>\n12(128−84)−12(128−84)\\frac{1}{2}(128-84) - \\frac{1}{2}(128-84)21(128−84)−21(128−84)<br>\nAnything minus itself = 0 ✅<br>\nNo need to calculate 128 − 84.<br>\n________________________________________<br>\n✅ Step 2: Answer<br>\n0<br>\n________________________________________<br>\n🧠 Trick / Exam Shortcut<br>\nLook for “A − A” patterns<br>\nDon’t waste time computing inside brackets unless necessary<br>\nCSC loves giving expressions like this to trick you into long subtraction<br>"
+    },
+    {
+      "id": 1771645309458,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Simplify: 33 1/3% of 48 + 12 ½% of 96 – 44 4/9% of 27",
+      "choices": {
+        "A": "12",
+        "B": "18",
+        "C": "24",
+        "D": "48"
+      },
+      "correctAnswer": "B",
+      "explanation": "Step 1: Convert each percent to a fraction (one by one)<br>\n33 1/3%<br>\n33 1/3=3/100  <br>\nPercent means divide by 100<br>\n33 1/3% =1/3<br>\nConvert percents to fractions<br>\n33 1/3% → 1/3<br>\n12 1/2% → 1/8<br>\n44 4/9% → 4/9<br>\n1/3×48+1/8×96-4/9×27<br>\nStep 2: Multiply each fraction<br>\n1/3× 48<br>\n48÷3=16<br>\n1/8× 96<br>\n96÷8=12<br>\n4/9× 27<br>\n27÷9=3, 3×4=12<br>\nStep 3: Add & subtract<br>\n16+12−12=16<br>\n✅ Final Answer: 16<br>\nQuick Reminder<br>\nCSC loves these fractions:<br>\nPercent\tFraction<br>\n33 1/3%\t1/3<br>\n12 1/2%\t1/8<br>\n44 4/9%\t4/9<br>\nConvert percent → fraction<br>\nMultiply → mental math<br>\nAdd/subtract → answer<br>\nThis is literally 5–10 seconds if you memorize the fractions.<br>"
+    },
+    {
+      "id": 1771666514364,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Reduce 231/1001 to its lowest terms",
+      "choices": {
+        "A": "7/11",
+        "B": "3/31",
+        "C": "3/13",
+        "D": "7/13"
+      },
+      "correctAnswer": "C",
+      "explanation": "⚡ Step 1: Know the hidden trick<br>\n👉 1001 is a famous number<br>\nIt equals:<br>\n1001 = 7 × 11 × 13<br>\nThat’s a well-known factor pattern.<br>\n________________________________________<br>\n⚡ Step 2: Factor 231<br>\nTry dividing by 7 first (easy check):<br>\n231 ÷ 7 = 33<br>\nAnd:<br>\n33 = 3 × 11<br>\nSo:<br>\n231 = 3 × 7 × 11<br>\n________________________________________<br>\n⚡ Step 3: Compare factors<br>\n231 = 3 × 7 × 11<br>\n1001 = 7 × 11 × 13<br>\nCancel common factors:<br>\nCancel 7<br>\nCancel 11<br>\nLeft with:<br>\n3 / 13<br>\n________________________________________<br>\n✅ Final Answer:<br>\nc. 3/13<br>\n________________________________________<br>\n🔥 Elimination Strategy (FAST way)<br>\nInstead of full factoring:<br>\nStep A: Notice 1001 ends with 1<br>\nSo it’s NOT divisible by:<br>\n2<br>\n5<br>\nStep B: Try small divisibility on 231<br>\n231 ÷ 7 = 33 ✔<br>\n231 ÷ 11 = 21 ✔<br>\nSo both 7 and 11 are common.<br>\nLook at answer choices:<br>\n7/11 ❌ (we cancelled both)<br>\n3/31 ❌ (31 is not a factor of 1001)<br>\n3/13 ✔ (13 is remaining factor)<br>\n7/13 ❌ (7 already cancelled)<br>\nYou can eliminate without full breakdown.<br>\n________________________________________<br>\n🧠 Big Exam Insight<br>\nCSC loves:<br>\n1001<br>\n999<br>\n144<br>\n121<br>\n625<br>\nThese numbers have nice factor patterns.<br>\nIf you memorize:<br>\n1001 = 7 × 11 × 13<br>\nYou instantly win questions like this.<br>"
+    },
+    {
+      "id": 1771667646446,
+      "subjectId": 2,
+      "topicId": 5,
+      "question": "Which of the foloowing is true?",
+      "choices": {
+        "A": "-16 > 8",
+        "B": "8/64 = ¼",
+        "C": "54 – 8   8 – 54",
+        "D": "9/117 = 1/17"
+      },
+      "correctAnswer": "C",
+      "explanation": "⚡ Option A<br>\n-16 > 8<br>\nNegative vs positive.<br>\nAny negative number is always smaller than any positive number.<br>\nSo:<br>\n-16 < 8<br>\n❌ FALSE<br>\n________________________________________<br>\n⚡ Option B<br>\n8/64 = 1/4 ?<br>\nSimplify 8/64:<br>\nDivide both by 8:<br>\n8 ÷ 8 = 1<br>\n64 ÷ 8 = 8<br>\nSo:<br>\n8/64 = 1/8<br>\nNOT 1/4 ❌<br>\n________________________________________<br>\n⚡ Option C<br>\n54 – 8 8 – 54<br>\nCompute both sides:<br>\n54 − 8 = 46<br>\n8 − 54 = -46<br>\nSo:<br>\n46 > -46<br>\nThis statement is TRUE ✔<br>\n(They forgot to print the > sign, but logically it must mean compare them.)<br>\n________________________________________<br>\n⚡ Option D<br>\n9/117 = 1/17 ?<br>\nSimplify 9/117:<br>\n117 ÷ 9 = 13<br>\nSo:<br>\n9/117 = 1/13<br>\nNOT 1/17 ❌<br>\n________________________________________<br>\n✅ Final Answer:<br>\nc<br>\n________________________________________<br>\n🔥 Elimination Strategy (fast exam way)<br>\nNegative vs positive → automatic decision<br>\n8/64 → looks like 1/8 (since 64 = 8×8)<br>\n9/117 → 117 divisible by 9 (digit sum = 9) → gives 13<br>\nThe subtraction one → compare signs<br>\nYou can eliminate 3 choices in under 20 seconds.<br>"
+    },
+    {
+      "id": 1771667942458,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "What is 25% of 228?",
+      "choices": {
+        "A": "52",
+        "B": "57",
+        "C": "54",
+        "D": "012"
+      },
+      "correctAnswer": "B",
+      "explanation": "25% means 25/100<br> <br>\nSo:<br> <br>\n25% of 228<br>\n= (25/100) × 228<br> <br>\nTrick Method (Faster Way)<br> <br>\n25% is the same as 1/4<br> <br>\nBecause:<br> <br>\n25/100 = 1/4<br> <br>\nSo now just divide 228 by 4.<br> <br>\n228 ÷ 4<br> <br>\n4 goes into 22 → 5 times (20) remainder 2<br>\nBring down 8 → 28<br>\n4 goes into 28 → 7<br> <br>\n= 57<br> <br>\nFinal Answer:<br> <br>\nb. 57<br> <br>\nQuick mental trick:<br>\n25% = divide by 4 ✔<br> <br>\nAlso breakdown<br>\n228 - > 200 / 4 = 50<br>\n228 - > 20 / 4 = 5<br>\n228 -> 8 / 4 = 2<br>\n50 + 5 + 2 = 57<br>"
+    },
+    {
+      "id": 1771668063632,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "228 is 25% of what number?",
+      "choices": {
+        "A": "52",
+        "B": "57",
+        "C": "54",
+        "D": "912"
+      },
+      "correctAnswer": "B",
+      "explanation": "25% means 25/100<br>\n<br>\nSo:<br>\n<br>\n25% of 228<br>\n= (25/100) × 228<br>\n<br>\nTrick Method (Faster Way)<br>\n<br>\n25% is the same as 1/4<br>\n<br>\nBecause:<br>\n<br>\n25/100 = 1/4<br>\n<br>\nSo now just divide 228 by 4.<br>\n<br>\n228 ÷ 4<br>\n<br>\n4 goes into 22 → 5 times (20) remainder 2<br>\nBring down 8 → 28<br>\n4 goes into 28 → 7<br>\n<br>\n= 57<br>\n<br>\nFinal Answer:<br>\n<br>\nb. 57<br>\n<br>\nQuick mental trick:<br>\n25% = divide by 4 ✔<br>\n<br>\nAlso breakdown<br>\n228 - > 200 / 4 = 50<br>\n228 - > 20 / 4 = 5<br>\n228 -> 8 / 4 = 2<br>\n50 + 5 + 2 = 57<br>"
+    },
+    {
+      "id": 1771668194549,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "168 is what percent of 672?",
+      "choices": {
+        "A": "25%",
+        "B": "50%",
+        "C": "400%",
+        "D": "80%"
+      },
+      "correctAnswer": "A",
+      "explanation": "Step 1: Simplify the fraction<br>\n168 ÷ 672 = ?<br>\nUse division trick:<br>\n168 × 4 = 672 ✅<br>\nSo:<br>\n168÷672=1/4168 ÷ 672 = 1/4168÷672=1/4 <br>\n________________________________________<br>\nStep 2: Convert fraction to percent<br>\n1/4 × 100 = 25%<br>\n________________________________________<br>\n✅ Final Answer<br>\na. 25%<br>\n________________________________________<br>\nQuick Exam Trick<br>\nIf the denominator is a multiple of the numerator:<br>\nCheck how many times numerator fits into denominator → that’s the fraction<br>\nMultiply by 100 → percent<br>\nFor example:<br>\n50 is what % of 200?<br>\n50 ÷ 200 = 1/4 → 25%<br>\n80 is what % of 160?<br>\n80 ÷ 160 = 1/2 → 50%<br>\nSuper fast mental math.<br>"
+    },
+    {
+      "id": 1771668517000,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Evaluate: 123 x 0.1 + 123 x 0.01 + 123 x 0.001",
+      "choices": {
+        "A": "13.653",
+        "B": "135.53",
+        "C": "1 356.3",
+        "D": "13 563"
+      },
+      "correctAnswer": "A",
+      "explanation": "Step 1: Multiply each term<br>\n123 × 0.1 = 12.3<br>\n123 × 0.01 = 1.23<br>\n123 × 0.001 = 0.123<br>\n________________________________________<br>\nStep 2: Add them together<br>\n12.3 + 1.23 = 13.53<br>\n13.53 + 0.123 = 13.653<br>\n________________________________________<br>\n✅ Step 3: Final Answer<br>\na. 13.653<br>\n________________________________________<br>\n🔥 Exam Shortcut<br>\nNotice the pattern:<br>\n123×0.1+0.01+0.001=123×(0.1+0.01+0.001)=123×0.111123 \\times 0.1 + 0.01 + 0.001 = 123 \\times (0.1 + 0.01 + 0.001) = 123 \\times 0.111123×0.1+0.01+0.001=123×(0.1+0.01+0.001)=123×0.111 <br>\nThen multiply:<br>\n123 × 0.111 = 13.653 ✔<br>\nSo you can either add step by step or factor out 123, whichever is faster mentally.<br>"
+    },
+    {
+      "id": 1771668615684,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Find 3 ¼ of 16",
+      "choices": {
+        "A": "7",
+        "B": "16",
+        "C": "39",
+        "D": "52"
+      },
+      "correctAnswer": "D",
+      "explanation": "Problem<br>\nFind 3 ¼ of 16<br>\n________________________________________<br>\nStep 1: Convert mixed fraction to improper fraction<br>\n3 ¼ = (3 × 4 + 1)/4 = 13/4<br>\nSo the problem becomes:<br>\n13/4×1613/4 × 1613/4×16 <br>\n________________________________________<br>\nStep 2: Multiply<br>\nMultiply numerator by 16:<br>\n13×16=20813 × 16 = 20813×16=208 <br>\nDenominator stays 4:<br>\n208÷4=52208 ÷ 4 = 52208÷4=52 <br>\n________________________________________<br>\n✅ Step 3: Final Answer<br>\nd. 52<br>\n________________________________________<br>\nQuick Exam Shortcut<br>\nMixed fraction → improper fraction<br>\nMultiply numerator by the whole number<br>\nDivide by denominator<br>\nDone!<br>\n________________________________________<br>\nFor mental math, notice:<br>\n16 ÷ 4 = 4 → 4 × 13 = 52 ✅<br>\nMuch faster mentally.<br>"
+    },
+    {
+      "id": 1771668835812,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Evaluate: 1 + ½ + ¼ + 1/8 = ?",
+      "choices": {
+        "A": "1 3/6",
+        "B": "1 3/8",
+        "C": "1 5/8",
+        "D": "1 7/8"
+      },
+      "correctAnswer": "D",
+      "explanation": "Method 1: Convert everything to eighths (common denominator = 8)<br>\n1 = 8/8<br>\n1/2 = 4/8<br>\n1/4 = 2/8<br>\n1/8 = 1/8<br>\nNow add:<br>\n8/8<br>\n4/8<br>\n2/8<br>\n1/8<br>\n= 15/8<br>\n________________________________________<br>\nConvert to mixed number<br>\n15/8 = 1 7/8<br>\n________________________________________<br>\n✅ Final Answer:<br>\nd. 1 7/8<br>\n________________________________________<br>\n🔥 Faster Mental Trick (Geometric Pattern)<br>\nNotice the pattern:<br>\n1/2 → 1/4 → 1/8<br>\nEach term is half of the previous one.<br>\nSo:<br>\n1 + 0.5 + 0.25 + 0.125<br>\n= 1.875<br>\n= 1 7/8<br>\n________________________________________<br>\nExam Insight<br>\nWhen you see:<br>\n1 + 1/2 + 1/4 + 1/8 + 1/16…<br>\nIt’s a halving pattern — the sum is always just slightly less than 2.<br>\nHere it stopped at 1/8, so answer is 1 7/8.<br>"
+    },
+    {
+      "id": 1771669017930,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Find the value of x in the equation: 3x + 7 = 28",
+      "choices": {
+        "A": "7",
+        "B": "-7",
+        "C": "±7",
+        "D": "4"
+      },
+      "correctAnswer": "A",
+      "explanation": "Step 1: Remove the +7<br>\nTo isolate 3x, subtract 7 from both sides:<br>\n3x + 7 − 7 = 28 − 7<br>\n3x = 21<br>\nStep 2: Solve for x<br>\nDivide both sides by 3:<br>\nx = 21 ÷ 3<br>\nx = 7<br>\n✅ Final Answer:<br>\na. 7<br>\n🧠 Quick Exam Trick (2-step rule)<br>\nWhen you see:<br>\n3x + 7 = 28<br>\n1️⃣ Move the number (7) to the other side → subtract<br>\n2️⃣ Divide by the number in front of x<br> <br>\nSo mentally:<br>\n28 − 7 = 21<br>\n21 ÷ 3 = 7<br>\nDone in 3 seconds ✔<br>"
+    },
+    {
+      "id": 1771669759334,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Which of the following has the greatest value?",
+      "choices": {
+        "A": "8/(6<sup>6</sup>)(8<sup>2</sup>)",
+        "B": "16/(6<sup>6</sup>)(8<sup>2</sup>)",
+        "C": "1/(6<sup>6</sup>)(8<sup>2</sup>)",
+        "D": "168/(6<sup>6</sup>)(8<sup>2</sup>)"
+      },
+      "correctAnswer": "A",
+      "explanation": "🔎 Step 1: Simplify each expression<br>\n________________________________________<br>\n🔹 Option A<br>\n8 / (6^2 × 8^2)<br>\n6^2 = 36<br>\n8^2 = 64<br>\nSo:<br>\n= 8 / (36 × 64)<br>\nNotice 8 cancels with 64:<br>\n64 = 8 × 8<br>\nSo:<br>\n= 1 / (36 × 8)<br>\n= 1 / 288<br>\n________________________________________<br>\n🔹 Option B<br>\n16 / (6^2 × 8^3)<br>\n6^2 = 36<br>\n8^3 = 512<br>\nSo:<br>\n= 16 / (36 × 512)<br>\nNotice 512 = 16 × 32<br>\nCancel 16:<br>\n= 1 / (36 × 32)<br>\n= 1 / 1152<br>\n________________________________________<br>\n🔹 Option C<br>\n1 / (6^3 × 8^2)<br>\n6^3 = 216<br>\n8^2 = 64<br>\n= 1 / (216 × 64)<br>\n= 1 / 13824<br>\nVery small.<br>\n________________________________________<br>\n🔹 Option D<br>\n168 / (6^4 × 8^3)<br>\n6^4 = 1296<br>\n8^3 = 512<br>\nHuge denominator.<br>\nThis will be MUCH smaller than the others.<br>\n________________________________________<br>\n🔎 Step 2: Compare<br>\nWe now have:<br>\nA = 1 / 288<br>\nB = 1 / 1152<br>\nC = 1 / 13824<br>\nD = very small<br>\nRemember:<br>\nThe smaller the denominator → the bigger the fraction.<br>\n288 < 1152 < 13824<br>\nSo:<br>\n1/288 is the largest.<br>\n________________________________________<br>\n✅ Final Answer:<br>\na<br>\n________________________________________<br>\n🧠 Exam Trick<br>\nWhen comparing fractions:<br>\nIf numerators are same → smaller denominator wins<br>\nIf denominators are huge powers → look for cancellation<br>\nCancel first before multiplying — never expand big numbers immediately<br>"
+    },
+    {
+      "id": 1771671151100,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Which of the following cannot yield an odd integer when divided by 10?",
+      "choices": {
+        "A": "The sum of two odd integers",
+        "B": "The product of a prime number and an odd integer",
+        "C": "The product of two odd integers",
+        "D": "The sum of three consecutive integers"
+      },
+      "correctAnswer": "C",
+      "explanation": "🔎 Option A: The sum of two odd integers<br>\nOdd + Odd = Even<br>\nExample:<br>\n3 + 5 = 8<br>\nCan it be a multiple of 10? Yes.<br>\n5 + 15 = 20<br>\n20 ÷ 10 = 2 (even, but still an integer)<br>\nSo it can yield an integer when divided by 10.<br>\nNot the answer.<br> <br>\n🔎 Option B: The product of a prime number and an odd integer<br>\nPrime numbers can be:<br>\n2 (even prime)<br>\n3, 5, 7, 11… (odd primes)<br>\nIf the prime is 5:<br>\n5 × 3 = 15<br>\nNot multiple of 10.<br>\nIf the prime is 2:<br>\n2 × 5 = 10<br>\n10 ÷ 10 = 1 (odd integer!)<br>\nSo this can produce an odd integer after dividing by 10.<br>\nNot the answer.<br> <br>\n🔎 Option C: The product of two odd integers<br>\nOdd × Odd = Odd<br>\nExample:<br>\n3 × 5 = 15<br>\n7 × 9 = 63<br>\nOdd numbers never end in 0.<br>\nSo they are never divisible by 10.<br>\nSo dividing by 10 will NEVER give an integer — especially not an odd one.<br> <br>\n✅ Final Answer:<br>\nc. The product of two odd integers<br>"
+    },
+    {
+      "id": 1771671421971,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "If 8x + 12 = 24, what is the value of 24x + 36",
+      "choices": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "72"
+      },
+      "correctAnswer": "D",
+      "explanation": "Given:<br>\n8x + 12 = 24<br> <br>\nWe are asked to find:<br>\n24x + 36<br> <br>\n🔎 Smart Way (No need to solve for x)<br> <br>\nNotice:<br>\n24x + 36<br>\nFactor out 3:<br>\n24x + 36 = 3(8x + 12)<br>\nBecause:<br>\n3 × 8x = 24x<br>\n3 × 12 = 36<br> <br>\nNow use the given:<br>\n8x + 12 = 24<br>\nSo:<br>\n3(8x + 12) = 3(24)<br>\n= 72<br> <br>\n✅ Final Answer:<br>\nd. 72<br> <br>\n🧠 Why this works<br>\nInstead of solving for x, we noticed the second expression is just 3 times the first expression.<br>\nSince:<br>\n8x + 12 = 24<br>\nThen multiplying both sides by 3:<br>\n3(8x + 12) = 3(24)<br>\n= 72<br>\nMuch faster than finding x first 😉<br>"
+    },
+    {
+      "id": 1771671546250,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "If a positive integer m is divisible by both 3 and 8, then m must also be divisible by",
+      "choices": {
+        "A": "10",
+        "B": "18",
+        "C": "24",
+        "D": "60"
+      },
+      "correctAnswer": "C",
+      "explanation": "Given:<br>\nm is divisible by 3 and 8.<br> <br>\nThat means:<br>\nm has factors 3 and 8.<br> <br>\nWe ask:<br>\nWhat must it also be divisible by?<br> <br>\n🔎 Step 1: Prime factorize<br>\n3 = 3<br>\n8 = 2 × 2 × 2 = 2^3<br> <br>\nSo if m is divisible by both 3 and 8, then it must contain:<br>\n2^3 × 3<br> <br>\nThat equals:<br>\n8 × 3 = 24<br> <br>\n🔎 Step 2: Check choices<br>\na. 10 → 2 × 5 ❌ (no 5 required)<br>\nb. 18 → 2 × 3^2 ❌ (needs extra 3)<br>\nc. 24 → 2^3 × 3 ✅<br>\nd. 60 → 2^2 × 3 × 5 ❌ (needs 5, only 2^2)<br>\n✅ Final Answer:<br>\nc. 24<br> <br>\n🧠 Why?<br>\nIf a number is divisible by 3 AND 8,<br>\nit must be divisible by their LCM.<br>\nLCM of 3 and 8 = 24<br>\nBecause 3 and 8 share no common factors.<br> <br>\nQuick Exam Rule<br>\nIf two numbers are relatively prime (no common factors):<br>\nLCM = just multiply them.<br>\n3 × 8 = 24<br>\nDone ✔<br>"
+    },
+    {
+      "id": 1771671745431,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "If positive integers m and n are not both odd, which of the following is always true?",
+      "choices": {
+        "A": "m + n is even",
+        "B": "mn is even",
+        "C": "m – n cannot be odd",
+        "D": "m + n – 1 is odd"
+      },
+      "correctAnswer": "B",
+      "explanation": "Given:<br>\nm and n are not both odd.<br>\nThat means:<br>\nAt least one of them is even<br>\nPossible cases:<br>\neven & even<br>\neven & odd<br>\nodd & even<br>\n(but NOT odd & odd)<br>\n________________________________________<br>\nNow let’s test each choice.<br>\n________________________________________<br>\n🔎 a. m + n is even<br>\nCheck cases:<br>\neven + even = even ✅<br>\neven + odd = odd ❌<br>\nodd + even = odd ❌<br>\nNot always even.<br>\n❌ Not always true.<br>\n________________________________________<br>\n🔎 b. mn is even<br>\nMultiply:<br>\neven × even = even<br>\neven × odd = even<br>\nodd × even = even<br>\nSince at least one is even → product is always even.<br>\n✅ Always true.<br>\n________________________________________<br>\n🔎 c. m – n cannot be odd<br>\nTest:<br>\neven − odd = odd<br>\nSo it can be odd.<br>\n❌ Not always true.<br>\n________________________________________<br>\n🔎 d. m + n − 1 is odd<br>\nTest:<br>\nIf m + n is odd:<br>\nodd − 1 = even ❌<br>\nIf m + n is even:<br>\neven − 1 = odd<br>\nSo not always.<br>\n❌ Not always true.<br>\n________________________________________<br>\n✅ Final Answer:<br>\nb. mn is even<br>\n________________________________________<br>\n🧠 Key Shortcut<br>\nIf at least one number is even →<br>\ntheir product is always even.<br>\nSo whenever you see:<br>\n“not both odd” → think → at least one even → product must be even.<br>\nVery common CSC pattern 👍<br>"
+    },
+    {
+      "id": 1771672019257,
+      "subjectId": 2,
+      "topicId": 5,
+      "question": "Find the average temperature change for the 12-day period. Temperature change in degree celsius: 2.6, 3.8, 7.0, 4.5, 4.6, 7.9, 5.0, 8.1, 4.4, 5.3, 6.4, 5.2",
+      "choices": {
+        "A": "4.8",
+        "B": "4.9",
+        "C": "5.2",
+        "D": "5.4"
+      },
+      "correctAnswer": "D",
+      "explanation": "We need the average (mean).<br> <br>\nFormula:<br>\nAverage = (sum of all values) ÷ 12<br> <br>\nStep 1: Add them smartly (grouping trick)<br> <br>\nNumbers:<br>\n2.6, 3.8, 7.0, 4.5, 4.6, 7.9,<br>\n5.0, 8.1, 4.4, 5.3, 6.4, 5.2<br> <br>\nLet’s carefully sum step-by-step cleanly:<br> <br>\nAdd first six:<br>\n2.6 + 3.8 = 6.4<br>\n6.4 + 7.0 = 13.4<br>\n13.4 + 4.5 = 17.9<br>\n17.9 + 4.6 = 22.5<br>\n22.5 + 7.9 = 30.4<br>\nFirst six = 30.4<br> <br>\nNow next six:<br>\n5.0 + 8.1 = 13.1<br>\n13.1 + 4.4 = 17.5<br>\n17.5 + 5.3 = 22.8<br>\n22.8 + 6.4 = 29.2<br>\n29.2 + 5.2 = 34.4<br>\nSecond six = 34.4<br> <br>\nStep 2: Total sum<br>\n30.4 + 34.4 = 64.8<br> <br>\nStep 3: Divide by 12<br>\n64.8 ÷ 12<br>\n12 × 5 = 60<br>\nRemainder = 4.8<br>\n4.8 ÷ 12 = 0.4<br>\nSo:<br>\n= 5.4<br> <br>\n✅ Final Answer:<br>\nd. 5.4<br> <br>\n🧠 Quick Exam Trick<br>\nIf choices are close (4.8, 4.9, 5.2, 5.4):<br>\nNotice most numbers are around 5–6.<br>\nSo average should be slightly above 5.<br>\nThat already eliminates 4.8 and 4.9 quickly.<br>"
+    },
+    {
+      "id": 1771672430270,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "State the property illustrated. If 8(6) + 4 = 48 + 4 = 52, then 8(6) + 4 = 52",
+      "choices": {
+        "A": "distributive property of multiplication over addition",
+        "B": "commutative property of addition",
+        "C": "associative property",
+        "D": "transitive property of equality"
+      },
+      "correctAnswer": "D",
+      "explanation": "Given statement:<br> <br>\nIf<br>\n8(6) + 4 = 48 + 4<br>\nand<br>\n48 + 4 = 52<br>\nThen<br>\n8(6) + 4 = 52<br> <br>\nWhat happened here?<br>\nIt follows this pattern:<br>\nIf<br>\nA = B<br>\nand<br>\nB = C<br>\nThen<br>\nA = C<br> <br>\nThat is the Transitive Property of Equality.<br>\nGeneral form of Transitive Property:<br>\nIf a = b and b = c,<br>\nthen a = c.<br> <br>\nThat’s exactly what the problem shows.<br> <br>\nCheck the choices<br> <br>\na. Distributive property ❌ (that’s like a(b + c))<br>\nb. Commutative property ❌ (changing order like a + b = b + a)<br>\nc. Associative property ❌ (grouping like (a + b) + c)<br>\nd. Transitive property of equality ✅<br> <br>\n✅ Final Answer:<br>\nd. transitive property of equality<br> <br>\n🧠 Quick Recognition Trick<br>\nIf you see:<br>\n“If A = B and B = C, then A = C”<br>\n→ Automatically think Transitive Property.<br>\nVery common exam pattern 👍<br>"
+    },
+    {
+      "id": 1771672598711,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "If 8 less than the product of a number and -3 is greater than 7, which of the following could be that number?",
+      "choices": {
+        "A": "-6",
+        "B": "-5",
+        "C": "5",
+        "D": "6"
+      },
+      "correctAnswer": "A",
+      "explanation": "🔎 Step 1: Translate to algebra<br>\n“Product of a number and -3” = -3x<br>\n“8 less than” that means subtract 8: -3x − 8<br>\n“is greater than 7” → inequality:<br>\n-3x − 8 > 7<br> <br>\n🔎 Step 2: Solve the inequality<br>\nAdd 8 to both sides:<br>\n-3x > 15<br>\nNow divide by -3<br>\n⚠ Important: when dividing by a negative, flip the inequality sign.<br>\nx < -5<br> <br>\n🔎 Step 3: Check choices<br>\nWe need a number less than -5<br>\na. -6 ✅<br>\nb. -5 ❌ (not less, equal)<br>\nc. 5 ❌<br>\nd. 6 ❌<br> <br>\n✅ Final Answer:<br>\na. -6<br> <br>\n🧠 Quick Exam Trick<br>\nWhen you divide by a negative:<br>\nAlways flip the inequality sign.<br>\nThat’s the most common mistake in these problems.<br>"
+    },
+    {
+      "id": 1771672762375,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "The difference between 8 times a number and 17 is 231. Find the number",
+      "choices": {
+        "A": "31",
+        "B": "37",
+        "C": "48",
+        "D": "1,984"
+      },
+      "correctAnswer": "A",
+      "explanation": "🔎 Step 1: Translate to algebra<br>\n“8 times a number” = 8x<br>\n“The difference between 8 times a number and 17” → 8x − 17<br>\n“is 231” → equation:<br>\n8x − 17 = 231<br> <br>\n🔎 Step 2: Solve<br>\nAdd 17 to both sides:<br>\n8x = 248<br>\nNow divide by 8:<br>\nx = 248 ÷ 8<br>\n248 ÷ 8:<br>\n8 × 30 = 240<br>\nRemainder = 8<br>\nSo:<br>\nx = 31<br> <br>\n✅ Final Answer:<br>\na. 31<br> <br>\n🧠 Quick Exam Shortcut<br>\nWhen you see:<br>\n“difference between A and B” → A − B<br>\nThen just isolate x.<br>"
+    },
+    {
+      "id": 1771673279433,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Four times the perimeter of a parking lot is 16 less than 2,000 meters. What is the perimeter of the lot?",
+      "choices": {
+        "A": "496 m",
+        "B": "504 m",
+        "C": "992 m",
+        "D": "1,008 m"
+      },
+      "correctAnswer": "A",
+      "explanation": "🔎 Step 1: Translate to algebra<br><br>“Four times the perimeter”<br>= 4P<br>“is 16 less than 2,000 meters”<br>16 less than 2000 means:<br>2000 − 16 = 1984<br>So the equation is:<br>4P = 1984<br>🔎 Step 2: Solve for P<br>P = 1984 ÷ 4<br>Compute:<br>4 × 400 = 1600<br>Remaining = 384<br>4 × 90 = 360<br>Remaining = 24<br>4 × 6 = 24<br>So:<br>P = 400 + 90 + 6<br>P = 496<br>✅ Final Answer:<br>a. 496 m<br>🧠 Quick Mental Shortcut<br>“16 less than 2000” → 1984<br>Then divide by 4:<br>2000 ÷ 4 = 500<br>16 ÷ 4 = 4<br>So:<br>500 − 4 = 496<br>Much faster mentally ✔"
+    },
+    {
+      "id": 1771677944992,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "The amount of last month’s telephone bill, decreased by the product of 3 and Php30.00 equals Php1,319.50",
+      "choices": {
+        "A": "Php 1,229.50",
+        "B": "Php 1,289.50",
+        "C": "Php 1,310.50",
+        "D": "Php 1, 409.50"
+      },
+      "correctAnswer": "D",
+      "explanation": "🔎 Step 1: Translate to algebra<br>Let the amount of last month’s telephone bill be x.<br>“The amount decreased by the product of 3 and Php30.00”<br>Product of 3 and 30:<br><br>3 × 30 = 90<br><br>So:<br><br>x − 90<br><br>“equals Php1,319.50”<br><br>So the equation is:<br><br>x − 90 = 1,319.50<br><br>🔎 Step 2: Solve<br><br>Add 90 to both sides:<br><br>x = 1,319.50 + 90<br><br>x = 1,409.50<br><br>✅ Final Answer:<br><br>d. Php 1,409.50<br><br>🧠 Quick Mental Shortcut<br><br>If a number minus 90 equals 1,319.50,<br>then the original number must be 90 more.<br><br>Just add back what was subtracted ✔"
+    },
+    {
+      "id": 1771678544370,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "Eighteen less than seven times the number of sandwiches is 269. How many sandwiches are there?",
+      "choices": {
+        "A": "32",
+        "B": "41",
+        "C": "44",
+        "D": "45"
+      },
+      "correctAnswer": "B",
+      "explanation": "🔎 Step 1: Translate to algebra<br><br>Let the number of sandwiches = x<br>“Seven times the number of sandwiches” → 7x<br>“Eighteen less than seven times …” → 7x − 18<br><br>“is 269” → 7x − 18 = 269<br><br>🔎 Step 2: Solve<br><br>Add 18 to both sides:<br><br>7x = 269 + 18<br>7x = 287<br><br>Divide by 7:<br><br>x = 287 ÷ 7<br><br>Compute:<br><br>7 × 40 = 280<br>287 − 280 = 7 → 7 ÷ 7 = 1<br><br>So: x = 41<br><br>✅ Final Answer:<br>b. 41 sandwiches<br><br>🧠 Quick Exam Shortcut<br>“n less than m × x = y” → x = (y + n) ÷ m<br>Here: x = (269 + 18) ÷ 7 = 287 ÷ 7 = 41<br>Done in 5 seconds ✔"
+    },
+    {
+      "id": 1771678663167,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A house and lot are sold for Php 14M. The house costs 1.5 times as much as the lot. How much does the lot cost?",
+      "choices": {
+        "A": "Php 5.6M",
+        "B": "Php 8.4M",
+        "C": "Php 10.5 M",
+        "D": "Php 21M"
+      },
+      "correctAnswer": "A",
+      "explanation": "🔎 Step 1: Translate to algebra<br>Let the cost of the lot = L<br>The house costs 1.5 times the lot → House = 1.5L<br>Total cost:<br>House + Lot = 14M<br>So:<br>1.5L + L = 14<br>________________________________________<br>Step 2: Combine like terms<br>1.5L + 1L = 2.5L<br>So:<br>2.5L = 14<br>________________________________________<br>Step 3: Solve for L<br>L = 14 ÷ 2.5<br>Divide:<br>2.5 × 5 = 12.5 → remainder 1.5<br>2.5 × 0.6 = 1.5<br>So:<br>L = 5.6<br>________________________________________<br>✅ Final Answer:<br>a. Php 5.6M<br>________________________________________<br>🧠 Quick Exam Shortcut<br>Total = 14M<br>Split in ratio House : Lot = 1.5 : 1 = 3:2<br>Total parts = 3 + 2 = 5 parts<br>Lot = 2/5 × 14 = 5.6 ✔<br>Much faster mentally than decimals."
+    },
+    {
+      "id": 1771678744259,
+      "subjectId": 2,
+      "topicId": 5,
+      "question": "The sale price of a television set is Php 7,200. The discount rate is 40%. Find its regular price.",
+      "choices": {
+        "A": "Php 4,320",
+        "B": "Php 12,000",
+        "C": "Php 6,800",
+        "D": "Php 10,000"
+      },
+      "correctAnswer": "B",
+      "explanation": "🔎 Step 1: Translate to algebra<br>Let the regular price = P<br>Discount = 40% → Sale price = 60% of regular price<br>So:<br>0.6 × P = 7,200<br>________________________________________<br>🔎 Step 2: Solve for P<br>P = 7,200 ÷ 0.6<br>Divide:<br>7,200 ÷ 0.6 = 7,200 ÷ (6/10) = 7,200 × (10/6) = 72,000 ÷ 6 = 12,000<br>________________________________________<br>✅ Final Answer:<br>b. Php 12,000<br>________________________________________<br>🧠 Quick Exam Shortcut<br>Sale price = (1 − discount) × regular price<br>Here: 7,200 = 0.6 × P → P = 7,200 ÷ 0.6<br>Or use fraction: 60% = 3/5 → P = 7,200 ÷ (3/5) = 7,200 × 5/3 = 12,000 ✔"
+    },
+    {
+      "id": 1771678813007,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "The lenghts of the sides of a triangle can be represented by three consecutive integers. The perimeter of the triangle is 96cm. Find the length of the longest side of the triangle.",
+      "choices": {
+        "A": "28",
+        "B": "32",
+        "C": "33",
+        "D": "36"
+      },
+      "correctAnswer": "C",
+      "explanation": "Step 1: Represent the sides<br>Let the three consecutive integers be:<br>x, x + 1, x + 2<br>x = shortest side<br>x + 2 = longest side<br>Perimeter = sum of all sides = 96<br>So:<br>x + (x + 1) + (x + 2) = 96<br>________________________________________<br>Step 2: Simplify<br>x + x + 1 + x + 2 = 3x + 3<br>3x + 3 = 96<br>________________________________________<br>Step 3: Solve for x<br>3x = 96 − 3<br>3x = 93<br>x = 93 ÷ 3<br>x = 31<br>________________________________________<br>Step 4: Find the longest side<br>Longest side = x + 2 = 31 + 2 = 33<br>________________________________________<br>✅ Final Answer:<br>c. 33 cm<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Consecutive integers → x, x+1, x+2<br>Add → 3x + 3<br>Subtract constant → divide → find longest side<br>Done in 5 seconds ✔"
+    },
+    {
+      "id": 1771678873369,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "The length of a rectangle is 8 meters more than twice its width. The perimeter is 112 meters. Find its area.",
+      "choices": {
+        "A": "16m",
+        "B": "24m",
+        "C": "28 m2",
+        "D": "640 m2"
+      },
+      "correctAnswer": "D",
+      "explanation": "Step 1: Let variables<br>Let the width = w<br>Length = 8 more than twice the width → L = 2w + 8<br>Perimeter of rectangle:<br>P=2(L+w)=112<br>________________________________________<br>Step 2: Substitute L<br>2((2w+8)+w)=112<br>2(3w+8)=112<br>6w+16=112<br>________________________________________<br>Step 3: Solve for w<br>6w=112−16<br>6w=96<br>w=16<br>________________________________________<br>Step 4: Find length<br>L=2w+8=2(16)+8=32+8=40<br>________________________________________<br>Step 5: Find area<br>Area=L×w=40×16=640<br>________________________________________<br>✅ Final Answer:<br>d. 640 m²<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Perimeter = 2(L + W) → solve for W<br>Use L = 2W + 8<br>Area = L × W<br>Done in 5–10 seconds mentally once you’re used to the pattern."
+    },
+    {
+      "id": 1771679205446,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Paula is twice as old as Queenie. Seven years ago the sum of their ages was 16. How old is Queenie now?",
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "18",
+        "D": "20"
+      },
+      "correctAnswer": "B",
+      "explanation": "Step 1: Let variables<br>Let Queenie’s current age = Q<br>Paula is twice as old → Paula’s age = 2Q<br>________________________________________<br>Step 2: Translate “seven years ago the sum of their ages was 16”<br>Seven years ago:<br>•\tQueenie: Q − 7<br>•\tPaula: 2Q − 7<br>Sum = 16<br>(Q−7)+(2Q−7)=16<br>3Q−14=16<br>________________________________________<br>Step 3: Solve for Q<br>3Q=16+14<br>3Q=30<br>Q=10<br>________________________________________<br>✅ Final Answer:<br>b. 10<br>________________________________________<br>🔹 Quick Exam Shortcut<br>•\t“Twice as old” → 2Q<br>•\t“X years ago” → subtract X from both<br>•\tSum = number → form linear equation → solve<br>Done in 10 seconds once you set it up properly."
+    },
+    {
+      "id": 1771679506687,
+      "subjectId": 2,
+      "topicId": 4,
+      "question": "For what value of x will x be the average of 2, 4x, 6, 8, 10?",
+      "choices": {
+        "A": "4",
+        "B": "12",
+        "C": "20",
+        "D": "30"
+      },
+      "correctAnswer": "C",
+      "explanation": "Step 1: Write the formula for the average<br>Average of 5 numbers = sum ÷ 5<br>We are told:<br>x=average of 2,4x,6,8,10<br>x=<sup>2+4x+6+8+10</sup>⁄<sub>5</sub><br>________________________________________<br>Step 2: Simplify numerator<br>2 + 6 + 8 + 10 = 26<br>So numerator = 26 + 4x<br>x=<sup>4x+26</sup>⁄<sub>5</sub><br>________________________________________<br>Step 3: Solve for x<br>Multiply both sides by 5:<br>5x=4x+26<br>Subtract 4x:<br>x=26<br>________________________________________<br>✅ Final Answer:<br>c. 26<br>________________________________________<br>🔹 Quick Exam Shortcut<br>•\tWhen one of the numbers in a set is x itself, average = sum ÷ n → set up equation<br>•\tCollect like terms and solve linearly<br>Done in 5–10 seconds ✔"
+    },
+    {
+      "id": 1771680225168,
+      "subjectId": 2,
+      "topicId": 5,
+      "question": "How many integers between 197 and 303 are divisible by 4 or 10?",
+      "choices": {
+        "A": "25",
+        "B": "26",
+        "C": "31",
+        "D": "37"
+      },
+      "correctAnswer": "B",
+      "explanation": "Step 1: Count numbers divisible by 4<br>•\tSmallest ≥ 197 divisible by 4:<br>197 ÷ 4 ≈ 49.25 → next multiple = 50 × 4 = 200<br>•\tLargest ≤ 303 divisible by 4:<br>303 ÷ 4 ≈ 75.75 → 75 × 4 = 300<br>•\tNumber of multiples = ((largest − smallest) ÷ 4) + 1<br><sup>300-200</sup>⁄<sub>4</sub>+1=<sup>100</sup>⁄<sub>4</sub>+1= 25 + 1 = 26<br><br>✅ 26 numbers divisible by 4<br>________________________________________<br>Step 2: Count numbers divisible by 10<br>•\tSmallest ≥ 197 divisible by 10: 200<br>•\tLargest ≤ 303 divisible by 10: 300<br>Number of multiples = ((300 − 200) ÷ 10) + 1<br><br><sup>100</sup>⁄<sub>30</sub> + 1 = 10 + 1 = 11<br><br>✅ 11 numbers divisible by 10<br>________________________________________<br>Step 3: Count numbers divisible by both 4 and 10<br>Numbers divisible by both 4 and 10 → divisible by LCM(4, 10) = 20<br>•\tSmallest ≥ 197 divisible by 20: 200<br>•\tLargest ≤ 303 divisible by 20: 300<br>Number of multiples = ((300 − 200) ÷ 20) + 1<br><br><sup>100</sup>⁄<sub>30</sub> + 1 = 5 + 1 = 6<br><br>✅ 6 numbers divisible by both<br>________________________________________<br>Step 4: Apply Inclusion-Exclusion<br>Divisible by 4 or 10=26+11−6=31<br>________________________________________<br>✅ Final Answer:<br>c. 31<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Count multiples of each number separately<br>Count multiples of LCM (overlap)<br>Add, then subtract overlap → fast with small numbers"
+    },
+    {
+      "id": 1771680334521,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A patient must take his medication every 7 hours starting at 7:00 AM, Sunday. On what day will the patient first receive his medication at 8 AM?",
+      "choices": {
+        "A": "Sunday",
+        "B": "Wednesday",
+        "C": "Thursday",
+        "D": "Tuesday"
+      },
+      "correctAnswer": "D",
+      "explanation": "Step 1: Find how many hours later 8:00 AM occurs<br>First dose: 7:00 AM Sunday<br>Next time we want: 8:00 AM<br>The difference = 1 hour later than a dose time.<br>________________________________________<br>Step 2: Medication interval<br>Patient takes medication every 7 hours.<br>So dose times:<br>7:00 AM, 2:00 PM, 9:00 PM, 4:00 AM, 11:00 AM, 6:00 PM, 1:00 AM, 8:00 AM …<br>Notice: 8:00 AM is exactly 7 × n + 1 hour after 7:00 AM<br>________________________________________<br>Step 3: Solve modulo 24<br>Doses repeat every 7 hours.<br>We want a dose to fall at 8:00 AM, which is 1 hour after 7:00 AM.<br>Let’s see how many doses:<br>7 × n ≡ 1 (mod 24)<br>We need n such that 7n ≡ 1 mod 24<br>________________________________________<br>Step 3a: Find n<br>•\t7 × n mod 24:<br>•\t7 × 1 = 7 → mod 24 = 7<br>•\t7 × 2 = 14 → 14<br>•\t7 × 3 = 21 → 21<br>•\t7 × 4 = 28 → 28 mod 24 = 4<br>•\t7 × 5 = 35 → 35 mod 24 = 11<br>•\t7 × 6 = 42 → 42 mod 24 = 18<br>•\t7 × 7 = 49 → 49 mod 24 = 1 ✅<br>So n = 7 doses later<br>________________________________________<br>Step 4: Count total hours<br>7 × 7 = 49 hours after 7:00 AM Sunday<br>•\tday = 24 hours → 49 ÷ 24 = 2 days + 1 hour<br>•\tdays after Sunday 7:00 AM → Tuesday 7:00 AM<br>•\tAdd 1 hour → Tuesday 8:00 AM<br>________________________________________<br>✅ Final Answer:<br>d. Tuesday<br>________________________________________<br>🔹 Quick Exam Shortcut<br>List a few doses in 24-hour format, or<br>Solve 7n ≡ 1 mod 24 → n = 7<br>Add n × 7 hours → convert to days & hours<br>Done in <1 minute."
+    },
+    {
+      "id": 1771680799542,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Of the 300 grocery shoppers surveyed, 96 did not have a regular day of the week on which they shop. What percentage of the shoppers did not have a regular day of shopping?",
+      "choices": {
+        "A": "32%",
+        "B": "48%",
+        "C": "64%",
+        "D": "96%"
+      },
+      "correctAnswer": "A",
+      "explanation": "Step 1: Write the fraction<br>Shoppers without a regular day = 96<br>Total shoppers = 300<br>Fraction:<br><br><sup>96</sup>⁄<sub>300</sub><br><br>________________________________________<br>Step 2: Convert to percentage<br><br><sup>96</sup>⁄<sub>300</sub> ×100%= <sup>96×100</sup>⁄<sub>300</sub>%<br><br><br>Simplify:<br><br><sup>9600</sup>⁄<sub>300</sub> = 32%<br>________________________________________<br>✅ Final Answer:<br>a. 32%<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Fraction ÷ total × 100 = percentage<br>Simplify by dividing numerator & denominator by 3 or 100 mentally<br>Here: 96 ÷ 3 = 32, 300 ÷ 3 = 100 → 32/100 = 32% ✔"
+    },
+    {
+      "id": 1771680928407,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A water container has 100mL of water in it and is 20% full. How many mL of water can this container hold if it is full?",
+      "choices": {
+        "A": "200 mL",
+        "B": "400 mL",
+        "C": "500 mL",
+        "D": "800 mL"
+      },
+      "correctAnswer": "C",
+      "explanation": "Step 1: Translate to equation<br>Let the full capacity of the container = C mL<br>We are told:<br>20% of C = 100 mL<br>0.2×C=100<br>________________________________________<br>Step 2: Solve for C<br><br>C=<sup>100</sup>⁄<sub>0.2</sub>=100×5=500<br>________________________________________<br>✅ Final Answer:<br>c. 500 mL<br>________________________________________<br>🔹 Quick Exam Shortcut<br>“X% full = amount” → divide the amount by the percentage (in decimal)<br>Here: 100 ÷ 0.2 = 500 ✔"
+    },
+    {
+      "id": 1771680989195,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "How many containers each occupies an area of 2 1/8 square meters can be stored in a 952 square meter warehouse?",
+      "choices": {
+        "A": "358",
+        "B": "440",
+        "C": "530",
+        "D": "630"
+      },
+      "correctAnswer": "B",
+      "explanation": "Problem: How many containers, each occupying an area of 2 1/8 square meters, can be stored in a 952 square meter warehouse?<br>Solution:<br>Step 1: Convert the mixed fraction to an improper fraction<br>2 1/8 = 17/8 m² per container<br>________________________________________<br>Step 2: Divide total area by area per container<br>Number of containers = 952 ÷ (17/8) = 952 × (8/17)<br>________________________________________<br>Step 3: Multiply<br>952 × 8 = 7616<br>7616 ÷ 17<br>Step by step:<br>•\t17 × 400 = 6800<br>•\t7616 − 6800 = 816<br>•\t17 × 48 = 816<br>Total = 400 + 48 = 448<br>________________________________________<br>✅ Final Answer:<br>b. 448 containers<br>________________________________________<br>🔹 Quick Exam Shortcut:<br>Convert mixed fractions → improper fraction<br>Divide total by per-item → multiply by reciprocal<br>Step-by-step multiplication and division if needed<br>Done in ~30 seconds ✔"
+    },
+    {
+      "id": 1771681324875,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A starting salary of a secretary at ABC Computer Specialists is Php15,000 a month. Next year the starting salary will be raised to Php18,000. What is the rate of increase in the starting salary?",
+      "choices": {
+        "A": "3%",
+        "B": "20%",
+        "C": "25%",
+        "D": "30%"
+      },
+      "correctAnswer": "B",
+      "explanation": "Step 1: Use the percentage increase formula<br><br>Rate of increase= <sup>(New Salary-Old Salary)</sup>⁄<sub>(Old Salary)</sub> ×100%<br>________________________________________<br>Step 2: Substitute values<br><br>Rate= <sup>(18,0000-15,000)</sup>⁄<sub>15,000</sub> ×100%<br>________________________________________<br>✅ Final Answer:<br>b. 20%<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Rate of increase = (increase ÷ original) × 100<br>Increase = new − old<br>Divide and convert to % ✔"
+    },
+    {
+      "id": 1771681495676,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "The cost of a square meter commercial lot in a certain municipality five years ago was Php12,500. There was a 420% increase in the price in the last five years. What is the price per square meter of that lot today?",
+      "choices": {
+        "A": "Php 17,500",
+        "B": "Php 52,500",
+        "C": "Php 19,000",
+        "D": "Php 65,000"
+      },
+      "correctAnswer": "D",
+      "explanation": "Problem: Price 5 years ago = Php 12,500; increase = 420%. Find the current price.<br>________________________________________<br>Step 1: Use the percentage increase formula<br><center>New Price=Old Price+(Old Price×Rate)</center><br><br><br>Rate = 420% = 4.2<br><center>New Price=12,500+(12,500×4.2)</center><br>________________________________________<br>Step 2: Multiply<br><center>12,500×4.2=12,500×(4+0.2)=12,500×4+12,500×0.2<br>12,500×4=50,000<br>12,500×0.2=2,500</center><br>Sum = 50,000 + 2,500 = 52,500<br>________________________________________<br>Step 3: Add to original price<br><center>12,500+52,500=65,000</center><br>________________________________________<br>✅ Final Answer:<br>d. Php 65,000<br>________________________________________<br>🔹 Quick Exam Shortcut<br>420% increase → multiply original by 4.2 → add original → or just multiply original by 5.2 directly<br>12,500 × 5.2 = 65,000 ✔"
+    },
+    {
+      "id": 1771681716282,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Last month, a store manager decided to decrease the prices of all items by 10%. This month, he increased the prices by 10%. What would be the price for a pair of pants that had cost Php750 before prices were decreased last month?",
+      "choices": {
+        "A": "PHp 742.50",
+        "B": "Php 750.00",
+        "C": "Php 675.00",
+        "D": "Php 825.00"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem: Original price = Php 750<br>First, 10% decrease<br>Then, 10% increase<br>Find the final price<br>________________________________________<br>Step 1: Decrease by 10%<br><center>Price after decrease=750−(10% of 750)=750−75=675</center><br>________________________________________<br>Step 2: Increase by 10%<br><center>Price after increase=675+(10% of 675)=675+67.5=742.5</center><br>________________________________________<br>✅ Final Answer:<br>a. Php 742.50<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Decrease then increase by same % does not return to original price.<br>Multiply sequentially instead:<br>Final Price=750×0.9×1.1=742.50<br>Done in 1 step ✔"
+    },
+    {
+      "id": 1771682754178,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "When the original price of an item is increased by a certain rate, the increased price is Php 3,100. When the original price is decreased by the same rate, the decreased price is Php1,900. What is the original price of this item?",
+      "choices": {
+        "A": "Php1,200",
+        "B": "Php200",
+        "C": "Php2,500",
+        "D": "Php2,800"
+      },
+      "correctAnswer": "C",
+      "explanation": "Problem<br>When the original price of an item is increased by a certain rate, the price becomes Php 3,100.<br>When decreased by the same rate, the price becomes Php 1,900.<br>Find the original price.<br>________________________________________<br>Step 1: Define the variables (this is ALWAYS the first proper step)<br>Let:<br>Original price = x<br>Rate = r (in decimal form)<br>We do NOT know the rate, so we represent it with a variable.<br>________________________________________<br>Step 2: Translate the words into equations<br>Statement 1:<br>“Increased by a certain rate → becomes 3100”<br>Increase by rate means:<br><center>x+xr=3100</center><br>Factor x:<br><center>x(1+r)=3100(Equation 1)</center><br>________________________________________<br>Statement 2:<br>“Decreased by the same rate → becomes 1900”<br>Decrease by rate means:<br><center>x−xr=1900</center><br>Factor x:<br><center>x(1−r)=1900(Equation 2)</center><br>Now we have a system of equations:<br><center>(1)x(1+r)=3100 <br>(2)x(1−r)=1900</center><br>________________________________________<br>Step 3: Divide the two equations (clean textbook method)<br>Divide Equation (1) by Equation (2):<br><center><br><sup>x(1+r)</sup>⁄<sub>x(1-r)</sub> = <sup>3100</sup>⁄<sub>1900</sub><br></center><br>Cancel xxx (very important step):<br><center><br><sup>1+r</sup>⁄<sub>1=r</sub> = <sup>3100</sup>⁄<sub>1900</sub><br></center><br>Simplify the fraction:<br><center><br><sup>3100</sup>⁄<sub>1900</sub> = <sup>31</sup>⁄<sub>19</sub><br></center><br>So now:<br><center><br><sup>1+r</sup>⁄<sub>1=r</sub> = <sup>31</sup>⁄<sub>19</sub><br></center><br>________________________________________<br>Step 4: Cross multiply (standard algebra move)<br><center>19(1+r)=31(1−r)</center><br>Distribute both sides:<br>Left:<br><center>19+19r</center><br>Right:<br><center>31−31r</center><br>So we get:<br><center>19+19r=31−31r</center><br>________________________________________<br>Step 5: Collect like terms (move r to one side)<br>Add 31r to both sides:<br><center>19+50r=31</center><br>Subtract 19 from both sides:<br><center>50r=12</center><br>Solve for r:<br><center><br>r= <sup>12</sup>⁄<sub>50</sub> = 0.24 <br></center><br>So the rate = 24%<br>________________________________________<br>Step 6: Substitute r back to find the original price<br>Use:<br><center>x(1+r)=3100</center><br>Substitute r=0.24r = 0.24r=0.24:<br><center>x(1.24)=3100</center><br>Now solve for x:<br><center><br>x= <sup>3100</sup>⁄<sub>1.24</sub><br></center><br>________________________________________<br>Step 7: Divide properly (no calculator method)<br>Remove decimal by multiplying top and bottom by 100:<br><center><br>x= <sup>310000</sup>⁄<sub>124 </sub><br></center><br>Now divide:<br><center>124 × 2500 = 310000</center><br>So:<br><center>x=2500</center><br>________________________________________<br>Final Answer:<br>c. Php 2,500"
+    },
+    {
+      "id": 1771683422697,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "How much must one has to invest in corporate bonds paying 9.6% in order to earn an income of Php12,000 per annum?",
+      "choices": {
+        "A": "Php11,520",
+        "B": "Php 23,040",
+        "C": "Php 125,000",
+        "D": "Php 250,000"
+      },
+      "correctAnswer": "C",
+      "explanation": "Problem:<br>Annual income = Php 12,000<br>Interest rate = 9.6% = 0.096<br>Investment = ?<br>________________________________________<br>Step 1: Use the simple interest formula for annual income<br><center><br>Income=Investment×Rate<br>12,000=Investment×0.096<br></center><br><br>________________________________________<br>Step 2: Solve for Investment<br><center><br>Investment= <sup>12,000</sup>⁄<sub>0.096</sub><br>Investment=125,000<br></center><br><br>________________________________________<br>✅ Final Answer:<br>c. Php 125,000<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Investment = Income ÷ Rate<br>Convert % to decimal first ✔"
+    },
+    {
+      "id": 1771683948603,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "How much must be cut form the edge of a piece of glass 16 1/8 cm wide, in order for it to fit into an opening 14 ¾ cm wide?",
+      "choices": {
+        "A": "2 3/8cm",
+        "B": "1 7/8cm",
+        "C": "1 3/8cm",
+        "D": "2 5/8 cm"
+      },
+      "correctAnswer": "C",
+      "explanation": "Problem:<br>Original width = 16 1/8 cm<br>Opening width = 14 3/4 cm<br>Find: amount to cut<br>________________________________________<br>Step 1: Convert mixed fractions to improper fractions<br><center><br><br>16 <sup>1</sup>⁄<sub>8</sub> = <sup>129</sup>⁄<sub>8</sub>  cm<br>14 <sup>3</sup>⁄<sub>4</sub> = 14 <sup>6</sup>⁄<sub>8</sub>  = <sup>118</sup>⁄<sub>8</sub> cm<br></center><br><br>________________________________________<br>Step 2: Subtract to find amount to cut<br><center><br>Cut= <sup>120</sup>⁄<sub>8</sub> - <sup>118</sup>⁄<sub>8</sub>=1<sup>1</sup>⁄<sub>8</sub>  cm<br></center><br>________________________________________<br>Step 3: Convert back to mixed fraction<br><center><br>1<sup>1</sup>⁄<sub>8</sub> =1<sup>3</sup>⁄<sub>8</sub>  cm</center><br><br>________________________________________<br>✅ Final Answer:<br>c. 1 1<sup>3</sup>⁄<sub>8</sub> cm<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Convert to same denominator, subtract, convert back to mixed fraction ✔"
+    },
+    {
+      "id": 1771684322489,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A race car traveled for 2 ½ hours with an average speed of 132 5/8 km per hour. Find the total distance it covered.",
+      "choices": {
+        "A": "264 5/16km",
+        "B": "331 9/16km",
+        "C": "330 5/16km",
+        "D": "135 1/8km"
+      },
+      "correctAnswer": "B",
+      "explanation": "Problem:<br>Time = 2 1/2 hours = 2.5 hours = 5/2 hours<br>Speed = 132 5/8 km/h = 132 + 5/8 = 132 5/8 km/h = 1061/8 km/h (as improper fraction)<br>Distance = Speed × Time<br>________________________________________<br>Step 1: Multiply fractions<br><center><br>Distance = <span><sup>1061</sup>&frasl;<sub>8</sub> × <sup>5</sup>&frasl;<sub>2</sub></span> = <span><sup>1061 × 5</sup>&frasl;<sub>8 × 2</sub></span> = <span><sup>5305</sup>&frasl;<sub>16</sub></span> km<br></center><br><br>________________________________________<br>Step 2: Convert improper fraction to mixed number<br><br><center><br>5305÷16<br>16 × 331 = 5296<br>5305 − 5296 = 9<br></center><br><br>So:<br><center><br>5305/16=3319/16 km<br></center><br><br>________________________________________<br>✅ Final Answer:<br>b. 331 9/16 km<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Convert all mixed numbers to improper fractions<br>Multiply fractions for Distance = Speed × Time<br>Convert back to mixed number ✔"
+    },
+    {
+      "id": 1771685147536,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "If the weight of a 241-kg freight car increases 3 1/8 times when fully loaded, what will be its weight with a full load?",
+      "choices": {
+        "A": "750 3/8kg",
+        "B": "824 3/8kg",
+        "C": "720 5/8kg",
+        "D": "753 1/8kg"
+      },
+      "correctAnswer": "D",
+      "explanation": "Problem:<br>Empty freight car = 241 kg<br>Increase = 3 1/8 times = 3 + 1/8 = 25/8<br>Weight fully loaded = Empty × Increase<br>________________________________________<br>Step 1: Convert mixed fraction to improper fraction<br><center><br>3 <sup>1</sup>&frasl;<sub>8</sub> = <sup>25</sup>&frasl;<sub>8</sub><br></center><br>________________________________________<br>Step 2: Multiply<br><center><br>Weight = 241 × <sup>25</sup>&frasl;<sub>8</sub> = <sup>6025</sup>&frasl;<sub>8</sub> kg<br></center><br>________________________________________<br>Step 3: Convert to mixed number<br><center><br>6025÷8<br>8 × 753 = 6024<br>6025 − 6024 = 1<br></center><br><center><br><sup>6025</sup>&frasl;<sub>8</sub> = 753 <sup>1</sup>&frasl;<sub>8</sub> kg<br></center><br>________________________________________<br>✅ Final Answer:<br>d. 753 1/8 kg<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Convert mixed fraction → improper fraction<br>Multiply by original weight<br>Convert back to mixed number ✔"
+    },
+    {
+      "id": 1771685670318,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "How many liters will remain in 1 1000-liter storage tank if 8.2% of the liquid has evaporated due to excessive heat?",
+      "choices": {
+        "A": "918",
+        "B": "991.8",
+        "C": "999.18",
+        "D": "998"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem:<br>Total liquid = 1,000 liters<br>Evaporated = 8.2% = 0.082<br>Remaining = ?<br>________________________________________<br>Step 1: Find amount evaporated<br><center><br>Evaporated=1,000×0.082=82 liters<br></center><br>________________________________________<br>Step 2: Subtract from total<br><center><br>Remaining=1,000−82=918 liters<br></center><br>________________________________________<br>✅ Final Answer:<br>a. 918 liters<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Remaining = Total × (1 − % evaporated in decimal)<br>1,000 × (1 − 0.082) = 1,000 × 0.918 = 918 ✔"
+    },
+    {
+      "id": 1771685835511,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Dante recently sold some stocks for which he originally bought for Php358. If it has increased in value by 116%, how much did he receive for the stock?",
+      "choices": {
+        "A": "Php678.27",
+        "B": "Php772",
+        "C": "Php773.28",
+        "D": "Php778"
+      },
+      "correctAnswer": "C",
+      "explanation": "Problem:<br>Original price = Php 358<br>Increase = 116% = 1.16 (in decimal)<br>Selling price = ?<br>________________________________________<br>Step 1: Use the formula<br><center><br>Selling price=Original price+(Original price×Increase rate)<br>Selling price=358+(358×1.16)<br></center><br>________________________________________<br>Step 2: Multiply<br><center><br>358×1.16=358×(1+0.16)=358+57.28=415.28<br></center><br>⚠ Wait, careful — 116% increase means increase = 116% of original, so final = original + 116% × original = 100% + 116% = 216% of original<br><center><br>Selling price=358×2.16<br>358×2=716<br>358×0.16=57.28<br>716+57.28=773.28<br></center><br><br>________________________________________<br>✅ Final Answer:<br>c. Php 773.28<br>________________________________________<br>🔹 Quick Exam Shortcut<br>If increase > 100%, multiply original by (1 + increase%) in decimal<br>116% → 1.16, add 1 → 2.16 ✔"
+    },
+    {
+      "id": 1771685972716,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Mr. Manny Vargas, a real estate broker sold a building for Php175M. How much did he receive if his commission is 5.5% of the sale price of the property?",
+      "choices": {
+        "A": "Php9.5M",
+        "B": "Php9.7M",
+        "C": "Php9.625M",
+        "D": "Php180.5M"
+      },
+      "correctAnswer": "C",
+      "explanation": "Given<br>Sale price = Php 175,000,000<br>Commission = 5.5%<br>We want: commission amount<br>________________________________________<br>Step 1: Convert percentage to decimal<br><center><br>5.5%=5.5÷100=0.055<br></center><br>________________________________________<br>Step 2: Multiply sale price by commission rate<br><center><br>Commission=175,000,000×0.055<br></center><br>Step by step:<br><center><br>175,000,000 × 0.05 = 8,750,000<br>175,000,000 × 0.005 = 875,000<br></center><br>Add them: 8,750,000 + 875,000 = 9,625,000<br>________________________________________<br>✅ Answer: Php 9.625M → c. 9.625M<br>________________________________________<br>Shortcut:<br>1% of 175M = 1.75M<br>5% = 5 × 1.75M = 8.75M<br>0.5% = 0.875M<br>Add → 8.75 + 0.875 = 9.625M"
+    },
+    {
+      "id": 1771728778781,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "If 560 out of 700 examinees passed in the recent Career Service exam for SubProfessional level, what percent of the examinees passed?",
+      "choices": {
+        "A": "65%",
+        "B": "72%",
+        "C": "80%",
+        "D": "140%"
+      },
+      "correctAnswer": "C",
+      "explanation": "Problem:<br>Passed = 560<br>Total examinees = 700<br>Find % passed<br>________________________________________<br>Step 1: Write as fraction<br>Fraction passed=560/700<br>________________________________________<br>Step 2: Convert to percentage<br>Fraction passed=560/700  ×100% <br>=0.8×100%=80%<br>________________________________________<br>✅ Final Answer:<br>c. 80%<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Percent passed = (Number passed ÷ Total) × 100 ✔"
+    },
+    {
+      "id": 1771728921166,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A store sells shirts for Php1,078 each or 3 for Php2,997. How much would one save by buying 3 shirts at a time instead of 3 shirts, one at a time?",
+      "choices": {
+        "A": "Php237",
+        "B": "Php921",
+        "C": "Php1,237",
+        "D": "Php1,921"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem:<br>Price per shirt = Php 1,078<br>Price for 3 shirts together = Php 2,997<br>Find savings if buying 3 at once instead of individually<br>________________________________________<br>Step 1: Find cost of 3 shirts individually<br><center><br>1,078×3=3,234<br></center><br>________________________________________<br>Step 2: Find savings<br><center><br>Savings=3,234−2,997=237<br></center><br>________________________________________<br>✅ Final Answer:<br>a. Php 237<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Multiply individual price by quantity → compare with package deal → difference = savings ✔"
+    },
+    {
+      "id": 1771729057884,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A computer can be rented for Php1,745 a week or Php 347.50 a day. You need the computer only for 6 days. At which rate (daily or weekly), would it be cheaper to rent and by how much cheaper?",
+      "choices": {
+        "A": "weekly: Php340",
+        "B": "daily: Php240",
+        "C": "daily:Php340",
+        "D": "weekly: Php240"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem:<br>Weekly rate = Php 1,745<br>Daily rate = Php 347.50<br>Need computer for 6 days → Compare costs<br>________________________________________<br>Step 1: Calculate cost if rented daily<br><center><br>347.50×6=2,085<br></center><br>________________________________________<br>Step 2: Calculate cost if rented weekly<br>•\tWeekly rate = 1,745 (covers 7 days, so 6 days still costs 1,745)<br> ________________________________________<br>Step 3: Compare<br><center><br>2,085−1,745=340<br>Weekly rental is cheaper by Php 340 <br></center><br>________________________________________<br>✅ Final Answer:<br>a. weekly: Php 340<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Multiply daily rate × number of days → compare with weekly<br>Difference = savings ✔"
+    },
+    {
+      "id": 1771729291146,
+      "subjectId": 2,
+      "topicId": 5,
+      "question": "A 1.25 kg of box of Brand A detergent sells for Php 87.50. A 1.5 kg box of Brand B detergent sells for Php103.20. What is the difference in the price per kg.?",
+      "choices": {
+        "A": "Php 1.20",
+        "B": "Php 1.50",
+        "C": "Php 1.80",
+        "D": "Php 2.00"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem:<br>Brand A: 1.25 kg → Php 87.50<br>Brand B: 1.5 kg → Php 103.20<br>Find difference in price per kg<br>________________________________________<br>Step 1: Price per kg for Brand A<br><br>Price per kg (A) ≤ <sup>87.50</sup>&frasl;<sub>1.25</sub> = 70 Php/kg<br><br>________________________________________<br>Step 2: Price per kg for Brand B<br><br>Price per kg (B) ≤ <sup>103.20</sup>&frasl;<sub>1.5</sub> = 68.8 Php/kg<br>________________________________________<br>Step 3: Difference<br><center><br>70−68.8=1.2 Php/kg<br></center><br>________________________________________<br>✅ Final Answer:<br>a. Php 1.20<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Price per kg = Total ÷ Weight<br>Subtract to find difference ✔"
+    },
+    {
+      "id": 1771729438287,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A 30-cm long plastic pipe costs Php249. At this rate, what is the price of the pipe per meter?",
+      "choices": {
+        "A": "Php 830",
+        "B": "Php 840",
+        "C": "Php 747",
+        "D": "Php 749"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem:<br>Pipe length = 30 cm<br>Cost = Php 249<br>Find cost per meter (100 cm)<br>________________________________________<br>Step 1: Find cost per cm<br><center><br>Cost per cm ≤ <sup>249</sup>&frasl;<sub>30</sub> = 8.3 Php/cm<br></center><br>________________________________________<br>Step 2: Find cost per meter<br><center><br>Cost per meter=8.3×100=830 Php<br></center><br>________________________________________<br>✅ Final Answer:<br>a. Php 830<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Convert given length to meters → scale cost proportionally<br>30 cm → 100 cm: multiply by 100 ÷ 30 ✔"
+    },
+    {
+      "id": 1771729579982,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A homeowner can rent a chain saw from a rental agency at Php 2,700 a day. The brand new of the same saw can be bought for Php18,900. For how many days could the homeonwer rent the saw before renting would cost more than buying? a. 5",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correctAnswer": "C",
+      "explanation": "Problem:<br>Daily rental = Php 2,700<br>Purchase price = Php 18,900<br>Find maximum number of days to rent before buying is cheaper<br>________________________________________<br>Step 1: Set up inequality<br><center><br>Rental cost ≤ Purchase price<br>2,700 × days ≤ 18,900<br></center><br>________________________________________<br>Step 2: Solve for days<br><center><br>days ≤ <sup>18,900</sup>&frasl;<sub>2,700</sub> = 7<br></center><br>________________________________________<br>✅ Final Answer:<br>c. 7 days<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Divide purchase price by daily rental to find max days before renting exceeds buying ✔"
+    },
+    {
+      "id": 1771729704119,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "Paula uses ten 100-watt bulbs in her house. She uses these bulbs at an average of 5 hours each day. How many KWH do these bulbs use each day?",
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "50",
+        "D": "5,000"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem:<br>Number of bulbs = 10<br>Power per bulb = 100 W<br>Usage = 5 hours/day<br>Find energy consumption in kWh<br>________________________________________<br>Step 1: Total power of all bulbs<br><center><br>10×100 W=1,000 W=1 kW<br></center><br>________________________________________<br>Step 2: Multiply by hours of usage<br><center><br>Energy (kWh)=Power (kW)×Time (h)<br>1 kW×5 h=5 kWh/day<br></center><br>________________________________________<br>✅ Final Answer:<br>a. 5 kWh<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Convert W → kW: divide by 1,000<br>Multiply kW × hours of usage = kWh ✔"
+    },
+    {
+      "id": 1771729921214,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "An electric range uses 12,200 watts per hour and is run an average of 60 hours a year. How many kilowatt-hour is this?",
+      "choices": {
+        "A": "73.2",
+        "B": "732",
+        "C": "7,320",
+        "D": "7.32"
+      },
+      "correctAnswer": "B",
+      "explanation": "Problem:<br>Power = 12,200 W = 12.2 kW (since 1 kW = 1,000 W)<br>Usage = 60 hours/year<br>Find energy consumption in kWh<br>________________________________________<br>Step 1: Convert watts to kilowatts<br><center><br>12,200÷1,000=12.2 kW<br></center><br>________________________________________<br>Step 2: Multiply by hours of usage<br><center><br>Energy (kWh)=12.2×60=732 kWh<br></center><br>________________________________________<br>✅ Final Answer:<br>b. 732 kWh<br>________________________________________<br>🔹 Quick Exam Shortcut<br>W → kW: divide by 1,000<br>Multiply kW × hours = kWh ✔"
+    },
+    {
+      "id": 1771730042875,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "A DVD movie, purchased for Php440 was marked up 25% on the selling price. Later, as retail prices fell, this movie was marked down 20% on the current sale price. Find its new sale price.",
+      "choices": {
+        "A": "Php 352",
+        "B": "Php 440",
+        "C": "Php 500",
+        "D": "Php 550"
+      },
+      "correctAnswer": "B",
+      "explanation": "Problem:<br>Cost price = Php 440<br>Marked up 25% → selling price<br>Then marked down 20% → new sale price<br>________________________________________<br>Step 1: Calculate marked-up price<br><br><center>Marked-up price = 440 + (25% × 440) = 440 + 110 = 550</center><br>________________________________________<br>Step 2: Calculate new sale price after 20% markdown<br><br><center>New price = 550 − (20% × 550) = 550 − 110 = 440</center><br>________________________________________<br>✅ Final Answer:<br>b. Php 440<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Percentage increase/decrease is on the current price, not original<br>Multiply sequentially:<br>New price=440×1.25×0.8=440✔\\text{New price} = 440 \\times 1.25 \\times 0.8 = 440 ✔New price=440×1.25×0.8=440✔"
+    },
+    {
+      "id": 1771730443177,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "VNS Inc. bought these office supplies last week: 1,320 pens @ Php 0.125; 1,480 packs paper clips @ Php 0.625; 1,240 boxes of tape @ Php 0.875; 1,720 boxes of cards @ 0.80. A 5% sales tax is added. What was the company’s total bill?",
+      "choices": {
+        "A": "Php 173.25",
+        "B": "Php 3,551",
+        "C": "Php 971.25",
+        "D": "Php 3,728.55"
+      },
+      "correctAnswer": "D",
+      "explanation": "Step 1: Compute subtotals<br>Pens:<br><center>1,320 × 0.125 = 165</center><br><br>Paper clips:<br><center>1,480 × 0.625 = 925</center><br><br>Tape:<br><center>1,240 × 0.875 = 1,085</center><br><br>Cards:<br><center>1,720 × 0.80 = 1,376</center><br>________________________________________<br>Step 2: Total before tax<br><br><center>165 + 925 + 1,085 + 1,376 = 3,551</center><br>________________________________________<br>Step 3: Add 5% sales tax<br><br><center>Total bill = 3,551 × 1.05 = 3,728.55</center><br>________________________________________<br>✅ Final Answer:<br>d. Php 3,728.55<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Multiply quantity × unit price → sum → multiply by 1 + tax% ✔"
+    },
+    {
+      "id": 1771730780511,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "The question “How many flowers are needed to border a rectangular garden?”, involves",
+      "choices": {
+        "A": "weight",
+        "B": "b.\tperimeter",
+        "C": "volume",
+        "D": "area"
+      },
+      "correctAnswer": "B",
+      "explanation": "This is a conceptual question.<br>When you want to border a rectangular garden, you are talking about the distance around the garden, not the area or volume.<br><center><br>Distance around a rectangle=Perimeter<br></center><br>________________________________________<br>✅ Answer:<br>b. perimeter"
+    },
+    {
+      "id": 1771730863789,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "How many meters of fencing are needed to enclose an 84-meter by 48-meter rectangular garden?",
+      "choices": {
+        "A": "132m",
+        "B": "244m",
+        "C": "264m",
+        "D": "4,032m2"
+      },
+      "correctAnswer": "C",
+      "explanation": "Problem:<br>Rectangular garden: 84 m × 48 m<br>Need fencing around → perimeter<br>________________________________________<br>Step 1: Perimeter of rectangle<br><center><br>P=2(length+width)<br>P=2(84+48)=2(132)=264 m<br></center><br>________________________________________<br>✅ Final Answer:<br>c. 264 m<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Fencing → perimeter<br>Add length + width → multiply by 2 ✔"
+    },
+    {
+      "id": 1771730988620,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "How many 1-cm square stickers are needed to cover a photo box 4 cm long, 3cm wide and 5cm high?",
+      "choices": {
+        "A": "47",
+        "B": "60",
+        "C": "88",
+        "D": "94"
+      },
+      "correctAnswer": "D",
+      "explanation": "Problem:<br>Box dimensions: 4 cm × 3 cm × 5 cm<br>Stickers = 1 cm² each → total surface area of box<br>________________________________________<br>Step 1: Surface area of rectangular box<br><center><br>Surface area=2(lw+lh+wh) <br>=2(4×3+4×5+3×5)<br>=2(12+20+15)=2(47)=94 cm²<br></center><br>________________________________________<br>Step 2: Number of 1-cm² stickers<br><center><br>Stickers needed=94<br></center><br>________________________________________<br>✅ Final Answer:<br>d. 94<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Box → 2(lw + lh + wh) = total surface area<br>Each 1-cm² sticker covers 1 cm² → same number as area ✔"
+    },
+    {
+      "id": 1771731088671,
+      "subjectId": 2,
+      "topicId": 6,
+      "question": "One side of a triangle is 3cm longer than the shortest side, and the other side is 4cm longer than the shortest side. How long is the shortest side if the perimeter is 67 cm?",
+      "choices": {
+        "A": "20 cm",
+        "B": "23 cm",
+        "C": "24 cm",
+        "D": "27 cm"
+      },
+      "correctAnswer": "A",
+      "explanation": "Problem:<br>Shortest side = x cm<br>Second side = x + 3 cm<br>Third side = x + 4 cm<br>Perimeter = 67 cm<br>Find x<br>________________________________________<br>Step 1: Write the perimeter equation<br><center><br>x+(x+3)+(x+4)=67<br>3x+7=67<br></center><br><br>________________________________________<br>Step 2: Solve for x<br><center><br>3x=67−7=60<br>x=60÷3=20 cm<br></center><br>________________________________________<br>✅ Final Answer:<br>a. 20 cm<br>________________________________________<br>🔹 Quick Exam Shortcut<br>Express all sides in terms of shortest side<br>Add → set equal to perimeter → solve ✔"
+    },
+    {
+      "id": 1771734550796,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "By what percent was the price per kilo of chicken inceased?<br><br><strong>(1)</strong> The price per kilo of chicken was increased by Php20<br><strong>(2)</strong> The price per kilo of chicken was increased by Php120",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "c",
+      "explanation": "Chicken price increase (%) – Both statements just tell the amount, but we don’t know the original price in either alone → BOTH needed. ✅"
+    },
+    {
+      "id": 1771734652099,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "A real estate broker received a commission of 8% of the selling price of a certain property, what was the selling price of the property?<br><br><strong>(1)</strong> The selling price minus the real estate agent’s commission was Php 9,200,000<br><strong>(2)</strong> The selling price was 250% of the original purchase price of Php 4,000,000.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "d",
+      "explanation": "Real estate selling price – Each statement alone gives enough: either commission formula or % of original price → ALONE sufficient. ✅"
+    },
+    {
+      "id": 1771735813809,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "Cherry and Keanna were among those who sold raffle tickets to raise money for the club. If Cherry and Keanna sold a total of 168 tickets, how many tickets did Cherry sell?<br><br><strong>(1)</strong> Keanna sold 60% as many raffle tickets as Cherry<br><strong>(2)</strong> Keanna sold 8% of all the raffle tickets sold",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "a",
+      "explanation": "Cherry & Keanna raffle tickets – Statement 1 gives ratio → can solve. Statement 2 only % of total → not enough → statement 1 alone sufficient. ✅"
+    },
+    {
+      "id": 1771735927515,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "What is the ratio of m : s: a?<br><br><strong>(1)</strong> a = 2, and ms = 64<br><strong>(2)</strong> m/s = 2 and a/s = ¼",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "b",
+      "explanation": "Ratio m:s:a – Statement 2 directly gives ratios → can solve. Statement 1 only gives a number and product → not enough → statement 2 alone sufficient. ✅"
+    },
+    {
+      "id": 1771736016404,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "If x and y are integers, is x divisible by 17?<br><br><strong>(1)</strong> The product xy is divisible by 17<br><strong>(2)</strong> y is not divisible by 17",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "c",
+      "explanation": "x divisible by 17 – Statement 1 alone: xy divisible doesn’t tell x. Statement 2 alone: y not divisible → not enough. Together → yes → BOTH needed. ✅"
+    },
+    {
+      "id": 1771736087127,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "On Saturday monring the printing machine of Gerpress Printing ran continuously at uniform rate to fill a production order. At what time did it completely fill the order that morning?<br><br><strong>(1)</strong> The supervisor began the plan for production 8:08am.<br><strong>(2)</strong> The machine had filled 50% of the order at 9:48am and 5/6 of the order by 10:18am",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "b",
+      "explanation": "Printing machine finish time – Statement 2 gives partial times → can compute total time. Statement 1 alone: just start time → not enough → statement 2 alone sufficient. ✅"
+    },
+    {
+      "id": 1771736143183,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "How many books does Gerard have?<br><br><strong>(1)</strong> If Gerard had 18 fewer books, he would have only half as many as he actually has.<br><strong>(2)</strong> Gerard has three times as many fiction as non-fiction books.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "a",
+      "explanation": "Gerard’s books – Statement 1 gives algebra to solve total → enough. Statement 2: ratio of fiction/non-fiction → not enough → statement 1 alone sufficient. ✅"
+    },
+    {
+      "id": 1771736201910,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "What number is 24% of x?<br><br><strong>(1)</strong> 16 is 8% of x<br><strong>(2)</strong> 1/8 of x is 1,600",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "d",
+      "explanation": "24% of x – Statement 1: 8% =16 → x = 200, gives 24%. Statement 2: 1/8 =1600 → x = 12800, gives 24%. Both → ALONE sufficient. ✅"
+    },
+    {
+      "id": 1771736272339,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "What was the total amount raised for the Payatas Tragedy from private corporations and personal donations?<br><br><strong>(1)</strong> Of the amount donated,48% came from private corporations<br><strong>(2)</strong> Of the amount donated, Php15M came from personal donations.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "c",
+      "explanation": "Total donations – Either % or absolute alone → not enough. Both together → total sum → BOTH needed. ✅"
+    },
+    {
+      "id": 1771736333545,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "Mary’s total score in the three bowling games was 530. What were her scores?<br><br><strong>(1)</strong> Mary’s highest score was 198<br><strong>(2)</strong> The sum of Mary’s two highest scores was 368",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "c",
+      "explanation": "Mary’s bowling scores – Highest + sum of top 2 alone → not enough individually, together → can find all 3 → BOTH needed. ✅"
+    },
+    {
+      "id": 1771736398778,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "If the value of n closer to 48 than to 78?<br><br><strong>(1)</strong> 78 – n > n – 48<br><strong>(2)</strong> n > 60",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "a",
+      "explanation": "Is n closer to 48 than 78? – Statement 1: yes, inequality solves → enough. Statement 2: n>60 → could be 61–78 → not enough → statement 1 alone sufficient. ✅"
+    },
+    {
+      "id": 1771736493679,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "In last Saturday’s Midnight Sale at Gaisano Mall a certain shop sold 75% of the shirts in its inventory. Each shirt was sold for Php358. What was the total revenue from the sale of these shirts on that day?<br><br><strong>(1)</strong> When the shop opened last Saturday, there were 448 shirts in its inventory<br><strong>(2)</strong> All but 112 of the shop’s inventory were sold last Saturday.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "d",
+      "explanation": "Revenue from shirts – Statement 1: # of shirts × 75% × price → enough. Statement 2: inventory minus 112 → also enough → ALONE sufficient. ✅"
+    },
+    {
+      "id": 1771736586339,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "How many more boys than girls are there in the room?<br><br><strong>(1)</strong> There is a total of 56 girls and boys in the room.<br><strong>(2)</strong> The number of boys in the room equals the square of the number of girls in the room.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "c",
+      "explanation": "More boys than girls – Total alone → not enough. Equation (boys = girls²) + total → solve difference → BOTH needed. ✅"
+    },
+    {
+      "id": 1771736748342,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "In what year was David born?<br><br><strong>(1)</strong> David’s friend Michelle, who is ½ years younger than him, was born in 1979.<br><strong>(2)</strong> In 1998, David turned 20 years old",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "b",
+      "explanation": "Year David born – Statement 2 gives exact age → solves. Statement 1: only Michelle’s birth → not enough → statement 2 alone sufficient. ✅"
+    },
+    {
+      "id": 1771736839439,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "A box contains 48 balls, of which 30 are red and 18 are blue. If 16 of the balls are removed, how many of the balls left in the box are blue?<br><br><strong>(1)</strong> Of the balls removed, the ratio of the number of red ones to the number of blue ones is 5:3<br><strong>(2)</strong> Of the first 8 marbles removed, 5 are red",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "a",
+      "explanation": "Balls remaining – Statement 1 gives ratio of removed → can compute remaining blue → enough. Statement 2 only gives partial info → not enough → statement 1 alone sufficient. ✅"
+    },
+    {
+      "id": 1771736917710,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "How long did it take Mrs. Lim to drive non-stop on a trip from here home to Ayala Alabang?<br><br><strong>(1)</strong> If Mrs. Lim average speed for the trip had been 1.5 times as fast, the trip would have taken 2 hours.<br><strong>(2)</strong> Mrs. Lim average speed for the trip was 80 km per hour.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "a",
+      "explanation": "Mrs. Lim trip time – Statement 1 gives speed × time ratio → can compute total time → enough. Statement 2 alone: speed only → time unknown → statement 1 alone sufficient. ✅"
+    },
+    {
+      "id": 1771736981727,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "If Lorna had a dentist’s appointment on a certain day, was the appointment on a Friday?<br><br><strong>(1)</strong> Exactly 64 hours before the appointment, it was Wednesday.<br><strong>(2)</strong> The appointment is between 2:00pm to 7:00pm",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "c",
+      "explanation": "Lorna dentist Friday? – Statement 1: 64 hours → exact day → yes/no. Statement 2: time of day → irrelevant → BOTH needed. ✅"
+    },
+    {
+      "id": 1771737057472,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "What was the average number of kilometers per liter of gasoline a car can consume during a certain trip?<br><br><strong>(1)</strong> The total cost of the gasoline used by the card or the 640-km trip was Php1,152.<br><strong>(2)</strong> The cost for the gasoline used by the car for the trip was Php18.00 per liter.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "c",
+      "explanation": "Average km per liter – Cost alone → liters unknown. Price per liter alone → distance unknown. Together → solve km/L → BOTH needed. ✅"
+    },
+    {
+      "id": 1771737108747,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "What is the ratio of a to b?<br><br><strong>(1)</strong> a is 8 more than twice b.<br><strong>(2)</strong> The ratio of a to 4b is 3 : 7.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "b",
+      "explanation": "Ratio a:b – Statement 1: linear equation → ratio not unique. Statement 2: direct ratio formula → solves → statement 2 alone sufficient. ✅"
+    },
+    {
+      "id": 1771737174685,
+      "subjectId": 2,
+      "topicId": 1771732111873,
+      "questionType": "data-sufficiency",
+      "question": "At Avanti Review Center, 400 students are enrolled for the Review Program or Academic Advancement Program or both. If 100 of these students are not enrolled in the Review Program, how many of them are enrolled in both Avanti Review Program and Avanti Academic Advancement Program?<br><br><strong>(1)</strong> Of the 400 students, 160 are not enrolled in the Academic Advancement Program.<br><strong>(2)</strong> A total of 240 of the students are enrolled in the Academic Advancement Program.",
+      "choices": {
+        "a": "if statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.",
+        "b": "if statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.",
+        "c": "if BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.",
+        "d": "if each statement ALONE is sufficient.",
+        "e": "if statement (1) and (2) TOGETHER are not sufficient."
+      },
+      "correctAnswer": "d",
+      "explanation": "Students in both programs – Statement 1: # not in AAP → enough? Statement 2: # in AAP → also enough → either alone → ALONE sufficient. ✅"
+    },
+    {
+      "id": 1771740028052,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Commission on the Filipino Language <br>Commission on Human Rights<br>Commission on Higher Education <br>Commission on Population<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Commission on the Filipino Language",
+          "Commission on Human Rights",
+          "Commission on Higher Education",
+          "Commission on Population"
+        ],
+        "sortedItems": [
+          "Commission on Higher Education",
+          "Commission on Human Rights",
+          "Commission on Population",
+          "Commission on the Filipino Language"
+        ]
+      },
+      "correctAnswer": "Commission on Higher Education|Commission on Human Rights|Commission on Population|Commission on the Filipino Language",
+      "explanation": "Commission on the Filipino Language<br>B. Commission on Human Rights<br>C. Commission on Higher Education<br>D. Commission on Population<br><br>Step 1: Decide what part to alphabetize by<br><br>Some people ignore “on the” because it’s a preposition/article, so you treat it like:<br><br>A → Commission Filipino Language<br><br>B → Commission Human Rights<br><br>C → Commission Higher Education<br><br>D → Commission Population<br><br>Some people include “on” and treat it as part of the name:<br><br>A → Commission on Filipino Language<br><br>B → Commission on Human Rights<br><br>C → Commission on Higher Education<br><br>D → Commission on Population<br><br>Step 2: Alphabetize<br><br>Option 1 — ignoring “on the” (focus on main word after preposition):<br><br>Filipino → A<br><br>Higher → C<br><br>Human → B<br><br>Population → D<br><br>✅ Gives ACBD<br><br>Option 2 — including “on” (treat full name exactly as written):<br><br>Commission on Filipino Language → C<br><br>Commission on Human Rights → B<br><br>Commission on Higher Education → D<br><br>Commission on Population → A<br><br>✅ Gives CBDA<br><br>Step 3: Why two answers?<br><br>It depends on whether you skip small words like “on, the, of” or not.<br><br>Different teachers/exams might define the rule differently: some ignore prepositions, some don’t.<br><br>Quick tip for exams:<br><br>If the answer key says CBDA, treat all words literally, including “on” and “the.”<br><br>If the key says ACBD, they ignored “on the” when alphabetizing."
+    },
+    {
+      "id": 1771755725477,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Food and Nutrition Research Institute <br>Fiber Industry Development Authority <br>Foreign Service Institute<br>Family Planning Organization of the Philippines<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Food and Nutrition Research Institute",
+          "Fiber Industry Development Authority",
+          "Foreign Service Institute",
+          "Family Planning Organization of the Philippines"
+        ],
+        "sortedItems": [
+          "Family Planning Organization of the Philippines",
+          "Fiber Industry Development Authority",
+          "Food and Nutrition Research Institute",
+          "Foreign Service Institute"
+        ]
+      },
+      "correctAnswer": "Family Planning Organization of the Philippines|Fiber Industry Development Authority|Food and Nutrition Research Institute|Foreign Service Institute",
+      "explanation": "Step 1: Look at the first word of each name<br><br>Food → A<br><br>Fiber → B<br><br>Foreign → C<br><br>Family → D<br><br>Alphabetically: Family (D), Fiber (B), Food (A), Foreign (C)<br><br>F < Fi < Fo < Fo → Let’s check carefully:<br><br>Family → F a<br><br>Fiber → F i<br><br>Food → F o<br><br>Foreign → F o r<br><br>So alphabetically: Family (D), Fiber (B), Food (A), Foreign (C)<br><br>✅ Alphabetical order: D, B, A, C → DBAC"
+    },
+    {
+      "id": 1771836148266,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Cooperative Development Authority <br>Cottage Industry Development Enterprise <br>Cottage Industry Technology Center <br>Council for the Welfare of Children<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Cooperative Development Authority",
+          "Cottage Industry Development Enterprise",
+          "Cottage Industry Technology Center",
+          "Council for the Welfare of Children"
+        ],
+        "sortedItems": [
+          "Cooperative Development Authority",
+          "Cottage Industry Development Enterprise",
+          "Cottage Industry Technology Center",
+          "Council for the Welfare of Children"
+        ]
+      },
+      "correctAnswer": "Cooperative Development Authority|Cottage Industry Development Enterprise|Cottage Industry Technology Center|Council for the Welfare of Children",
+      "explanation": "Step 1: Compare the first words<br><br>All start with C → so go to the next letteCooperative → Co o<br>Cottage → Co t<br>Council → Co u<br><br>Now compare the third letters:<br><br>Cooperative → C o o<br><br>Cottage → C o t<br><br>Council → C o u<br><br>Alphabet order:<br>o comes before t, and t comes before u<br><br>So far we have:<br><br>1️⃣ Cooperative (A)<br>2️⃣ Cottage (B & C – tie for now)<br>3️⃣ Council (D)<br><br>Step 2: Break the tie between B and C<br><br>Both start with:<br>Cottage Industry …<br><br>So compare the next word after \"Industry\":<br><br>B → Development<br><br>C → Technology<br><br>Compare D vs T:<br><br>D comes before So:<br><br>B comes before Final Answer:<br><br>A → B → C → D<br><br>✅ ABCD"
+    },
+    {
+      "id": 1771837008194,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Insurance Commission <br>Industrial Technology Development Institute <br>Institute of Labor and Manpower Studies <br>Instructional Materials Corporation<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Insurance Commission",
+          "Industrial Technology Development Institute",
+          "Institute of Labor and Manpower Studies",
+          "Instructional Materials Corporation"
+        ],
+        "sortedItems": [
+          "Industrial Technology Development Institute",
+          "Institute of Labor and Manpower Studies",
+          "Instructional Materials Corporation",
+          "Insurance Commission"
+        ]
+      },
+      "correctAnswer": "Industrial Technology Development Institute|Institute of Labor and Manpower Studies|Instructional Materials Corporation|Insurance Commission",
+      "explanation": "Step 1: Compare the FIRST word only<br><br>Because all start with “In…”, we go letter by letteInsurance → Ins<br>Industrial → Ind<br>Institute → Ins<br>Instructional → Ins<br><br>Now compare the 3rd letter after “In”:<br><br>Industrial = d<br><br>Insurance = s<br><br>Institute = s<br><br>Instructional = s<br><br>Alphabet rule:<br>d comes before s<br><br>So FIRST is:<br>👉 B (Industrial)<br><br>Step 2: Compare the remaining three (all start with “Ins…”)<br><br>Insurance = Insu<br>Institute = Inst<br>Instructional = Inst<br><br>Compare the 4th letter:<br><br>Insurance → u<br><br>Institute → t<br><br>Instructional → t<br><br>t comes before u<br>So Insurance goes LAST among the threCurrent order:<br><br>B<br><br>(Institute vs Instructional)<br><br>A (Insurance)<br><br>Step 3: Break the tie (Institute vs Instructional)<br><br>Compare letter by letter:<br><br>Institute = Institu…<br>Instructional = Instru…<br><br>At the 6th letter:<br><br>Institute → i<br><br>Instructional → r<br><br>Alphabet: i comes before r<br><br>So:<br>Institute (C) comes before Instructional (D)<br><br>Final Alphabetical Order:<br><br>B → C → D → A<br><br>✅ Answer: BCDA"
+    },
+    {
+      "id": 1771837188646,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Presidential Commission on Good Governance <br>Presidential Commission to Fight Poverty <br>Presidential Commission for the Urban Poor <br>Presidential Commission on Human Rights<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Presidential Commission on Good Governance",
+          "Presidential Commission to Fight Poverty",
+          "Presidential Commission for the Urban Poor",
+          "Presidential Commission on Human Rights"
+        ],
+        "sortedItems": [
+          "Presidential Commission for the Urban Poor",
+          "Presidential Commission on Good Governance",
+          "Presidential Commission on Human Rights",
+          "Presidential Commission to Fight Poverty"
+        ]
+      },
+      "correctAnswer": "Presidential Commission for the Urban Poor|Presidential Commission on Good Governance|Presidential Commission on Human Rights|Presidential Commission to Fight Poverty",
+      "explanation": "Step 1: Ignore the identical starting words<br><br>All four start with:<br><br>Presidential Commission<br><br>So this part is useless for sortinWe move to the next word:<br><br>A → on Good Governance<br><br>B → to Fight Poverty<br><br>C → for the Urban Poor<br><br>D → on Human Rights<br><br>Now we compare:<br>for, on, on, to<br><br>Alphabetically:<br>f < o < t<br><br>So first is:<br>👉 C (for…)<br><br>Step 2: Break the tie (A vs D)<br><br>Both have:<br><br>Presidential Commission on<br><br>So we go to the NEXT word after “on”:<br><br>A → Good Governance<br><br>D → Human Rights<br><br>Compare first letters:<br>G vs H<br><br>Alphabet:<br>G comes before H<br><br>So:<br>A comes before D<br><br>Step 3: Final order (with logic)<br><br>C → for the Urban Poor<br><br>A → on Good Governance<br><br>D → on Human Rights<br><br>B → to Fight Poverty<br><br>Final answer:<br>CADB"
+    },
+    {
+      "id": 1771838494743,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "AA Industrial Chemical Supply <br>AB Capital and Investment Corporation <br>A Soriano Aviation Incorporated <br>A-1 Driving Company Incorporated<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "AA Industrial Chemical Supply",
+          "AB Capital and Investment Corporation",
+          "A Soriano Aviation Incorporated",
+          "A-1 Driving Company Incorporated"
+        ],
+        "sortedItems": [
+          "A Soriano Aviation Incorporated",
+          "A-1 Driving Company Incorporated",
+          "AA Industrial Chemical Supply",
+          "AB Capital and Investment Corporation"
+        ]
+      },
+      "correctAnswer": "A Soriano Aviation Incorporated|A-1 Driving Company Incorporated|AA Industrial Chemical Supply|AB Capital and Investment Corporation",
+      "explanation": "They sorted it as:<br><br>A-1 Driving Company Incorporated<br>A Soriano Aviation Incorporated<br>AA Industrial Chemical Supply<br>AB Capital and Investment Corporation<br><br>Let’s analyze what rule would produce thaWhat rule are they likely using?<br><br>They are treating characters in this priority:<br><br>Symbols → Space → Letters<br><br>So under that system:<br><br>After the first letter “A”, compare the second character:<br><br>A-1 → second character = - (symbol)<br><br>A Soriano → second character = space<br><br>AA → second character = A<br><br>AB → second character = B<br><br>If they use:<br><br>Symbols come before spaces, and spaces come before letters<br><br>Then the order becomes:<br><br>1️⃣ A-1 (hyphen)<br>2️⃣ A Soriano (space)<br>3️⃣ AA<br>4️⃣ AB<br><br>Which gives:<br><br>✅ D C A B<br><br>Why would someone use that rule?<br><br>Because in strict ASCII sorting:<br><br>Symbols like - have lower character values than letters<br><br>Some systems treat space after symbols<br><br>Programming-style sorting sometimes does this<br><br>So they are probably:<br><br>Following strict character-by-character comparison<br><br>Not ignoring punctuation<br><br>Giving priority to special characters<br><br>Which rule is correct for CSE Clerical?<br><br>In Civil Service style clerical operations:<br><br>✔ Compare exactly as written<br>✔ Do not ignore punctuation<br>✔ Do not ignore spaces<br><br>But the tricky part is:<br>Some reviewers teach:<br><br>Space comes before symbols<br>Others teach:<br><br>Symbols come before space<br><br>That’s why you see two possible answerWhat should YOU follow?<br><br>Follow whatever rule your reviewer/book consistently applieIf previous items treat symbols before space → stick with thaConsistency is more important than “real-world” dictionary logi"
+    },
+    {
+      "id": 1771838751445,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Ayala Plans InAyala Health Care, InAyala Land InAyala Life Assurance In<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Ayala Plans Inc.",
+          "Ayala Health Care, Inc.",
+          "Ayala Land Inc.",
+          "Ayala Life Assurance Inc."
+        ],
+        "sortedItems": [
+          "Ayala Health Care, Inc.",
+          "Ayala Land Inc.",
+          "Ayala Life Assurance Inc.",
+          "Ayala Plans Inc."
+        ]
+      },
+      "correctAnswer": "Ayala Health Care, Inc.|Ayala Land Inc.|Ayala Life Assurance Inc.|Ayala Plans Inc.",
+      "explanation": "Step 1: Ignore the identical first word<br><br>All start with Ayala, so skip iNow compare the second word:<br><br>A → Plans<br><br>B → Health<br><br>C → Land<br><br>D → Life<br><br>Step 2: Alphabetize the second word<br><br>Health → H<br>Land → L<br>Life → L<br>Plans → P<br><br>Alphabetically:<br><br>H < L < P<br><br>So first is:<br>👉 B (Health)<br><br>Step 3: Break the tie between Land and Life<br><br>Both start with Compare second letter:<br><br>Land → La<br>Life → Li<br><br>Alphabet:<br>a comes before i<br><br>So:<br>👉 Land (C) comes before Life (D)<br><br>Step 4: Final order<br><br>1️⃣ B – Health<br>2️⃣ C – Land<br>3️⃣ D – Life<br>4️⃣ A – Plans<br><br>Final Answer:<br><br>BCDA"
+    },
+    {
+      "id": 1771838908256,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Filspin Incorporated <br>Filway Marketing InFilsov Shipping Company <br>Fina Products In<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Filspin Incorporated",
+          "Filway Marketing Inc.",
+          "Filsov Shipping Company",
+          "Fina Products Inc."
+        ],
+        "sortedItems": [
+          "Filsov Shipping Company",
+          "Filspin Incorporated",
+          "Filway Marketing Inc.",
+          "Fina Products Inc."
+        ]
+      },
+      "correctAnswer": "Filsov Shipping Company|Filspin Incorporated|Filway Marketing Inc.|Fina Products Inc.",
+      "explanation": "Step 1: Compare from the VERY FIRST letter<br><br>Alphabetizing is done letter by letter, not by meaninLook at the first 4 letters:<br><br>Filspin → F i l s<br><br>Filway → F i l w<br><br>Filsov → F i l s<br><br>Fina → F i n a<br><br>Now compare:<br><br>“Fil…” comes before “Fin…” because l comes before n<br><br>So D (Fina) is NOT first?<br>Wait — check carefully:<br><br>Alphabet:<br>l (12th letter)<br>n (14th letter)<br><br>So:<br>Fil… < Fin…<br><br>That means D goes AFTER all Fil- wordStep 2: Focus only on the “Fil…” group first<br><br>Now compare:<br><br>A → Filspin<br><br>B → Filway<br><br>C → Filsov<br><br>All share “Fil”<br><br>Go to the 4th letter:<br><br>Filspin → s<br><br>Filway → w<br><br>Filsov → s<br><br>Alphabet:<br>s < w<br>So B (Filway) is last among the Fil- grouOrder so far inside Fil-:<br>A and C first, then B<br><br>Step 3: Break the tie (Filspin vs Filsov)<br><br>Compare next letters:<br><br>Fils pin<br>Fils ov<br><br>Compare p vs o:<br><br>Alphabet:<br>o comes before p<br><br>So:<br>Filsov (C) comes before Filspin (A)<br><br>Step 4: Put everything together<br><br>From smallest to largest alphabetically:<br><br>1️⃣ C – Filsov<br>2️⃣ A – Filspin<br>3️⃣ B – Filway<br>4️⃣ D – Fina<br><br>Final Answer:<br><br>CABD"
+    },
+    {
+      "id": 1771839057166,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "John Shannon Montessori <br>John Paul Hospital <br>John Robert Powers <br>John Nelson and Associates<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "John Shannon Montessori",
+          "John Paul Hospital",
+          "John Robert Powers",
+          "John Nelson and Associates"
+        ],
+        "sortedItems": [
+          "John Nelson and Associates",
+          "John Paul Hospital",
+          "John Robert Powers",
+          "John Shannon Montessori"
+        ]
+      },
+      "correctAnswer": "John Nelson and Associates|John Paul Hospital|John Robert Powers|John Shannon Montessori",
+      "explanation": "Step 1: Ignore the identical first word<br><br>All start with “John”, so it does NOT help in sortinSo we compare the next word:<br><br>Shannon<br><br>Paul<br><br>Robert<br><br>Nelson<br><br>Step 2: Compare the second word alphabetically<br><br>Look at first letters:<br><br>Nelson → N<br><br>Paul → P<br><br>Robert → R<br><br>Shannon → S<br><br>Alphabet order:<br>N < P < R < S<br><br>Step 3: Arrange from A to Z<br><br>So the correct order is:<br><br>1️⃣ D – John Nelson and Associates<br>2️⃣ B – John Paul Hospital<br>3️⃣ C – John Robert Powers<br>4️⃣ A – John Shannon Montessori<br><br>Final Answer:<br><br>DBCA"
+    },
+    {
+      "id": 1771839258285,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Sports Zone Restaurant <br>Sports Resources InSports Values InSports House and General Merchandise<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Sports Zone Restaurant",
+          "Sports Resources Inc.",
+          "Sports Values Inc.",
+          "Sports House and General Merchandise"
+        ],
+        "sortedItems": [
+          "Sports House and General Merchandise",
+          "Sports Resources Inc.",
+          "Sports Values Inc.",
+          "Sports Zone Restaurant"
+        ]
+      },
+      "correctAnswer": "Sports House and General Merchandise|Sports Resources Inc.|Sports Values Inc.|Sports Zone Restaurant",
+      "explanation": "Step 1: Ignore the common first word<br><br>All start with “Sports”, so we skip iNow compare the NEXT word:<br><br>Zone<br><br>Resources<br><br>Values<br><br>House<br><br>Step 2: Compare alphabetically by the second word<br><br>Look at first letters:<br><br>House → H<br><br>Resources → R<br><br>Values → V<br><br>Zone → Z<br><br>Alphabet order:<br>H < R < V < Z<br><br>Step 3: Arrange from A to Z<br><br>So the correct order becomes:<br><br>1️⃣ D – Sports House and General Merchandise<br>2️⃣ B – Sports Resources In3️⃣ C – Sports Values In4️⃣ A – Sports Zone Restaurant<br><br>Final Answer:<br><br>DBCA"
+    },
+    {
+      "id": 1771839766028,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Abad, Josephine <br>Abad, Jason <br>Abad, Joseph <br>Abad, June<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Abad, Josephine",
+          "Abad, Jason",
+          "Abad, Joseph",
+          "Abad, June"
+        ],
+        "sortedItems": [
+          "Abad, Jason",
+          "Abad, Joseph",
+          "Abad, Josephine",
+          "Abad, June"
+        ]
+      },
+      "correctAnswer": "Abad, Jason|Abad, Joseph|Abad, Josephine|Abad, June",
+      "explanation": "Step 1: Compare last names<br><br>All are Abad, so we go to first nameStep 2: Compare first names letter by letter<br><br>Jason → J-a-s-o-n<br><br>Joseph → J-o-s-e-p-h<br><br>Josephine → J-o-s-e-p-h-i-n-e<br><br>June → J-u-n-e<br><br>Compare alphabetically:<br><br>J-a… comes before J-o… → Jason is first<br><br>Next is Joseph (J-o-s-e-p-h)<br><br>Then Josephine (J-o-s-e-p-h-i-n-e)<br><br>Last is June (J-u-n-e)<br><br>✅ Correct Alphabetical Order:<br><br>B, C, A, D → Jason, Joseph, Josephine, June"
+    },
+    {
+      "id": 1771840002651,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "St. Stephen’s School<br>St. Stephen’s University<br>St. Scholastica’s Academy<br>St. Scholastica’s Colle<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "St. Stephen’s School",
+          "St. Stephen’s University",
+          "St. Scholastica’s Academy",
+          "St. Scholastica’s Colle"
+        ],
+        "sortedItems": [
+          "St. Scholastica’s Academy",
+          "St. Scholastica’s Colle",
+          "St. Stephen’s School",
+          "St. Stephen’s University"
+        ]
+      },
+      "correctAnswer": "St. Scholastica’s Academy|St. Scholastica’s Colle|St. Stephen’s School|St. Stephen’s University",
+      "explanation": "Step 1: Compare the first word “St.” → all the same, move to the next word.<br><br>“Stephen’s” vs “Scholastica’s”<br><br>Scholastica → comes before Stephen’s alphabetically (c < t)<br><br>✅ So all St. Scholastica’s … entries come first.<br><br>Step 2: Between “St. Scholastica’s Academy” (C) and “St. Scholastica’s College” (D)<br><br>Compare letter by letter after “Scholastica’s”:<br><br>Academy → A<br><br>College → C<br><br>A < C, so C comes first, then D<br><br>Step 3: The “St. Stephen’s …” entries (A and B)<br><br>Compare “School” vs “University”<br><br>School < University → A comes before B<br><br>✅ Final Alphabetical Order:<br><br>C, D, A, B → St. Scholastica’s Academy, St. Scholastica’s College, St. Stephen’s School, St. Stephen’s University"
+    },
+    {
+      "id": 1771841983355,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Santos, Anita <br>Santos, Ana <br>Santos, Antonio <br>Santos, Anthony<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Santos, Anita",
+          "Santos, Ana",
+          "Santos, Antonio",
+          "Santos, Anthony"
+        ],
+        "sortedItems": [
+          "Santos, Ana",
+          "Santos, Anita",
+          "Santos, Anthony",
+          "Santos, Antonio"
+        ]
+      },
+      "correctAnswer": "Santos, Ana|Santos, Anita|Santos, Anthony|Santos, Antonio",
+      "explanation": "Step 1: Compare last names<br>All last names are Santos, so we go to the first names to alphabetize.<br><br>Anita<br><br>Ana<br><br>Antonio<br><br>Anthony<br><br>Step 2: Compare first names letter by letter<br><br>Ana vs Anita → A n a … vs A n i … → a comes before i → Ana first<br><br>Antonio vs Anthony → A n t … vs A n t … → next letters o vs h → h comes before o → Anthony before Antonio<br><br>Step 3: Put them in order<br><br>B. Santos, Ana<br><br>A. Santos, Anita<br><br>D. Santos, Anthony<br><br>C. Santos, Antonio<br><br>✅ Alphabetical order: B, A, D, C"
+    },
+    {
+      "id": 1771843497197,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Philippine Daily Inquirer <br>Philippine Star <br>Philippine Herald <br>Philippine Tribune<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Philippine Daily Inquirer",
+          "Philippine Star",
+          "Philippine Herald",
+          "Philippine Tribune"
+        ],
+        "sortedItems": [
+          "Philippine Daily Inquirer",
+          "Philippine Herald",
+          "Philippine Star",
+          "Philippine Tribune"
+        ]
+      },
+      "correctAnswer": "Philippine Daily Inquirer|Philippine Herald|Philippine Star|Philippine Tribune",
+      "explanation": "Step 1: Compare word by word<br><br>All start with “Philippine”, so we look at the second word:<br><br>Daily Inquirer → D<br><br>Star → S<br><br>Herald → H<br><br>Tribune → T<br><br>Step 2: Alphabetical order of second word<br><br>D → H → S → T<br><br>So the order is:<br><br>✅ A. Philippine Daily Inquirer<br>✅ C. Philippine Herald<br>✅ B. Philippine Star<br>✅ D. Philippine Tribune<br><br>Answer: ACBD"
+    },
+    {
+      "id": 1771843987688,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Luna, Antonio <br>Luna, Juan <br>Luna, Olive <br>Luna, Oliver<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Luna, Antonio",
+          "Luna, Juan",
+          "Luna, Olive",
+          "Luna, Oliver"
+        ],
+        "sortedItems": [
+          "Luna, Antonio",
+          "Luna, Juan",
+          "Luna, Olive",
+          "Luna, Oliver"
+        ]
+      },
+      "correctAnswer": "Luna, Antonio|Luna, Juan|Luna, Olive|Luna, Oliver",
+      "explanation": "Step 1: Compare last names<br><br>All are “Luna”, so move to first names: Antonio, Juan, Olive, Oliver.<br><br>Step 2: Alphabetical order of first names<br><br>Antonio → A<br><br>Juan → J<br><br>Olive → O<br><br>Oliver → O<br><br>Antonio comes first, then Juan. For Olive and Oliver, compare letter by letter:<br><br>Olive → O l i v e<br><br>Oliver → O l i v e r<br><br>They match until the last letters; “e” comes before “er”, so Olive → Oliver.<br><br>✅ Final alphabetical order: Antonio, Juan, Olive, Oliver → A, B, C, D<br><br>Answer: ABCD"
+    },
+    {
+      "id": 1771844510090,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Felimon, Jason <br>Felipe, Julian <br>Felimon, Jamie <br>Felipe, Julia<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Felimon, Jason",
+          "Felipe, Julian",
+          "Felimon, Jamie",
+          "Felipe, Julia"
+        ],
+        "sortedItems": [
+          "Felimon, Jamie",
+          "Felimon, Jason",
+          "Felipe, Julia",
+          "Felipe, Julian"
+        ]
+      },
+      "correctAnswer": "Felimon, Jamie|Felimon, Jason|Felipe, Julia|Felipe, Julian",
+      "explanation": "Step 1: Compare last names<br><br>Felipe vs Felimon → Felipe comes first alphabetically (compare letter by letter: Felip… vs Felim… → e < i)<br><br>So the Felipe names (B, D) come before Felimon names (A, C).<br><br>Step 2: Compare first names within same last name<br><br>Felipe, Julian → J<br><br>Felipe, Julia → J<br><br>Compare letter by letter:<br><br>Julian → Julian<br><br>Julia → Julia<br><br>“Julia” comes before “Julian” alphabetically because a < n at the 5th letter.<br><br>✅ Order for Felipe: D → B<br><br>Step 3: Compare Felimon first names<br><br>Felimon, Jason → J<br><br>Felimon, Jamie → J<br><br>Compare letter by letter:<br><br>Jason → a after J? Wait: Jason → J a s o n<br><br>Jamie → J a m i e<br><br>Compare 3rd letters:<br><br>Jason → s<br><br>Jamie → m<br><br>m < s, so Jamie comes before Jason.<br><br>✅ Order for Felimon: C → A<br><br>✅ Step 4: Combine<br><br>Final alphabetical order: D → B → C → A<br><br>Answer: CADB"
+    },
+    {
+      "id": 1771845221323,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "UP Institute for Small Scale Industries <br>UP Institute for Science and Math Education <br>UP Institute of Biology <br>UP Institute of Chemistry<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "UP Institute for Small Scale Industries",
+          "UP Institute for Science and Math Education",
+          "UP Institute of Biology",
+          "UP Institute of Chemistry"
+        ],
+        "sortedItems": [
+          "UP Institute of Biology",
+          "UP Institute of Chemistry",
+          "UP Institute for Science and Math Education",
+          "UP Institute for Small Scale Industries"
+        ]
+      },
+      "correctAnswer": "UP Institute of Biology|UP Institute of Chemistry|UP Institute for Science and Math Education|UP Institute for Small Scale Industries",
+      "explanation": "Step 1: Ignore the common part<br><br>All start with UP Institute, so we look at what comes after “UP Institute”:<br><br>A → for Small Scale Industries → “for S…”<br><br>B → for Science and Math Education → “for S…”<br><br>C → of Biology → “of …”<br><br>D → of Chemistry → “of …”<br><br>Step 2: Compare first letters after “UP Institute”<br><br>f (for) comes before o (of), so normally “for …” items (A & B) come before “of …” items (C & D).<br><br>BUT sometimes in Philippine clerical exams, prepositions like “for” are ignored, because they are considered non-significant words, while “of” is treated as significant. In that case:<br><br>“Small Scale Industries” → S<br><br>“Science and Math Education” → S<br><br>“Biology” → B<br><br>“Chemistry” → C<br><br>Step 3: Alphabetize by first significant word<br><br>C → Chemistry (D)<br><br>D → Biology (C)<br><br>Wait, re-labeling carefully:<br><br>Significant words after ignoring “for”/“of”:<br><br>A → Small Scale Industries → S<br><br>B → Science and Math Education → S<br><br>C → Biology → B<br><br>D → Chemistry → C<br><br>Alphabetical order by significant word: B (Biology / C), D (Chemistry / D), B & A?<br><br>✅ This gives C → D → B → A → CDBA"
+    },
+    {
+      "id": 1771847053031,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Bureau of Post <br>Bureau of Internal Revenue <br>Bureau of Mines <br>Bureau of Fisheries and Aquatic Resources<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Bureau of Post",
+          "Bureau of Internal Revenue",
+          "Bureau of Mines",
+          "Bureau of Fisheries and Aquatic Resources"
+        ],
+        "sortedItems": [
+          "Bureau of Fisheries and Aquatic Resources",
+          "Bureau of Internal Revenue",
+          "Bureau of Mines",
+          "Bureau of Post"
+        ]
+      },
+      "correctAnswer": "Bureau of Fisheries and Aquatic Resources|Bureau of Internal Revenue|Bureau of Mines|Bureau of Post",
+      "explanation": "Step 1: Ignore “Bureau of”<br><br>We only compare the significant words after Bureau of:<br><br>A → Post<br><br>B → Internal Revenue<br><br>C → Mines<br><br>D → Fisheries and Aquatic Resources<br><br>Step 2: Alphabetical order of the significant words<br><br>Compare the first letters: F, I, M, P<br><br>D → Fisheries and Aquatic Resources → F<br><br>B → Internal Revenue → I<br><br>C → Mines → M<br><br>A → Post → P<br><br>✅ Alphabetical order: D, B, C, A → DBCA"
+    },
+    {
+      "id": 1771854164506,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Rancho, Elian <br>Rallon, Michel <br>Ramirez, Sean <br>Rancho, Elaine<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Rancho, Elian",
+          "Rallon, Michel",
+          "Ramirez, Sean",
+          "Rancho, Elaine"
+        ],
+        "sortedItems": [
+          "Rallon, Michel",
+          "Ramirez, Sean",
+          "Rancho, Elaine",
+          "Rancho, Elian"
+        ]
+      },
+      "correctAnswer": "Rallon, Michel|Ramirez, Sean|Rancho, Elaine|Rancho, Elian",
+      "explanation": "Step 1: Compare last names first<br><br>All are “Rancho”, “Rallon”, “Ramirez”, “Rancho” → first letter of last name: R for all.<br><br>Next, compare the letters after Ra:<br><br>Rancho → n<br><br>Rallon → l<br><br>Ramirez → m<br><br>Rancho → n<br><br>Step 2: Sort by last name alphabetically<br><br>Order of last names: Rallon (l) → Ramirez (m) → Rancho (n)<br><br>Within Rancho: compare first names: Elian vs Elaine → Elaine comes before Elian<br><br>✅ Alphabetical order:<br><br>B. Rallon, Michel → C. Ramirez, Sean → D. Rancho, Elaine → A. Rancho, Elian<br><br>Answer: B, C, D, A"
+    },
+    {
+      "id": 1771860018562,
+      "subjectId": 1771738791141,
+      "topicId": 1771738822928,
+      "questionType": "alphabetize",
+      "question": "Quesada, Arianne <br>Quisumbing, Armie <br>Quintin, Adela <br>Quezon, Aurora<br><br><em>Drag and drop the items below to arrange them in alphabetical order.</em>",
+      "choices": {
+        "items": [
+          "Quesada, Arianne",
+          "Quisumbing, Armie",
+          "Quintin, Adela",
+          "Quezon, Aurora"
+        ],
+        "sortedItems": [
+          "Quesada, Arianne",
+          "Quezon, Aurora",
+          "Quintin, Adela",
+          "Quisumbing, Armie"
+        ]
+      },
+      "correctAnswer": "Quesada, Arianne|Quezon, Aurora|Quintin, Adela|Quisumbing, Armie",
+      "explanation": "Step 1: Compare the last names (ignore first names first)<br><br>We look letter by letter:<br><br>Quesada → Que…<br><br>Quisumbing → Qui…<br><br>Quintin → Qui…<br><br>Quezon → Que…<br><br>So we group them:<br><br>Que… → Quesada, Quezon<br><br>Qui… → Quisumbing, Quintin<br><br>Alphabetically:<br>Que (e) comes before Qui (i)<br>So first group = A & D, then B & C.<br><br>Step 2: Break the tie inside “Que…”<br><br>Compare:<br><br>Quesada<br><br>Quezon<br><br>After “Que”:<br><br>Quesada → s<br><br>Quezon → z<br><br>Since s comes before z,<br>Order: Quesada before Quezon<br>→ A then D<br><br>Step 3: Break the tie inside “Qui…”<br><br>Compare:<br><br>Quisumbing<br><br>Quintin<br><br>After “Qui”:<br><br>Quisumbing → s<br><br>Quintin → n<br><br>Since n comes before s,<br>Order: Quintin before Quisumbing<br>→ C then B<br><br>✅ Final alphabetical order:<br><br>A. Quesada, Arianne<br>D. Quezon, Aurora<br>C. Quintin, Adela<br>B. Quisumbing, Armie<br><br>Answer: ADCB"
+    }
+  ]
+}
